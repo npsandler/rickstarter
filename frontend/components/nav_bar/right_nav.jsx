@@ -26,11 +26,11 @@ const loggedInLinks = (currentUser, logOut) => (
     <ul>
       <li>
         <Link to='/' className='search-button nav-item'>
-          <i className="fa fa-search nav-item nav-icon"></i>
+          <i className="fa fa-search nav-icon"></i>
           </Link>
       </li>
       <li>
-        <div className="header-link nav-item user-icon" onClick={logOut}>
+        <div className="header-link user-icon" onClick={logOut}>
           <img src={currentUser.image_url} />
         </div>
       </li>
