@@ -1,0 +1,90 @@
+
+.logo {
+  align-self: center;
+  margin-top: 15px;
+  font-size: 30px;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.logo-image {
+  width: 175px;
+  margin-left: 70px;
+}
+
+.nav-bar {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  margin-top: -20px;
+  height: 50px;
+  box-shadow: 2px 2px 5px #bbadad;
+}
+
+.nav-item:hover{
+  padding-bottom: 9px;
+  border-bottom: 3px solid #2BDE73;
+}
+
+.left-nav > ul > li:hover,
+.right-nav > ul > li:hover {
+  border-bottom: 5px green;
+  margin-bottom: 5px;
+
+  cursor: pointer;
+}
+
+.right-nav > ul > li {
+  padding-right: 10;
+
+}
+
+.left-nav {
+  margin-left: -35px;
+}
+
+.left-nav > ul > li {
+  padding-right: 40px;
+}
+
+ul {
+  white-space:nowrap;
+}
+
+.right-nav ul,
+.left-nav ul {
+    display: flex;
+    list-style-type: none;
+}
+.right-nav ul {
+  margin-right: 120px;
+}
+
+li  {
+  align-self: center;
+}
+
+.fa-compass {
+  color: #05af3c;
+  padding-right: 6px;
+}
+
+li a {
+    color: #4a4141;
+    display: block;
+    width: 60px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.user-icon {
+  border-radius: 141px;
+    width: 50px;
+    height: 50px;
+}
+.compass {
+  color: black;
+}
