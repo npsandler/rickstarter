@@ -1,9 +1,8 @@
 # **Rickstarter** #
 
 
+[Heroku link](rickstarter2017.herokuapp.com)
 
-*Heroku link*
-TODO: host on Heroku
 
 [Trello link](https://trello.com/b/I3pLX8AX/rickstarter)
 
