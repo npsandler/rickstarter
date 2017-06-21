@@ -6,15 +6,15 @@ const loggedOutLinks = () => (
   <nav  className='right-nav'>
     <ul>
       <li>
-        <Link to='/' className='search-button nav-item'>
-          <i className="fa fa-search nav-item nav-icon"></i>
+        <Link to='/' className='search-button'>
+          <i className="fa fa-search nav-icon"></i>
         </Link>
       </li>
       <li>
-        <Link to="/login" className="header-link nav-item" >Login</Link>
+        <Link to="/login" className="header-link nav-item login-link" >Log in</Link>
       </li>
       <li>
-        <Link to="/signup" className="header-link nav-item" >Sign up</Link>
+        <Link to="/signup" className="header-link nav-item signup-link" >Sign up</Link>
       </li>
     </ul>
 
@@ -25,13 +25,13 @@ const loggedInLinks = (currentUser, logOut) => (
   <nav  className='right-nav'>
     <ul>
       <li>
-        <Link to='/' className='search-button nav-item'>
+        <Link to='/' className='search-button'>
           <i className="fa fa-search nav-icon"></i>
           </Link>
       </li>
       <li>
-        <div className="header-link user-icon" onClick={logOut}>
-          <img src={currentUser.image_url} />
+        <div className="header-link" onClick={logOut}>
+          <img className='user-icon' src={currentUser.image_url} />
         </div>
       </li>
     </ul>

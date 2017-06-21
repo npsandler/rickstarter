@@ -13,7 +13,7 @@
   position: fixed;
   width: 175px;
   margin-top: -42px;
-  margin-left: -100px;
+  margin-left: -35px;
 }
 
 .nav-bar {
@@ -25,31 +25,59 @@
   height: 50px;
   box-shadow: 2px 2px 5px #bbadad;
 }
+.right-nav {
+  width: 40%;
+  height: 129%;
+  color: black;
+
+}
+.left-nav {
+  margin-left: -35px;
+  width: 35%;
+  height: 129%;
+}
 
 .nav-item:hover{
-  padding-bottom: 9px;
   border-bottom: 3px solid #2BDE73;
+}
+
+.fa-search:hover {
+  color: #a2a2a2;
 }
 
 .left-nav > ul > li:hover,
 .right-nav > ul > li:hover {
-  border-bottom: 5px green;
-  margin-bottom: 5px;
-
   cursor: pointer;
 }
 
 .right-nav > ul > li {
   padding-right: 10;
-
 }
 
-.left-nav {
-  margin-left: -35px;
-}
 
 .left-nav > ul > li {
   padding-right: 40px;
+}
+.explore-button {
+  padding-left: 0;
+  padding-right: 9px;
+}
+
+.create-proj {
+  padding-left: 0px;
+  padding-right: 35px;
+}
+.login-link {
+  width: 42px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-right: 45px;
+}
+
+.signup-link {
+  width: 51px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 ul {
@@ -58,11 +86,16 @@ ul {
 
 .right-nav ul,
 .left-nav ul {
-    display: flex;
     list-style-type: none;
 }
+
+.left-nav ul {
+    display: flex;
+}
 .right-nav ul {
-  margin-right: 120px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 li  {
@@ -84,8 +117,8 @@ li a {
 
 .user-icon {
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 }
 .compass {
   color: black;

@@ -44,12 +44,12 @@ class SessionForm extends React.Component {
     if (this.props.formType === 'login') {
       return (
         <section> New to Rickstarter?
-          <Link to="/login" className='hyperlink'> Sign up!</Link>
+          <Link to="/signup" className='hyperlink'> Sign up!</Link>
         </section>
       );
     } else {
       return (<section>Have an account?
-        <Link to="/signup" className='hyperlink'> Log in</Link>
+        <Link to="/login" className='hyperlink'> Log in</Link>
         </section>
       );
     }
