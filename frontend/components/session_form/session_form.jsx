@@ -7,7 +7,9 @@ class SessionForm extends React.Component {
     this.state = {
       name: '',
       email: '',
-      password: ''
+      password: '',
+      imageFile: null,
+      imageUrl: null
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDemo = this.handleDemo.bind(this);
@@ -27,17 +29,32 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    let formData = new FormData();
+    formData.append("email", this.state.email)
+    formData.append("password", this.state.password)
+
     const user = this.state;
     if (this.props.formType === 'login') {
-      this.props.processForm({email: user.email, password: user.password})
+      this.props.processForm({email: formData.email, password: formData.password})
     } else {
-      this.props.processForm(user)
+      this.props.processForm(formData)
     };
   }
   handleDemo(e) {
     e.preventDefault();
-      const user = {email: 'demo', password: 'hunter12'}
+      const user = {email: 'demo', password: 'hunter12'};
       this.props.logIn(user)
+  }
+
+  updateFile(e) {
+    let file = e.currentTarget.files[0];
+    const fileReader = new FileReader();
+    debugger
+    fileReader.onloadend = function () {
+      this.setState({ imageFile: file, imageUrl: fileReader.result });
+    }.bind(this);
+
+    fileReader.readAsDataURL(file);
   }
 
   navLink() {
@@ -104,7 +121,10 @@ class SessionForm extends React.Component {
                   className="login-input"
                 />
               <br/>
-            <input type="submit" value="Create account" className='submit-button'/>
+                <input type='file' onChange={this.updateFile} />
+                Upload a profile picture
+              <br/>
+              <input type="submit" value="Create account" className='submit-button'/>
         </form>
         <br/>
           <div className='or'>

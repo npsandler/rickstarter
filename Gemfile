@@ -22,6 +22,7 @@ gem 'rails_12factor'
 
 gem 'figaro'
 gem 'paperclip',  '5.0.0.beta1'
+gem 'aws-sdk', '>= 2.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
