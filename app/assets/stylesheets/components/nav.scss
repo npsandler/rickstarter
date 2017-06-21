@@ -47,6 +47,9 @@
 .nav-item:hover{
   border-bottom: 3px solid #2bde73;
 }
+.nav-item {
+  border-bottom: 3px solid white;
+}
 
 .left-nav > ul > li:hover,
 .right-nav > ul > li:hover {
@@ -55,7 +58,6 @@
 .left-nav > ul > li a,
 .right-nav > ul > li a {
   padding-bottom: 19px;
-  border-bottom: 3px white;
 }
 
 .right-nav > ul > li {
