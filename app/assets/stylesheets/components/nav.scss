@@ -28,8 +28,11 @@
 .right-nav {
   width: 40%;
   height: 129%;
-  color: black;
+}
 
+
+.right-nav > ul > li a {
+  color: black;
 }
 .left-nav {
   margin-left: -35px;
@@ -37,17 +40,22 @@
   height: 129%;
 }
 
-.nav-item:hover{
-  border-bottom: 3px solid #2BDE73;
-}
-
 .fa-search:hover {
   color: #a2a2a2;
+}
+
+.nav-item:hover{
+  border-bottom: 3px solid #2bde73;
 }
 
 .left-nav > ul > li:hover,
 .right-nav > ul > li:hover {
   cursor: pointer;
+}
+.left-nav > ul > li a,
+.right-nav > ul > li a {
+  padding-bottom: 19px;
+  border-bottom: 3px white;
 }
 
 .right-nav > ul > li {
@@ -105,6 +113,7 @@ li  {
 .fa-compass {
   color: #05af3c;
   padding-right: 6px;
+  font-size: 18px;
 }
 
 li a {
