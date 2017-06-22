@@ -9,7 +9,7 @@ class Api::ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
-
+    @project.creator = currentUser
     if @project.save
       render :show
     else

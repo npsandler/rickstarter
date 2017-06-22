@@ -82,21 +82,22 @@ class FullProjectForm extends React.Component {
             <section className='form-sub-box'>
               <div>Category</div>
               <select className='right-box'>
-                <option value='Art'>Art</option>
-                <option value='Comics'>Comics</option>
-                <option value='Crafts'>Crafts</option>
-                <option value='Dance'>Dance</option>
-                <option value='Design'>Design</option>
-                <option value='Fashion'>Fashion</option>
-                <option value='Film & Video'>Film & Video</option>
-                <option value='Food'>Food</option>
-                <option value='Games'>Games</option>
-                <option value='Journalism'>Journalism</option>
-                <option value='Music'>Music</option>
-                <option value='Photography'>Photography</option>
-                <option value='Publishing'>Publishing</option>
-                <option value='Technology'>Technology</option>
-                <option value='Theatre'>Theatre</option>
+                <option name={this.state.category} value=''>Select a category</option>
+                <option name={this.state.category} value='Art'>Art</option>
+                <option name={this.state.category} value='Comics'>Comics</option>
+                <option name={this.state.category} value='Crafts'>Crafts</option>
+                <option name={this.state.category} value='Dance'>Dance</option>
+                <option name={this.state.category} value='Design'>Design</option>
+                <option name={this.state.category} value='Fashion'>Fashion</option>
+                <option name={this.state.category} value='Film & Video'>Film & Video</option>
+                <option name={this.state.category} value='Food'>Food</option>
+                <option name={this.state.category} value='Games'>Games</option>
+                <option name={this.state.category} value='Journalism'>Journalism</option>
+                <option name={this.state.category} value='Music'>Music</option>
+                <option name={this.state.category} value='Photography'>Photography</option>
+                <option name={this.state.category} value='Publishing'>Publishing</option>
+                <option name={this.state.category} value='Technology'>Technology</option>
+                <option name={this.state.category} value='Theatre'>Theatre</option>
               </select>
             </section>
               <section className='form-sub-box'>
@@ -109,9 +110,9 @@ class FullProjectForm extends React.Component {
               <section className='form-sub-box'>
                 <div>Funding goal</div>
                 <div className='right-box'>
-                  <input type="number" name="someid" />
-                  <div>Funding on Rickstarter is all-or-nothing. It’s okay to raise more than your goal, but if your goal isn’t met, no money will be collected. Your goal should reflect the minimum amount of funds you need to complete your project and send out rewards, and include a buffer for payments processing fees.
-                    If your project is successfully funded, the following fees will be collected from your funding total: Rickstarter’s 5% fee, and payment processing fees (between 3% and 5%). If funding isn’t successful, there are no fees.</div>
+                  <input type="number" onChange={this.update('description')} value={this.state.funding_goal} />
+                <div>Funding on Rickstarter is all-or-nothing. It’s okay to raise more than your goal, but if your goal isn’t met, no money will be collected. Your goal should reflect the minimum amount of funds you need to complete your project and send out rewards, and include a buffer for payments processing fees.
+                  If your project is successfully funded, the following fees will be collected from your funding total: Rickstarter’s 5% fee, and payment processing fees (between 3% and 5%). If funding isn’t successful, there are no fees.</div>
                 </div>
               </section>
               <section className='bottom-bar'>

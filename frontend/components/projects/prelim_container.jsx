@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import PreliminaryProjectForm from './prelim_project_form';
 
-const mapStateToProps = ({ errors }) => ({
-  errors
+const mapStateToProps = (state) => ({
+  state
 });
 
 const mapDispatchToProps = dispatch => ({
