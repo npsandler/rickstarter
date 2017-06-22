@@ -4,7 +4,6 @@ import { withRouter } from 'react-router-dom';
 class PreliminaryProjectForm extends React.Component {
   constructor(props) {
     super(props)
-    // TODO: find currentUser.id
     this.state = {
       category: '',
       title: ''
@@ -14,14 +13,17 @@ class PreliminaryProjectForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger
     this.props.receiveIncompleteForm(this.state);
-    debugger
-    history.push('/fullform');
+    this.props.history.push('/fullform');
   }
 
   update(property) {
     return e => this.setState({ [property]: e.target.value });
+  }
+
+  componentWillReceiveProps() {
+    debugger
+    console.log('hi from CWRP');
   }
 
 
@@ -39,7 +41,7 @@ class PreliminaryProjectForm extends React.Component {
       return (
         <section className="project-create">
           <section className='prelim-form-box'>
-            <h1 className='blue'> Get Started </h1>
+            <div className='blue'> Get Started </div>
             <ul>
               {this.errors()}
             </ul>

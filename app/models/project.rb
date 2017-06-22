@@ -17,7 +17,7 @@ class Project < ActiveRecord::Base
   validates :title, :end_date, :funding_goal,
   :details, :creator_id, :category, presence: true
 
-  belongs_to: :creator,
+  belongs_to :creator,
   class_name: :User,
   foreign_key: :creator_id
 end

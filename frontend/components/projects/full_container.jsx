@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import FullProjectForm from './prelim_project_form';
+import FullProjectForm from './full_project_form';
 
 const mapStateToProps = ({errors}) => ({
   errors

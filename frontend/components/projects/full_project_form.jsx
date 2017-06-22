@@ -5,9 +5,14 @@ import { createProject } from '../../util/project_api_util';
 class FullProjectForm extends React.Component {
   constructor(props) {
     super(props);
+    debugger
+    console.log('made it past debugger');
+    const importedCategory = this.state.incompleteForm.Category;
+    const importedTitle = this.state.incompleteForm.title;
     this.state = {
+      category: importedCategory,
+      title: importedCategory,
       body: '',
-      title: '',
       description: '',
       end_date: null,
       funding_goal: null,
@@ -40,6 +45,18 @@ class FullProjectForm extends React.Component {
         })
       );
     }
+  }
+
+
+  selectorRender() {
+    const CATEGORIES = ['Art', 'Comic', 'Crafts', 'Dance', 'Design', 'Fashion',
+    'Film & Video', 'Food', 'Games', 'Journalism', 'Music', 'Photography', 'Publishing', 'Technology', 'Theatre']
+
+    selectorOptions = CATEGORIES.map( cat=> <option name={this.state.category} value='cat'>cat</option> )
+
+    return (
+      selectorOptions
+    )
   }
 
   render() {
@@ -79,22 +96,8 @@ class FullProjectForm extends React.Component {
             <section className='form-sub-box'>
               <div>Category</div>
               <select className='right-box'>
-                <option name={this.state.category} value=''>Select a category</option>
-                <option name={this.state.category} value='Art'>Art</option>
-                <option name={this.state.category} value='Comics'>Comics</option>
-                <option name={this.state.category} value='Crafts'>Crafts</option>
-                <option name={this.state.category} value='Dance'>Dance</option>
-                <option name={this.state.category} value='Design'>Design</option>
-                <option name={this.state.category} value='Fashion'>Fashion</option>
-                <option name={this.state.category} value='Film & Video'>Film & Video</option>
-                <option name={this.state.category} value='Food'>Food</option>
-                <option name={this.state.category} value='Games'>Games</option>
-                <option name={this.state.category} value='Journalism'>Journalism</option>
-                <option name={this.state.category} value='Music'>Music</option>
-                <option name={this.state.category} value='Photography'>Photography</option>
-                <option name={this.state.category} value='Publishing'>Publishing</option>
-                <option name={this.state.category} value='Technology'>Technology</option>
-                <option name={this.state.category} value='Theatre'>Theatre</option>
+                  <option name={this.state.category} value=''>Select a category</option>
+                  {selectorRender()}
               </select>
             </section>
               <section className='form-sub-box'>

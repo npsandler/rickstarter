@@ -28,8 +28,8 @@ const App = () => (
     </section>
 
     <Switch>
-      <Route path="/newproject" component={PrelimFormContainer} />
-      <ProtectedRoute path='/fullform'component={FullFormContainer} />
+      <Route exact path="/newproject" component={PrelimFormContainer} />
+      <ProtectedRoute exact path='/fullform' component={FullFormContainer} />
       <AuthRoute path="/login" component={SessionFormContainer} />
       <AuthRoute path="/signup" component={SessionFormContainer} />
     </Switch>
