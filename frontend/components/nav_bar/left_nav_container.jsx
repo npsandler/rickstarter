@@ -19,7 +19,7 @@ class LeftNav extends React.Component {
               </Link>
             </li>
             <li>
-              <Link to="/new-project" className='nav-item create-proj'>
+              <Link to="/newproject" className='nav-item create-proj'>
                 Start a project
               </Link>
             </li>

@@ -5,6 +5,7 @@ import FullProjectForm from './full_container';
 class PreliminaryProjectForm extends React.Component {
   constructor(props) {
     debugger
+    super(props)
     // TODO: find currentUser.id
     this.state = {
       category: '',
@@ -16,7 +17,8 @@ class PreliminaryProjectForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    window.location.href = `/fullform`);
+    debugger
+    window.location.href = `/fullform`;
   }
 
   update(property) {
@@ -71,7 +73,6 @@ class PreliminaryProjectForm extends React.Component {
         </section>
       );
     }
-  }
 }
 
 export default withRouter(PreliminaryProjectForm);

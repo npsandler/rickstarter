@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import PreliminaryProjectForm from './post_form';
+import PreliminaryProjectForm from './prelim_project_form';
 
 const mapStateToProps = ({ errors }) => ({
   errors

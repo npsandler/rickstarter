@@ -23,6 +23,7 @@ class FullProjectForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    debugger
     this.state.projectId = this.props.match.params.projectId;
     // TODO: currentUser?
     this.props.createProject(this.state)
@@ -97,10 +98,11 @@ class FullProjectForm extends React.Component {
                 <option value='Technology'>Technology</option>
                 <option value='Theatre'>Theatre</option>
               </select>
+            </section>
               <section className='form-sub-box'>
                 <div>Project end date</div>
                 <div className='right-box'>
-                  <input type="date" name="TEST" value={this.state.end_date}>
+                  <input type="date" name="TEST" value={this.state.end_date} />
                   <div>Projects with shorter durations have higher success rates. You won’t be able to adjust your duration after you launch.</div>
                 </div>
               </section>
@@ -112,11 +114,11 @@ class FullProjectForm extends React.Component {
                     If your project is successfully funded, the following fees will be collected from your funding total: Rickstarter’s 5% fee, and payment processing fees (between 3% and 5%). If funding isn’t successful, there are no fees.</div>
                 </div>
               </section>
-            <section className='bottom-bar'>
-              <link>Discard changes</link>
-              // TODO: get discard changes to work
-              <button className='project-submit-button'>Save and continue</button>
-            </section>
+              <section className='bottom-bar'>
+                <link>Discard changes</link>
+                // TODO: get discard changes to work
+                <button className='project-submit-button'>Save and continue</button>
+              </section>
           </form>
         </section>
       );

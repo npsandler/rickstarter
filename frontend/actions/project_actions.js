@@ -1,4 +1,4 @@
-import * as APIUtil from '../util/api_util';
+import * as APIUtil from '../util/project_api_util';
 
 export const RECEIVE_ALL_PROJECTS = 'RECEIVE_ALL_PROJECTS';
 export const RECEIVE_SINGLE_PROJECT = 'RECEIVE_SINGLE_PROJECT';
