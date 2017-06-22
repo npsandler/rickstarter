@@ -97,9 +97,26 @@ class ProjectForm extends React.Component {
                 <option value='Technology'>Technology</option>
                 <option value='Theatre'>Theatre</option>
               </select>
-
-
-            <button>Save and continue</button>
+              <section className='form-sub-box'>
+                <div>Project end date</div>
+                <div className='right-box'>
+                  <input type="date" name="TEST" value={this.state.end_date}>
+                  <div>Projects with shorter durations have higher success rates. You won’t be able to adjust your duration after you launch.</div>
+                </div>
+              </section>
+              <section className='form-sub-box'>
+                <div>Funding goal</div>
+                <div className='right-box'>
+                  <input type="number" name="someid" />
+                  <div>Funding on Rickstarter is all-or-nothing. It’s okay to raise more than your goal, but if your goal isn’t met, no money will be collected. Your goal should reflect the minimum amount of funds you need to complete your project and send out rewards, and include a buffer for payments processing fees.
+                    If your project is successfully funded, the following fees will be collected from your funding total: Rickstarter’s 5% fee, and payment processing fees (between 3% and 5%). If funding isn’t successful, there are no fees.</div>
+                </div>
+              </section>
+            <section className='bottom-bar'>
+              <link>Discard changes</link>
+              // TODO: get discard changes to work
+              <button className='project-submit-button'>Save and continue</button>
+            </section>
           </form>
         </section>
       );
