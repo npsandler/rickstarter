@@ -51,7 +51,9 @@
     category: "design",
     details: "",
     end_date: "09/15/2017",
-    funding_goal: 5000,
+    funding_goal: 5000
+  }
+
     rewards: {
       1: {
         id: 1,

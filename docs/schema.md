@@ -1,6 +1,7 @@
 Users
 ----
 
+
 Column Name | Data Type | Details
 ------------ | -------------
 id |integer | not null, PRIMARY KEY
@@ -16,6 +17,7 @@ session_token | string | not null, unique, indexed
 
 Projects
 -----
+
 
 column name |	data type |	details
 ------------ |  -----------
