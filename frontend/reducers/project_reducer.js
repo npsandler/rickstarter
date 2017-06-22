@@ -11,8 +11,8 @@ const projectReducer = (state = defaultState, action) => {
     case RECEIVE_ALL_PROJECTS:
       return merge({}, state, action.projects);
     case RECEIVE_SINGLE_PROJECT:
-      const project = action.project;
-      return project;
+      const newProject = {[action.project.id]: action.project};
+      return newProject;
     case DELETE_PROJECT:
       const newState = merge({}, state);
       delete newState[action.project.id];
@@ -26,3 +26,4 @@ const projectReducer = (state = defaultState, action) => {
 
 
 export default projectReducer;
+cd 
