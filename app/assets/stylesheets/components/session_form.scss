@@ -56,6 +56,23 @@
   padding-bottom: 6px;
 }
 
+.image-form > ul {
+  align-items: center;
+  text-align: center;
+  list-style-type: none;
+  padding-bottom: 40px;
+}
+
+.image-form > ul > li a {
+  text-align: center;
+  margin-left: 20px;
+}
+
+.image-form-header {
+  width: 152px;
+  padding-bottom: 40px;
+}
+
 .or {
   text-align: center;
 }

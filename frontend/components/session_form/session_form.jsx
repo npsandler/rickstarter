@@ -13,6 +13,7 @@ class SessionForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDemo = this.handleDemo.bind(this);
+    this.updateFile = this.updateFile.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -32,7 +33,7 @@ class SessionForm extends React.Component {
     let formData = new FormData();
     formData.append("email", this.state.email)
     formData.append("password", this.state.password)
-
+    debugger
     const user = this.state;
     if (this.props.formType === 'login') {
       this.props.processForm({email: formData.email, password: formData.password})
@@ -49,10 +50,10 @@ class SessionForm extends React.Component {
   updateFile(e) {
     let file = e.currentTarget.files[0];
     const fileReader = new FileReader();
-    debugger
+
     fileReader.onloadend = function () {
       this.setState({ imageFile: file, imageUrl: fileReader.result });
-    }.bind(this);
+    }.bind(this)
 
     fileReader.readAsDataURL(file);
   }
@@ -121,8 +122,16 @@ class SessionForm extends React.Component {
                   className="login-input"
                 />
               <br/>
-                <input type='file' onChange={this.updateFile} />
-                Upload a profile picture
+              <div className='image-form'>
+                <ul>
+                  <li className='image-form-header'>
+                    Upload a profile picture
+                  </li>
+                  <li>
+                    <input type='file' onChange={this.updateFile} />
+                  </li>
+                </ul>
+              </div>
               <br/>
               <input type="submit" value="Create account" className='submit-button'/>
         </form>
