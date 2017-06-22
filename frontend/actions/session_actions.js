@@ -6,6 +6,7 @@ export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 
 export const logIn = (user) => (dispatch) => {
+  debugger
   return APIUtil.logIn(user)
     .then(user => {
       return dispatch(receiveCurrentUser(user));
@@ -13,6 +14,7 @@ export const logIn = (user) => (dispatch) => {
 };
 
 export const signUp = (user) => (dispatch) => {
+  debugger
   return APIUtil.signUp(user)
     .then(user => {
       return dispatch(receiveCurrentUser(user));

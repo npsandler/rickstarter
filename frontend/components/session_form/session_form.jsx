@@ -7,13 +7,10 @@ class SessionForm extends React.Component {
     this.state = {
       name: '',
       email: '',
-      password: '',
-      imageFile: null,
-      imageUrl: null
+      password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDemo = this.handleDemo.bind(this);
-    this.updateFile = this.updateFile.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -30,32 +27,17 @@ class SessionForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    let formData = new FormData();
-    formData.append("email", this.state.email)
-    formData.append("password", this.state.password)
-    debugger
     const user = this.state;
     if (this.props.formType === 'login') {
-      this.props.processForm({email: formData.email, password: formData.password})
+      this.props.processForm({email: user.email, password: user.password})
     } else {
-      this.props.processForm(formData)
+      this.props.processForm(user)
     };
   }
   handleDemo(e) {
     e.preventDefault();
-      const user = {email: 'demo', password: 'hunter12'};
+      const user = {email: 'demo', password: 'hunter12'}
       this.props.logIn(user)
-  }
-
-  updateFile(e) {
-    let file = e.currentTarget.files[0];
-    const fileReader = new FileReader();
-
-    fileReader.onloadend = function () {
-      this.setState({ imageFile: file, imageUrl: fileReader.result });
-    }.bind(this)
-
-    fileReader.readAsDataURL(file);
   }
 
   navLink() {
@@ -122,18 +104,7 @@ class SessionForm extends React.Component {
                   className="login-input"
                 />
               <br/>
-              <div className='image-form'>
-                <ul>
-                  <li className='image-form-header'>
-                    Upload a profile picture
-                  </li>
-                  <li>
-                    <input type='file' onChange={this.updateFile} />
-                  </li>
-                </ul>
-              </div>
-              <br/>
-              <input type="submit" value="Create account" className='submit-button'/>
+            <input type="submit" value="Create account" className='submit-button'/>
         </form>
         <br/>
           <div className='or'>
