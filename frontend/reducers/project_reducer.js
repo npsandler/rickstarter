@@ -2,12 +2,7 @@ import { RECEIVE_ALL_PROJECTS, RECEIVE_SINGLE_PROJECT, DELETE_PROJECT, EDIT_PROJ
 import { merge } from 'lodash';
 import { combineReducers } from "redux";
 
-projectsDefault = {
-  byId: {},
-  allIds: []
-};
-
-const projectReducer = (state = projectsDefault, action) => {
+const projectReducer = ( state = {}, action) => {
   switch (action.type) {
     case RECEIVE_ALL_PROJECTS:
       return merge({}, state, action.projects);
