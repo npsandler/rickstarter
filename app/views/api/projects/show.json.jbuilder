@@ -1,1 +1,1 @@
-json.partial! 'project', project: @project
+json.id json.partial! 'project', project: @project
