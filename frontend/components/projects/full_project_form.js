@@ -52,8 +52,35 @@ class ProjectForm extends React.Component {
           <ul>
             {this.errors()}
           </ul>
-          <form className="project-form" onSubmit={this.handleSubmit}>
-              <selectr>
+
+          <form className="full-project-form" onSubmit={this.handleSubmit}>
+            <section className='form-sub-box'>
+              <div>Project title</div>
+              <div className='right-box'>
+                <input
+                  type="text"
+                  value={this.state.title}
+                  placeholder="title..."
+                  onChange={this.update('title')}
+                />
+                <div>Our search looks through words from your project title and blurb, so make them clear and descriptive of what you’re making. Your profile name will be searchable, too.
+                  These words will help people find your project, so choose them wisely! Your name will be searchable too.</div>
+              </div>
+            </section>
+            <section className='form-sub-box'>
+              <div>Short blurb</div>
+              <div className='right-box'>
+                <input
+                  type="textarea"
+                  value={this.state.description}
+                  onChange={this.update('description')}
+                />
+                <div>Give people a sense of what you’re doing. Skip “Help me” and focus on what you’re making.</div>
+              </div>
+            </section>
+            <section className='form-sub-box'>
+              <div>Category</div>
+              <select className='right-box'>
                 <option value='Art'>Art</option>
                 <option value='Comics'>Comics</option>
                 <option value='Crafts'>Crafts</option>
@@ -71,12 +98,7 @@ class ProjectForm extends React.Component {
                 <option value='Theatre'>Theatre</option>
               </select>
 
-              <input
-                type="text"
-                value={this.state.title}
-                placeholder="title..."
-                onChange={this.update('title')}
-              />
+
             <button>Save and continue</button>
           </form>
         </section>

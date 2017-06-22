@@ -41,7 +41,7 @@ class preliminaryProjectForm extends React.Component {
           <ul>
             {this.errors()}
           </ul>
-          <form className="project-form" onSubmit={this.handleSubmit}>
+          <form className="prelim-project-form" onSubmit={this.handleSubmit}>
               <select>
                 <option value='Art'>Art</option>
                 <option value='Comics'>Comics</option>
