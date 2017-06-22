@@ -1,14 +1,12 @@
-
 import { connect } from 'react-redux';
-import FullProjectForm from './full_project_form';
-import { createProject } from '../../actions/project_actions';
+import FullProjectForm from './prelim_project_form';
 
-const mapStateToProps = (state) => ({
-  errors: state.errors
+const mapStateToProps = ({errors}) => ({
+  errors
 });
 
 const mapDispatchToProps = dispatch => ({
-  createProject: project => dispatch(createProject(project))
+  receiveSingleProject: () => dispatch(receiveSingleProject())
 });
 
 export default connect(

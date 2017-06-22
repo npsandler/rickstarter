@@ -14,7 +14,10 @@ class PreliminaryProjectForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    history.push('/fullform')
+    debugger
+    this.props.receiveIncompleteForm(this.state);
+    debugger
+    history.push('/fullform');
   }
 
   update(property) {

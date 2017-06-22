@@ -4,17 +4,14 @@ import { createProject } from '../../util/project_api_util';
 
 class FullProjectForm extends React.Component {
   constructor(props) {
-    debugger
-    // TODO: check props
     super(props);
-    if (this.props.match.path.includes('edit')) {
-      this.editing = true;
-    } else {
-      this.editing = false;
-    }
     this.state = {
       body: '',
-      title: ''
+      title: '',
+      description: '',
+      end_date: null,
+      funding_goal: null,
+      details: '',
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
