@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { createProject } from '../../util/project_api_util';
 
-class ProjectForm extends React.Component {
+class FullProjectForm extends React.Component {
   constructor(props) {
     debugger
     // TODO: check props
@@ -124,4 +124,4 @@ class ProjectForm extends React.Component {
   }
 }
 
-export default withRouter(ProjectForm);
+export default withRouter(FullProjectForm);

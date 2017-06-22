@@ -2,6 +2,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import PreliminaryProjectForm from '../projects/prelim_container';
 
 
 import { logOut } from '../../actions/session_actions';
@@ -18,7 +19,7 @@ class LeftNav extends React.Component {
               </Link>
             </li>
             <li>
-              <Link to="/" className='nav-item create-proj'>
+              <Link to="/new-project" className='nav-item create-proj'>
                 Start a project
               </Link>
             </li>

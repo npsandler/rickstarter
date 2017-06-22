@@ -1,8 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { createProject } from '../../util/project_api_util';
+import FullProjectForm from './full_container';
 
-class preliminaryProjectForm extends React.Component {
+class PreliminaryProjectForm extends React.Component {
   constructor(props) {
     debugger
     // TODO: find currentUser.id
@@ -74,4 +74,4 @@ class preliminaryProjectForm extends React.Component {
   }
 }
 
-export default withRouter(preliminaryProjectForm);
+export default withRouter(PreliminaryProjectForm);
