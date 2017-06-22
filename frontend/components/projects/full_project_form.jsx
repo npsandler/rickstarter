@@ -7,8 +7,9 @@ class FullProjectForm extends React.Component {
     super(props);
     debugger
     console.log('made it past debugger');
-    const importedCategory = this.state.incompleteForm.Category;
-    const importedTitle = this.state.incompleteForm.title;
+    const importedCategory = this.props.incompleteForm.category;
+    const importedTitle = this.props.incompleteForm.title;
+
     this.state = {
       category: importedCategory,
       title: importedCategory,
@@ -52,8 +53,17 @@ class FullProjectForm extends React.Component {
     const CATEGORIES = ['Art', 'Comic', 'Crafts', 'Dance', 'Design', 'Fashion',
     'Film & Video', 'Food', 'Games', 'Journalism', 'Music', 'Photography', 'Publishing', 'Technology', 'Theatre']
 
-    selectorOptions = CATEGORIES.map( cat=> <option name={this.state.category} value='cat'>cat</option> )
-
+    const selectorOptions = CATEGORIES.map( (cat) => {
+      if (cat === this.state.category) {
+        return (
+          <option name={this.state.category} selected='selected' value={cat}>{cat}</option>
+          );
+      } else {
+        return (
+          <option name={this.state.category} value={cat}>{cat}</option>
+          );
+      }
+    });
     return (
       selectorOptions
     )
@@ -61,66 +71,68 @@ class FullProjectForm extends React.Component {
 
   render() {
       return (
-        <section className="project-create">
-          <h1> Lets get started </h1>
-          <h2>Make a great first impression with your project’s title and image, and set your funding goal, campaign duration, and project category.</h2>
-          <ul>
-            {this.errors()}
-          </ul>
+        <section className="full-project-create">
+          <section className='content-container'>
+            <div className='full-header'> Lets get started </div>
+            <div className='sub-header'>Make a great first impression with your project’s title and image, and set your funding goal, campaign duration, and project category.</div>
+            <ul>
+              {this.errors()}
+            </ul>
 
-          <form className="full-project-form" onSubmit={this.handleSubmit}>
-            <section className='form-sub-box'>
-              <div>Project title</div>
-              <div className='right-box'>
-                <input
-                  type="text"
-                  value={this.state.title}
-                  placeholder="title..."
-                  onChange={this.update('title')}
-                />
-                <div>Our search looks through words from your project title and blurb, so make them clear and descriptive of what you’re making. Your profile name will be searchable, too.
-                  These words will help people find your project, so choose them wisely! Your name will be searchable too.</div>
-              </div>
-            </section>
-            <section className='form-sub-box'>
-              <div>Short blurb</div>
-              <div className='right-box'>
-                <input
-                  type="textarea"
-                  value={this.state.description}
-                  onChange={this.update('description')}
-                />
-                <div>Give people a sense of what you’re doing. Skip “Help me” and focus on what you’re making.</div>
-              </div>
-            </section>
-            <section className='form-sub-box'>
-              <div>Category</div>
-              <select className='right-box'>
-                  <option name={this.state.category} value=''>Select a category</option>
-                  {selectorRender()}
-              </select>
-            </section>
+            <form className="full-project-form" onSubmit={this.handleSubmit}>
               <section className='form-sub-box'>
-                <div>Project end date</div>
+                <div>Project title</div>
                 <div className='right-box'>
-                  <input type="date" name="TEST" value={this.state.end_date} />
-                  <div>Projects with shorter durations have higher success rates. You won’t be able to adjust your duration after you launch.</div>
+                  <input
+                    type="text"
+                    value={this.state.title}
+                    placeholder="title..."
+                    onChange={this.update('title')}
+                  />
+                  <div>Our search looks through words from your project title and blurb, so make them clear and descriptive of what you’re making. Your profile name will be searchable, too.
+                    These words will help people find your project, so choose them wisely! Your name will be searchable too.</div>
                 </div>
               </section>
               <section className='form-sub-box'>
-                <div>Funding goal</div>
+                <div>Short blurb</div>
                 <div className='right-box'>
-                  <input type="number" onChange={this.update('description')} value={this.state.funding_goal} />
-                <div>Funding on Rickstarter is all-or-nothing. It’s okay to raise more than your goal, but if your goal isn’t met, no money will be collected. Your goal should reflect the minimum amount of funds you need to complete your project and send out rewards, and include a buffer for payments processing fees.
-                  If your project is successfully funded, the following fees will be collected from your funding total: Rickstarter’s 5% fee, and payment processing fees (between 3% and 5%). If funding isn’t successful, there are no fees.</div>
+                  <input
+                    type="textarea"
+                    value={this.state.description}
+                    onChange={this.update('description')}
+                  />
+                  <div>Give people a sense of what you’re doing. Skip “Help me” and focus on what you’re making.</div>
                 </div>
               </section>
-              <section className='bottom-bar'>
-                <link>Discard changes</link>
-                // TODO: get discard changes to work
-                <button className='project-submit-button'>Save and continue</button>
+              <section className='form-sub-box'>
+                <div>Category</div>
+                <select className='right-box'>
+                    <option name={this.state.category} value=''>Select a category</option>
+                    {this.selectorRender()}
+                </select>
               </section>
-          </form>
+                <section className='form-sub-box'>
+                  <div>Project end date</div>
+                  <div className='right-box'>
+                    <input type="date" name="TEST" value={this.state.end_date} />
+                    <div>Projects with shorter durations have higher success rates. You won’t be able to adjust your duration after you launch.</div>
+                  </div>
+                </section>
+                <section className='form-sub-box'>
+                  <div>Funding goal</div>
+                  <div className='right-box'>
+                    <input type="number" onChange={this.update('funding_goal')} value={this.state.funding_goal} />
+                  <div>Funding on Rickstarter is all-or-nothing. It’s okay to raise more than your goal, but if your goal isn’t met, no money will be collected. Your goal should reflect the minimum amount of funds you need to complete your project and send out rewards, and include a buffer for payments processing fees.
+                    If your project is successfully funded, the following fees will be collected from your funding total: Rickstarter’s 5% fee, and payment processing fees (between 3% and 5%). If funding isn’t successful, there are no fees.</div>
+                  </div>
+                </section>
+                <section className='bottom-bar'>
+                  <div>Discard changes</div>
+                  // TODO: get discard changes to work
+                  <button className='project-submit-button'>Save and continue</button>
+                </section>
+            </form>
+          </section>
         </section>
       );
 
