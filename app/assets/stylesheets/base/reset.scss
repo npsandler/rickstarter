@@ -88,7 +88,7 @@ hr {
  */
 
 pre {
-  font-family: monospace, monospace; /* 1 */
+  // font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
 
@@ -142,7 +142,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
+  // font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
 
@@ -341,7 +341,9 @@ progress {
 /**
  * Remove the default vertical scrollbar in IE.
  */
-
+ul {
+  list-style-type: decimal;
+}
 textarea {
   overflow: auto;
 }

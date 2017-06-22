@@ -1,0 +1,57 @@
+.project-create {
+  display: flex;
+  justify-content: center;
+  background-image: url('prelim-backdrop.png');
+  background-size: cover;
+  // background-color: red;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 150px;
+  right: 0;
+  overflow: auto;
+}
+
+.prelim-form-box {
+
+    align-self: center;
+    align-items: center;
+   margin-top: -10%;
+    padding: 50px;
+    height: 345px;
+    background-color: gba(255,0,0,0.3)
+}
+
+prelim-form-box > ul > li {
+  padding: 35px;
+  color: #80809e;
+  font-size: 22px;
+  line-height: 30px;
+  padding-left: 35px;
+  margin-right: 40px;
+}
+
+.input {
+  border-radius: 6px;
+  margin-bottom: 20px;
+  height: 43px;
+  box-sizing: border-box;
+  padding: 12px;
+  width: 348px;
+  line-height: 17px;
+  background: white;
+  border: 1px solid #dad7d4;
+}
+.continue-button {
+  margin-left: 40px;
+}
+
+
+.blue {
+  color: #2752ff;
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 200;
+    margin-left: 30px;
+}
