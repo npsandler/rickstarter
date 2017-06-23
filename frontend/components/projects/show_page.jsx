@@ -13,8 +13,8 @@ class ShowPage extends React.Component {
     }
   }
 
-  numberWithCommas(num) {
-    num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  numberWithCommas(date) {
+    return date.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
 
   dateRemaining() {
