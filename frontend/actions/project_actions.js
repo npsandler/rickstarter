@@ -17,16 +17,22 @@ export const requestSingleProject = (projectId) => (dispatch) => {
     .then(project => dispatch(receiveSingleProject(project)));
 };
 
-export const createProject = project => dispatch => (
-    APIUtil.createProject(project)
-  .then( () => dispatch(requestAllProjects()))
-);
+export const createProject = project => dispatch => {
+    console.log('hi from inside createpor')
+    debugger
+    return (
+      APIUtil.createProject(project)
+    .then( () => dispatch(requestAllProjects()))
+  );
+};
 
-export const updateProject = project => dispatch=> (
-  APIUtil.editProject(project).then(project => {
-    dispatch(requestAllProjects());
-  })
-);
+export const updateProject = project => dispatch => {
+    return (
+    APIUtil.editProject(project).then(project => {
+      dispatch(requestAllProjects());
+    }));
+  };
+
 
 export const editProject = project => {
   return {

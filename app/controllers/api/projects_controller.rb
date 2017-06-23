@@ -8,6 +8,7 @@ class Api::ProjectsController < ApplicationController
   end
 
   def create
+    debugger
     @project = Project.new(project_params)
     @project.creator = currentUser
     if @project.save
@@ -33,7 +34,8 @@ class Api::ProjectsController < ApplicationController
     :end_date,
     :funding_goal,
     :details,
-    :category
+    :category,
+    :description
     )
   end
 

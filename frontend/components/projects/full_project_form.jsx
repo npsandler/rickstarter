@@ -12,7 +12,7 @@ class FullProjectForm extends React.Component {
 
     this.state = {
       category: importedCategory,
-      title: importedCategory,
+      title: importedTitle,
       body: '',
       description: '',
       end_date: null,

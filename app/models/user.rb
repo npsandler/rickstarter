@@ -23,9 +23,6 @@ class User < ActiveRecord::Base
 
   validates :session_token, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true
-  validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
-
-  validate :password_complexity
 
 
 
@@ -63,12 +60,6 @@ class User < ActiveRecord::Base
 
   def ensure_session_token
     self.session_token ||= SecureRandom.urlsafe_base64
-  end
-
-  def password_complexity
-    if password.present? && !password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d). /)
-      errors.add :password, "must include at least one lowercase letter, one uppercase letter, and one digit"
-    end
   end
 
 end

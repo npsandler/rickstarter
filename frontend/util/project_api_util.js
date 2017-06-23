@@ -13,10 +13,11 @@ export const fetchSingleProject = (projectId) => {
 };
 
 export const createProject= (project) => {
+  debugger
   return $.ajax({
     method: 'POST',
     url: 'api/projects/',
-    data: { project }
+    project: { project }
   });
 };
 
