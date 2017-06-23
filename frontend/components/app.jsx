@@ -6,6 +6,7 @@ import LeftNavContainer from './nav_bar/left_nav_container';
 import RightNavContainer from './nav_bar/right_nav_container';
 import PrelimFormContainer from './projects/prelim_container';
 import ProjectShowContainer from './projects/show_page_container';
+// import ProjectIndex from './projects/project_index';
 import FullFormContainer from './projects/full_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -29,9 +30,9 @@ const App = () => (
     </section>
 
     <Switch>
-      <Route path='/project/:project:Id' component={ProjectShowContainer} />
-      <Route exact path="/newproject" component={PrelimFormContainer} />
-      <ProtectedRoute exact path='/fullform' component={FullFormContainer} />
+      <Route path='/projects/:projectId' component={ProjectShowContainer} />
+      <Route path="/newproject" component={PrelimFormContainer} />
+      <ProtectedRoute path='/fullform' component={FullFormContainer} />
       <AuthRoute path="/login" component={SessionFormContainer} />
       <AuthRoute path="/signup" component={SessionFormContainer} />
     </Switch>

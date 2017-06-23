@@ -22,10 +22,10 @@ class FullProjectForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger
 
     const newProject = this.state;
     this.props.createProject(newProject)
+    this.props.history.push('/');
   }
 
   update(property) {

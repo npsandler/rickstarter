@@ -2,12 +2,11 @@ require 'active_support/core_ext/string'
 
 class Api::ProjectsController < ApplicationController
   def index
-    @projects = Project.all
+    @projects = Project.includes(:creator)
   end
 
   def show
-    debugger
-    @project = Project.find(params[:id])
+    @project = Project.includes(:creator).find(params[:id])
   end
 
 
@@ -15,7 +14,6 @@ class Api::ProjectsController < ApplicationController
     @project = Project.new(project_params)
     @project.creator = current_user
 
-debugger
     if @project.save
       render :show
     else

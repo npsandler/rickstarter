@@ -3,7 +3,6 @@ import { merge } from 'lodash';
 import { combineReducers } from "redux";
 
 const projectReducer = ( state = {}, action) => {
-  debugger
   switch (action.type) {
     case RECEIVE_ALL_PROJECTS:
       return merge({}, state, action.projects);

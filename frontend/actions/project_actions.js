@@ -18,7 +18,6 @@ export const requestSingleProject = (projectId) => (dispatch) => {
 };
 
 export const createProject = (project) => (dispatch) => {
-    debugger
     return (
       APIUtil.createProject(project)
     .then( (project) => dispatch(receiveSingleProject(project)))
