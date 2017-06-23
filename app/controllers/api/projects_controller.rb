@@ -6,6 +6,7 @@ class Api::ProjectsController < ApplicationController
   end
 
   def show
+    debugger
     @project = Project.find(params[:id])
   end
 
@@ -14,18 +15,12 @@ class Api::ProjectsController < ApplicationController
     @project = Project.new(project_params)
     @project.creator = current_user
 
-    debugger
-
-
-    @project.end_date = @project.end_date.to_string.to_time
-    # Date.strptime(@project.end_date.to_s, '%m-%d-%Y')
-
-    debugger
+debugger
     if @project.save
       render :show
     else
       render json: @project.errors.full_messages, status: 422
-    end@
+    end
   end
 
   def update

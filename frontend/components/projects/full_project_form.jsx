@@ -13,7 +13,7 @@ class FullProjectForm extends React.Component {
       description: '',
       end_date: null,
       funding_goal: null,
-      details: '',
+      details: 'The creator of this project has not added any details yet!',
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -22,13 +22,10 @@ class FullProjectForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.state.projectId = this.props.match.params.projectId;
-    //probably delete this line
     debugger
 
     const newProject = this.state;
     this.props.createProject(newProject)
-      .then( () => window.location.href = `/`);
   }
 
   update(property) {

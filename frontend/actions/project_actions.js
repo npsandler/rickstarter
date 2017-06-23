@@ -18,10 +18,11 @@ export const requestSingleProject = (projectId) => (dispatch) => {
 };
 
 export const createProject = (project) => (dispatch) => {
+    debugger
     return (
       APIUtil.createProject(project)
-    .then( () => dispatch(requestAllProjects()))
-  );
+    .then( (project) => dispatch(receiveSingleProject(project)))
+  ), err => dispatch(receiveErrors(err.responseJSON));
 };
 
 export const updateProject = project => dispatch => {

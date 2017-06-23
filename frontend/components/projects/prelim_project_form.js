@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 
 class PreliminaryProjectForm extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       category: '',
       title: ''

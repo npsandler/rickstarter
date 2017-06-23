@@ -3,12 +3,12 @@ import { merge } from 'lodash';
 import { combineReducers } from "redux";
 
 const projectReducer = ( state = {}, action) => {
+  debugger
   switch (action.type) {
     case RECEIVE_ALL_PROJECTS:
       return merge({}, state, action.projects);
     case RECEIVE_SINGLE_PROJECT:
-      const newProject = action.project;
-      return newProject;
+      return merge({}, state, action.project);
     case DELETE_PROJECT:
       const newState = merge({}, state);
       delete newState[action.project.id];
