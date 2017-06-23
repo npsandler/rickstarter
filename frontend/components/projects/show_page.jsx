@@ -1,10 +1,15 @@
 
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { Line } from 'rc-progress';
 
 class ShowPage extends React.Component {
   constructor(props) {
     super(props);
+
+
+
+    this.dateRemaining = this.dateRemaining.bind(this);
   }
 
   componentDidMount() {
@@ -13,23 +18,30 @@ class ShowPage extends React.Component {
     }
   }
 
-  numberWithCommas(date) {
-    return date.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  }
 
-  dateRemaining() {
-    const currentDate = new Date();
-    return this.numberWithCommas(
-      Math.ceil((new Date(this.props.end_date) - currentDate) / 86400000)
-    );
-  }
+
+
+  numberWithCommas(x) {
+    return(
+     x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+     );
+   }
+
+   dateRemaining() {
+     const currentDate = new Date();
+     return this.numberWithCommas(
+       Math.ceil((new Date(this.props.project.end_date) - currentDate) / 86400000)
+     );
+   }
 
   render() {
     // TODO: renderuserimage properly
     // TODO: days to do, backers
     // TODO: rewards view
     const { project } = this.props;
+    debugger
     if (project) {
+      const percentFunded = (project.current_funding / project.funding_goal) * 100
       // check project.current_funding
       return   (
         <article className='show-background'>
@@ -50,7 +62,10 @@ class ShowPage extends React.Component {
                 <div className='image'> IMG HERE</div>
               </section>
               <ul className='project-stats'>
-                <li className='current-funding-text'>${project.current_funding}</li>
+                <li className='funding-bar'>
+                  <Line percent={percentFunded} trailWidth="3" strokeColor="#D3D3D3" />
+                </li>
+                <li className='current-funding-text green'>${project.current_funding}</li>
                 <li className='funding-goal-text'>pledged of a ${project.funding_goal} goal</li>
                 <li className='stat'></li>
                 <li className='stat-line'>backers</li>

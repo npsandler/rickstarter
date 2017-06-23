@@ -1,0 +1,15 @@
+.project-index-container {
+  width: 100%;
+  margin: 0px;
+  margin-left: 5%;
+}
+.project-index {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 10%;
+  list-style-type: none;
+}
+.project-index > li {
+  width: 30%;
+}
