@@ -14,22 +14,46 @@ class FullProjectForm extends React.Component {
       end_date: null,
       funding_goal: null,
       details: 'The creator of this project has not added any details yet!',
+      image: null,
+      imageUrl: null
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.updateFile = this.updateFile.bind(this);
   }
 
 
   handleSubmit(e) {
     e.preventDefault();
+    const formData = new FormData();
 
-    const newProject = this.state;
-    this.props.createProject(newProject)
-    this.props.history.push('/');
+    Object.keys(this.state).forEach( key => {
+      if (key === "imageUrl" || (key === "image" && !this.state.image)) {
+        return;
+      }
+      formData.append(`project[${key}]`, this.state[key]);
+    });
+    // debugger
+    this.props.createProject(formData);
+    // this.props.history.push('/');
   }
 
   update(property) {
     return e => this.setState({ [property]: e.target.value });
+  }
+
+  updateFile(e) {
+    const file = e.currentTarget.files[0];
+    const fileReader = new FileReader();
+    fileReader.onloadend = () => {
+      this.setState({
+        image: file,
+        imageUrl: fileReader.result
+      });
+    };
+    if (file) {
+      fileReader.readAsDataURL(file);
+    }
   }
 
 
@@ -75,6 +99,8 @@ class FullProjectForm extends React.Component {
             </ul>
 
             <form className="full-project-form" onSubmit={this.handleSubmit}>
+              <input type="file" onChange={this.updateFile}/>
+              <img src={this.state.imageUrl}/>
               <section className='form-sub-box'>
                 <div>Project title</div>
                 <div className='right-box'>

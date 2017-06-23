@@ -19,6 +19,9 @@ class Project < ActiveRecord::Base
   validates :title, :end_date, :funding_goal, :description,
    :details, :creator_id, :category, presence: true
 
+  has_attached_file :image, default_url: "prelim-backdrop.png"
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+
 
   belongs_to :creator,
   class_name: :User,

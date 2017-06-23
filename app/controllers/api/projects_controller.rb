@@ -38,7 +38,8 @@ class Api::ProjectsController < ApplicationController
     :funding_goal,
     :details,
     :category,
-    :description
+    :description,
+    :image
     )
   end
 
