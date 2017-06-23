@@ -11,7 +11,7 @@ class FullProjectForm extends React.Component {
       category: importedCategory,
       title: importedTitle,
       description: '',
-      end_date: '1989-07-27',
+      end_date: null,
       funding_goal: null,
       details: '',
     };
@@ -25,6 +25,7 @@ class FullProjectForm extends React.Component {
     this.state.projectId = this.props.match.params.projectId;
     //probably delete this line
     debugger
+
     const newProject = this.state;
     this.props.createProject(newProject)
       .then( () => window.location.href = `/`);
@@ -108,13 +109,13 @@ class FullProjectForm extends React.Component {
                     {this.selectorRender()}
                 </select>
               </section>
-                // <section className='form-sub-box'>
-                //   // <div>Project end date</div>
-                //   // <div className='right-box'>
-                //   //   <input type="date" name="TEST" value={this.state.end_date} />
-                //   //   <div>Projects with shorter durations have higher success rates. You won’t be able to adjust your duration after you launch.</div>
-                //   // </div>
-                // </section>
+              <section className='form-sub-box'>
+                <div>Project end date</div>
+                <div className='right-box'>
+                  <input type="date" name="TEST" onChange={this.update('end_date')} value={this.state.end_date} />
+                  <div>Projects with shorter durations have higher success rates. You won’t be able to adjust your duration after you launch.</div>
+                </div>
+              </section>
                 <section className='form-sub-box'>
                   <div>Funding goal</div>
                   <div className='right-box'>
