@@ -17,9 +17,7 @@ export const requestSingleProject = (projectId) => (dispatch) => {
     .then(project => dispatch(receiveSingleProject(project)));
 };
 
-export const createProject = project => dispatch => {
-    console.log('hi from inside createpor')
-    debugger
+export const createProject = (project) => (dispatch) => {
     return (
       APIUtil.createProject(project)
     .then( () => dispatch(requestAllProjects()))

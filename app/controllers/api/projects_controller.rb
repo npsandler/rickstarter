@@ -7,10 +7,11 @@ class Api::ProjectsController < ApplicationController
     @project = Project.find(params[:id])
   end
 
+
   def create
-    debugger
     @project = Project.new(project_params)
-    @project.creator = currentUser
+    @project.creator = current_user
+    debugger
     if @project.save
       render :show
     else
@@ -29,7 +30,7 @@ class Api::ProjectsController < ApplicationController
   end
 
   def project_params
-    params.require(:projects).permit(
+    params.require(:project).permit(
     :title,
     :end_date,
     :funding_goal,

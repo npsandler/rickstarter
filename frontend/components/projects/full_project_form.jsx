@@ -1,21 +1,17 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import { createProject } from '../../util/project_api_util';
 
 class FullProjectForm extends React.Component {
   constructor(props) {
     super(props);
-    debugger
-    console.log('made it past debugger');
     const importedCategory = this.props.incompleteForm.category;
     const importedTitle = this.props.incompleteForm.title;
 
     this.state = {
       category: importedCategory,
       title: importedTitle,
-      body: '',
       description: '',
-      end_date: null,
+      end_date: '1989-07-27',
       funding_goal: null,
       details: '',
     };
@@ -26,10 +22,11 @@ class FullProjectForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger
     this.state.projectId = this.props.match.params.projectId;
-    // TODO: currentUser?
-    this.props.createProject(this.state)
+    //probably delete this line
+    debugger
+    const newProject = this.state;
+    this.props.createProject(newProject)
       .then( () => window.location.href = `/`);
   }
 
@@ -111,13 +108,13 @@ class FullProjectForm extends React.Component {
                     {this.selectorRender()}
                 </select>
               </section>
-                <section className='form-sub-box'>
-                  <div>Project end date</div>
-                  <div className='right-box'>
-                    <input type="date" name="TEST" value={this.state.end_date} />
-                    <div>Projects with shorter durations have higher success rates. You won’t be able to adjust your duration after you launch.</div>
-                  </div>
-                </section>
+                // <section className='form-sub-box'>
+                //   // <div>Project end date</div>
+                //   // <div className='right-box'>
+                //   //   <input type="date" name="TEST" value={this.state.end_date} />
+                //   //   <div>Projects with shorter durations have higher success rates. You won’t be able to adjust your duration after you launch.</div>
+                //   // </div>
+                // </section>
                 <section className='form-sub-box'>
                   <div>Funding goal</div>
                   <div className='right-box'>

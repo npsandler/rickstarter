@@ -21,11 +21,6 @@ class PreliminaryProjectForm extends React.Component {
     return e => this.setState({ [property]: e.target.value });
   }
 
-  componentWillReceiveProps() {
-    debugger
-    console.log('hi from CWRP');
-  }
-
 
   errors() {
     if (this.props.errors) {

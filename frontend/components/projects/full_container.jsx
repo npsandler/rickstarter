@@ -8,7 +8,7 @@ const mapStateToProps = ({errors, incompleteForm}) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  createProject: () => dispatch(createProject())
+  createProject: (project) => dispatch(createProject(project))
 });
 
 export default connect(
