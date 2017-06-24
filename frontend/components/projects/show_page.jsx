@@ -44,13 +44,13 @@ class ShowPage extends React.Component {
       // check project.current_funding
       return   (
         <article className='show-background'>
-          <section className='headline content-box'>
-            <section className='content-subsection'>
+          <section className='content-box'>
+            <section className='header content-subsection'>
               <section className='creator-area'>
                 <div className='creator-img'> prof-pic</div>
                 <div className='creator-name'>{project.creator.name}</div>
               </section>
-              <section className='headline-text'>
+              <section className='headline'>
                 <div className='title'>{project.title}</div>
                 <div className='description'>{project.description}</div>
               </section>
@@ -71,7 +71,7 @@ class ShowPage extends React.Component {
                 <li className='stat'>{this.dateRemaining()}</li>
                 <li className='stat-line'>days to go</li>
                 <li>
-                  <button className='backer-button'>Back this project</button>
+                  <button className='backer-button shadowed-green'>Back this project</button>
                 </li>
                 <li>
                   <text className='footer'>All or nothing. This project will only be funded if it reaches its goal by {project.end_date}}</text>
@@ -79,7 +79,7 @@ class ShowPage extends React.Component {
               </ul>
             </section>
 
-            <section className='content-subsection'>
+            <section className='lower content-subsection'>
               <section className='details-box'>
                 <div className='details'>{project.details}</div>
               </section>

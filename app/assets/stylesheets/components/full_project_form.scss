@@ -12,12 +12,32 @@
 }
 
 .content-container {
-  width: 50%;
-  margin-top: 10%;
-  margin: auto;
-  align-items: center
+  width: 75%;
+  margin: 0 auto;
+  background: white;
 }
 
-.full-header {
-  margin-top: 25%;
+.page-header {
+  padding: 70px 0;
+  width: 75%;
+  margin: 60px auto auto auto;
+  align-items: center;
+}
+
+.page-header h1, h2 {
+  color: #353535;
+  text-align: center;
+}
+.page-header h2 {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.form-sub-box {
+  width: 635;
+  height: 175;
+  background: #f8f9fd;
+  margin: 0 30px;
+  display: flex;
+  justify-content: space-between;
 }

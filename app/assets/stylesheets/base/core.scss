@@ -1,9 +1,12 @@
-a {
-  text-decoration: none;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
-  font-size: 10px;
-}
+
 
 body {
   background-color: solid #dad7d4;
+  text-decoration: none;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
+  font-size: inherit;
+}
+
+a {
+  text-decoration: none;
 }
