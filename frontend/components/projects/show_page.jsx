@@ -41,7 +41,7 @@ class ShowPage extends React.Component {
     const { project } = this.props;
     debugger
     if (project) {
-      const percentFunded = (project.current_funding / project.funding_goal) * 100
+      const percentFunded = Math.ceil((project.current_funding / project.funding_goal) * 100);
       // check project.current_funding
       return   (
         <article className='show-background'>

@@ -1,10 +1,12 @@
 .home-page {
   overflow: auto;
 }
-.carosel {
+
+.tester{
   height: 575px;
-  width: 100%;
+  background: lightgray;
 }
+
 
 
 .project-index-container {
@@ -31,6 +33,7 @@
 .project-index-item {
   width: 400px;
   height: 515px;
+  margin-top: 5%;
   border: 1px solid white;
   box-shadow: 2px 2px 2px #bbadad, -2px 2px 2px #bbadad;
 }
@@ -76,4 +79,35 @@
 .preview-funding-bar {
   width: 85%;
   margin-left: 5%;
+}
+
+.carousel {
+  height: 575px;
+  width: 100%;
+  arrows: true;
+  dots: true;
+  fade: true;
+  infinite: true
+}
+
+.slick-slide {
+  height: 575px !important;
+  width: 100%;
+}
+
+.abc {
+  background-color: gray;
+  z-index: -1;
+}
+.bcd {
+  background-color: red;
+  z-index: -1;
+}
+.def {
+  background-color: white;
+  z-index: -1;
+}
+.efg {
+  background-color: blue;
+  z-index: -1;
 }

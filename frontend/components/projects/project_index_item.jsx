@@ -25,8 +25,10 @@ class ProjectIndexItem extends React.Component {
 
   render() {
     const { project } = this.props;
-    debugger
-    const percentFunded = (project.current_funding / project.funding_goal) * 100;
+    let percentFunded = Math.ceil((project.current_funding / project.funding_goal) * 100);
+    if (percentFunded > 100) {
+      percentFunded = 100;
+    }
     return (
       <li className="project-index-item">
         <Link className='preview-wrapper' to={`/projects/${project.id}`}>
@@ -48,7 +50,7 @@ class ProjectIndexItem extends React.Component {
               <div> creatorname </div>
             </section>
             <div className='preview-funding-bar'>
-              <Line percent={percentFunded} trailWidth="3" strokeColor="#D3D3D3" />
+              <Line percent={percentFunded} trailWidth="3" strokeColor="#25CB68" />
             </div>
             <div className='preview-stat text-element'>
               <div className='heavy'>${project.current_funding}</div>
