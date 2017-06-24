@@ -15,3 +15,6 @@ users = User.create([{email: 'rick@aol.com', name: 'Rick Sanchez', password: 'hu
   {email: 'demo', name: 'Demo', password: 'hunter12'}])
 
 Project.create({title: 'Anatomy Park', description: 'Help us fund the worlds premier new theme park', details: "fill me in later",  end_date: DateTime.now(), funding_goal: 50000, creator_id: users[0].id, category: 'Theatre'})
+Project.create({title: 'Help me take 3 strokes off my short game', description: 'how hard can it be?', details: "fill me in later",  end_date: DateTime.now(), funding_goal: 50000, creator_id: users[0].id, category: 'Theatre'})
+Project.create({title: 'Anatomy Park', description: 'Help us fund the worlds premier new theme park', details: "fill me in later",  end_date: DateTime.now(), funding_goal: 50000, creator_id: users[0].id, category: 'Theatre'})
+Project.create({title: 'Anatomy Park', description: 'Help us fund the worlds premier new theme park', details: "fill me in later",  end_date: DateTime.now(), funding_goal: 50000, creator_id: users[0].id, category: 'Theatre'})

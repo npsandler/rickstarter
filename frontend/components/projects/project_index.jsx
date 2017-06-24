@@ -14,10 +14,16 @@ componentDidMount() {
    const projects = Object.keys(this.props.projects).map( key => this.props.projects[key]);
    if (projects.length > 0) {
      return (
-        <section className="project-index-container">
-          <ul className='project-index'>
-            { projects.map(project => <ProjectIndexItem key={project.id} project={project} />)}
-          </ul>
+       <section className='home-page-background'>
+         <section className='home-page'>
+           <section className='carousel'>
+           </section>
+           <section className="project-index-container">
+             <ul className='project-index'>
+               { projects.map(project => <ProjectIndexItem key={project.id} project={project} />)}
+             </ul>
+           </section>
+         </section>
         </section>
       );
     } else {

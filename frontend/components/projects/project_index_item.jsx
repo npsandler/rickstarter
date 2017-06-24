@@ -29,40 +29,40 @@ class ProjectIndexItem extends React.Component {
     const percentFunded = (project.current_funding / project.funding_goal) * 100;
     return (
       <li className="project-index-item">
-        <Link to={`/projects/${project.id}`}>
-          <div>image</div>
-          <div> { project.category } </div>
-          <div> { project.title } </div>
-          <div> { project.description } </div>
-          <section className='creator'>
-            <div className='preview-pic'> creatorpic </div>
-            <div> creatorname </div>
+        <Link className='preview-wrapper' to={`/projects/${project.id}`}>
+          <section className='text-wrapper'>
+          <div className='preview-image'>image</div>
+            <div className='text-element'> { project.category } </div>
+
+            <div className='text-element'>
+              <text className='heavy'>
+                { project.title }:
+              </text>
+              <text className='light'>
+                { project.description }
+              </text>
+            </div>
+
+            <section className='creator'>
+              <div className='preview-pic text-element'> creatorpic </div>
+              <div> creatorname </div>
+            </section>
+            <div className='preview-funding-bar'>
+              <Line percent={percentFunded} trailWidth="3" strokeColor="#D3D3D3" />
+            </div>
+            <div className='preview-stat text-element'>
+              <div className='heavy'>${project.current_funding}</div>
+              <div className='light'> pledged</div>
+            </div>
+            <div className='preview-stat text-element'>
+              <div className='heavy'>{percentFunded}%</div>
+              <div className='light'> funded</div>
+            </div>
+            <div className='preview-stat text-element'>
+              <div className='heavy'>{this.dateRemaining()}</div>
+              <div className='light'> days to do </div>
+            </div>
           </section>
-          <div className='preview-funding-bar'>
-            <Line percent={percentFunded} trailWidth="3" strokeColor="#D3D3D3" />
-          </div>
-          <div className='preview-stat'>
-            <text>US$</text>
-            <div>${project.current_funding}</div>
-            <div> pledged</div>
-          </div>
-          <div className='preview-stat'>
-            <div>{percentFunded}%</div>
-            <div> funded</div>
-          </div>
-          <div className='preview-stat'>
-            <div>{this.dateRemaining()}</div>
-            <div> days remaining </div>
-          </div>
-
-
-
-          <div className='funding-goal-text'>pledged of a ${project.funding_goal} goal</div>
-
-
-
-
-
         </Link>
 
 

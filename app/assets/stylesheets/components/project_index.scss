@@ -1,15 +1,79 @@
+.home-page {
+  overflow: auto;
+}
+.carosel {
+  height: 575px;
+  width: 100%;
+}
+
+
 .project-index-container {
   width: 100%;
   margin: 0px;
-  margin-left: 5%;
+  margin-left: -2%;
 }
+
+.project-index-container:hover{
+  cursor: pointer;
+}
+
 .project-index {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-left: 10%;
+  margin: 10%;
   list-style-type: none;
 }
 .project-index > li {
   width: 30%;
+}
+
+.project-index-item {
+  width: 400px;
+  height: 515px;
+  border: 1px solid white;
+  box-shadow: 2px 2px 2px #bbadad, -2px 2px 2px #bbadad;
+}
+
+.preview-image {
+  width: 98%;
+  height: 200px;
+  margin-left: -11px;
+  margin-top: -10px;
+  border: solid green;
+}
+
+.preview-wrapper {
+  width: 101%;
+  height: 100%;
+  margin: auto;
+}
+.creator {
+  display: flex;
+}
+.preview-stat {
+  display: flex;
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.text-element {
+  padding: 10px;
+  padding-left: 5%;
+}
+.heavy {
+  font-weight: bold;
+  padding-right: 3px;
+}
+
+.light {
+  font-weight: 300;
+}
+.preview-funding-bar {
+  width: 85%;
+  margin-left: 5%;
 }
