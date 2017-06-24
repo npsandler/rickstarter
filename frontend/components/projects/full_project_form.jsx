@@ -33,7 +33,6 @@ class FullProjectForm extends React.Component {
       }
       formData.append(`project[${key}]`, this.state[key]);
     });
-    // debugger
     this.props.createProject(formData);
     // this.props.history.push('/');
   }

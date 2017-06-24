@@ -39,7 +39,6 @@ class ShowPage extends React.Component {
     // TODO: days to do, backers
     // TODO: rewards view
     const { project } = this.props;
-    debugger
     if (project) {
       const percentFunded = Math.ceil((project.current_funding / project.funding_goal) * 100);
       // check project.current_funding
