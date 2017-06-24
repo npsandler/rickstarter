@@ -82,17 +82,19 @@
 }
 
 .carousel {
-  height: 575px;
+  height: 700px;
   width: 100%;
-  arrows: true;
-  dots: true;
-  fade: true;
-  infinite: true
 }
 
 .slick-slide {
-  height: 575px !important;
+  height: 700px !important;
   width: 100%;
+}
+
+.index-header {
+  padding-top: 3%;
+  padding-left: 12%;
+  margin-bottom: -10%;
 }
 
 .abc {
@@ -111,3 +113,8 @@
   background-color: blue;
   z-index: -1;
 }
+//
+// $('.carousel-slide').slick({
+//       prevArrow:"<img class='a-left control-c prev slick-prev' src='../images/shoe_story/arrow-left.png'>",
+//       nextArrow:"<img class='a-right control-c next slick-next' src='../images/shoe_story/arrow-right.png'>"
+//   });
