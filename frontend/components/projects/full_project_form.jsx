@@ -117,6 +117,8 @@ class FullProjectForm extends React.Component {
                     onChange={this.update('title')}
                   />
                 <text>Our search looks through words from your project title and blurb, so make them clear and descriptive of what you’re making. Your profile name will be searchable, too.
+                </text>
+                  <text>
                     These words will help people find your project, so choose them wisely! Your name will be searchable too.</text>
                 </div>
               </section>
@@ -150,6 +152,8 @@ class FullProjectForm extends React.Component {
                   <div className='right-box'>
                     <input type="number" onChange={this.update('funding_goal')} value={this.state.funding_goal} />
                   <text>Funding on Rickstarter is all-or-nothing. It’s okay to raise more than your goal, but if your goal isn’t met, no money will be collected. Your goal should reflect the minimum amount of funds you need to complete your project and send out rewards, and include a buffer for payments processing fees.
+                  </text>
+                    <text>
                     If your project is successfully funded, the following fees will be collected from your funding total: Rickstarter’s 5% fee, and payment processing fees (between 3% and 5%). If funding isn’t successful, there are no fees.</text>
                   </div>
                 </section>

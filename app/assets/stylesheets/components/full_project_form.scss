@@ -15,6 +15,7 @@
   width: 75%;
   margin: 0 auto;
   background: white;
+  border: 1px solid #dcdedd;
 }
 
 .page-header {
@@ -34,10 +35,44 @@
 }
 
 .form-sub-box {
-  width: 635;
-  height: 175;
+  // height: 175px !important;
   background: #f8f9fd;
-  margin: 0 30px;
+  margin: 20px 25px;
   display: flex;
   justify-content: space-between;
+}
+
+.form-sub-box h3 {
+  display: block;
+  width: 25%;
+  padding: 0 15px;
+  font-size: 13px;
+}
+
+.form-sub-box text {
+  font-size: 12px;
+  font-weight: 400;
+  width: 90%;
+  padding: 15px 0;
+}
+
+.right-box {
+  display: flex;
+  width: 75%;
+  flex-direction: column;
+  justify-content: flex-end;
+  // align-items: flex-start;
+
+}
+
+.right-box input, select {
+  border-radius: 6px;
+  margin: 5px 5px 5px 0;
+  height: 43px;
+  box-sizing: border-box;
+  padding: 12px;
+  width: 95%;
+  line-height: 17px;
+  background: white;
+  border: 1px solid #dad7d4;
 }
