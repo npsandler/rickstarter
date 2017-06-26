@@ -37,7 +37,8 @@ class Api::RewardsController < ApplicationController
     :pledge_amount,
     :description,
     :project_id,
-    :number_remaining
+    :num_allowed,
+    :num_backers
     )
   end
 

@@ -10,6 +10,8 @@
 #  number_remaining :integer          not null
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
+#  num_backers      :integer          default(0)
+#  num_allowed      :integer
 #
 
 require 'test_helper'

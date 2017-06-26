@@ -3,6 +3,8 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Line } from 'rc-progress';
 
+import RewardItem from '../rewards/reward_item';
+
 class ShowPage extends React.Component {
   constructor(props) {
     super(props);
@@ -34,14 +36,14 @@ class ShowPage extends React.Component {
      );
    }
 
+
+
   render() {
     // TODO: renderuserimage properly
     // TODO: days to do, backers
-    // TODO: rewards view
     const { project } = this.props;
     if (project) {
       const percentFunded = Math.ceil((project.current_funding / project.funding_goal) * 100);
-      // check project.current_funding
       return   (
         <article className='show-background'>
           <section className='content-box'>
@@ -84,7 +86,8 @@ class ShowPage extends React.Component {
                 <div className='details'>{project.details}</div>
               </section>
               <section className='rewards-bar'>
-                Rewards go here
+                <h1>Support this project</h1>
+                { project.rewards.map(reward => <RewardItem key={reward.id} reward={reward} />) }
               </section>
             </section>
           </section>

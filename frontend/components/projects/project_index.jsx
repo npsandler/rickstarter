@@ -32,12 +32,24 @@ componentDidMount() {
              <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
              <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.3.15/slick.css" />
             	<Slider {...sliderSettings}>
+                <section className='carousel-slide'>
+                  <img className="carousel-image" src={projects[0].image}/>
+                  <text className="carousel-overlay"> {projects[0].title}</text>
+                </section>
+                <section className='carousel-slide'>
+                  <img className="carousel-image" src={projects[1].image}/>
+                  <text className="carousel-overlay"> {projects[1].title}</text>
+                </section>
+                <section className='carousel-slide'>
+                  <img className="carousel-image" src={projects[2].image}/>
+                  <text className="carousel-overlay"> {projects[2].title}</text>
+                </section>
+                <section className='carousel-slide'>
+                  <img className="carousel-image" src={projects[3].image}/>
+                  <text className="carousel-overlay"> {projects[3].title}</text>
+                </section>
 
-                <div className='abc carousel-slide'>hello from carousel slide 1</div>
-                <div className='bcd carousel-slide'>hello from carousel slide 2</div>
-                <div className='def carousel-slide'>hello from carousel slide 3</div>
-                <div className='efg carousel-slide'>hello from carousel slide 4</div>
-              </Slider>
+               </Slider>
            </section>
            <section className="project-index-container">
              <h1 className='index-header'>Recent projects</h1>

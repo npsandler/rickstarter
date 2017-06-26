@@ -10,10 +10,12 @@
 #  number_remaining :integer          not null
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
+#  num_backers      :integer          default(0)
+#  num_allowed      :integer
 #
 
 class Reward < ActiveRecord::Base
-  validates :project, :title, :pledge_amount, :description, :number_remaining, presence: true
+  validates :project, :title, :pledge_amount, :description, presence: true
 
   belongs_to :project
 end

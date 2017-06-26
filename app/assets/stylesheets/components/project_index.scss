@@ -98,21 +98,8 @@
   margin-bottom: -10%;
 }
 
-.abc {
-  background-color: gray;
-  z-index: -1;
-}
-.bcd {
-  background-color: red;
-  z-index: -1;
-}
-.def {
-  background-color: white;
-  z-index: -1;
-}
-.efg {
-  background-color: blue;
-  z-index: -1;
+.carousel-image {
+  object-fit: fill;
 }
 //
 // $('.carousel-slide').slick({
