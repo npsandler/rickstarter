@@ -30,7 +30,9 @@
 
 .content-subsection {
   display: flex;
-  margin: 90px 0 50px 0;
+  margin: 0 auto;
+  justify-content: center;
+  padding-bottom: 110px;
 }
 
 
@@ -42,6 +44,12 @@
   width: 750px;
   height: 425px;
   border: 2px solid gray;
+  margin-right: 35px;
+}
+.image {
+  // object-fit: contain;
+  width: 100%;
+  height: auto;
 }
 .project-stats {
   list-style-type: none;
@@ -93,5 +101,9 @@
   font-size: 15px;
 }
 .lower {
-  justify-content: space-between !important;
+  padding-top: 40px;
+  border-top: 1px solid #f1eeea;
+  width: 1900px;
+  justify-content: space-around !important;
+  background: white;
 }

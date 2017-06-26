@@ -42,7 +42,7 @@ class ShowPage extends React.Component {
     // TODO: renderuserimage properly
     // TODO: days to do, backers
     const { project } = this.props;
-    if (project) {
+    if (project) {``
       const percentFunded = Math.ceil((project.current_funding / project.funding_goal) * 100);
       return   (
         <article className='show-background'>
@@ -60,7 +60,7 @@ class ShowPage extends React.Component {
 
             <section className='content-subsection'>
               <section className='project-image'>
-                <div className='image'> IMG HERE</div>
+                <img className='image' src={project.image}/>
               </section>
               <ul className='project-stats'>
                 <li className='funding-bar'>
@@ -76,13 +76,14 @@ class ShowPage extends React.Component {
                   <button className='backer-button shadowed-green'>Back this project</button>
                 </li>
                 <li>
-                  <text className='footer'>All or nothing. This project will only be funded if it reaches its goal by {project.end_date}}</text>
+                  <text className='footer'>All or nothing. This project will only be funded if it reaches its goal by {project.end_date}</text>
                 </li>
               </ul>
             </section>
 
             <section className='lower content-subsection'>
               <section className='details-box'>
+                <h2>About this project</h2>
                 <div className='details'>{project.details}</div>
               </section>
               <section className='rewards-bar'>

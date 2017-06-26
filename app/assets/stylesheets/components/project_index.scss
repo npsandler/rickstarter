@@ -40,11 +40,10 @@
 }
 
 .preview-image {
-  width: 98%;
-  height: 200px;
+  width: 100%;
+  height: 260px;
   margin-left: -11px;
   margin-top: -10px;
-  border: solid green;
 }
 
 .preview-wrapper {
@@ -68,14 +67,19 @@
 .text-element {
   padding: 10px;
   padding-left: 5%;
+  height: auto;
+  word-wrap: break-word;
 }
+
+
 .heavy {
   font-weight: bold;
   padding-right: 3px;
 }
 
 .light {
-  font-weight: 300;
+  font-weight: 400;
+  color: gray;
 }
 .preview-funding-bar {
   width: 85%;

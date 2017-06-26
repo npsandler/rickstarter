@@ -1,3 +1,32 @@
 .reward {
   width: 325px;
+  background: rgb(248, 249, 253);
+  border: 1px solid rgb(224, 228, 251);
+  padding: 30px 25px;
+  margin-bottom: 25px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.reward ul {
+  list-style: none;
+}
+
+.reward-title {
+  font-size: 18px;
+  margin: 0;
+}
+
+.blue {
+  color: rgb(88, 107, 233);
+}
+
+.orange {
+  color: rgb(255, 129, 101);
+}
+
+.gray {
+  color: gray;
 }
