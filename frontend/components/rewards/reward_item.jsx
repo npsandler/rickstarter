@@ -13,7 +13,7 @@ class RewardItem extends React.Component {
       debugger
       let numRemaining = reward.num_allowed - reward.num_backers;
       return (
-        <li className="orange">Limited ({numRemaining} of {reward.num_allowed} left)</li>
+        <p className="orange">Limited ({numRemaining} of {reward.num_allowed} left)</p>
       );
     } else {
       return (
@@ -27,13 +27,11 @@ class RewardItem extends React.Component {
 
     return (
       <section className='reward'>
-        <ul>
-          <li className="blue reward-title">Pledge ${reward.pledge_amount} or more</li>
-          <li>{reward.title}</li>
-          <li className='gray'>{reward.description}</li>
-          {this.numberRemaining()}
-          <li className='gray'>{reward.num_backers} backers</li>
-        </ul>
+        <p className="reward-blue reward-header">Pledge ${reward.pledge_amount} or more</p>
+        <label className='reward-header'>{reward.title}</label>
+        <text className='gray desc'>{reward.description}</text>
+        {this.numberRemaining()}
+        <p className='gray'>{reward.num_backers} backers</p>
       </section>
     );
   }

@@ -32,17 +32,26 @@
   display: flex;
   margin: 0 auto;
   justify-content: center;
-  padding-bottom: 110px;
 }
 
+h2 {
+  font-weight: normal;
+}
+
+.move-left {
+  text-align: left;
+}
 
 .header {
   height: 215px;
-
+  width: 1250px;
+  margin: 150px auto 0 auto;
+  display: flex;
+  justify-content: flex-start;
 }
 .project-image{
-  width: 750px;
-  height: 425px;
+  width: 820px;
+  height: 460px;
   border: 2px solid gray;
   margin-right: 35px;
 }
@@ -99,8 +108,12 @@
 
 .footer {
   font-size: 15px;
+  width: 350;
+  height: auto;
+  word-wrap: break-word;
 }
 .lower {
+  margin-top: 140px;
   padding-top: 40px;
   border-top: 1px solid #f1eeea;
   width: 1900px;

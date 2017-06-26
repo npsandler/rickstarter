@@ -1,26 +1,40 @@
 .reward {
+  box-sizing: border-box;
   width: 325px;
   background: rgb(248, 249, 253);
   border: 1px solid rgb(224, 228, 251);
-  padding: 30px 25px;
-  margin-bottom: 25px;
+  // padding: 30px;
+  margin: 0 70px 25px 0;
   font-size: 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
-.reward ul {
-  list-style: none;
+// .reward:hover {
+//   color: rgba(43, 222, 115, 0.9);
+// }
+
+
+.reward >  p {
+  padding: 10px 0 10px 25px;;
 }
 
-.reward-title {
+.reward > text {
+  padding: 5px 0 0 25px;
+}
+
+.reward-header {
   font-size: 18px;
-  margin: 0;
+  padding-left: 25px;
 }
 
-.blue {
+
+
+.reward-blue {
   color: rgb(88, 107, 233);
+  font-weight: 300;
+  margin-left: 0;
 }
 
 .orange {

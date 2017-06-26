@@ -58,7 +58,7 @@ class ShowPage extends React.Component {
               </section>
             </section>
 
-            <section className='content-subsection'>
+            <section className='main-content content-subsection'>
               <section className='project-image'>
                 <img className='image' src={project.image}/>
               </section>
@@ -87,7 +87,7 @@ class ShowPage extends React.Component {
                 <div className='details'>{project.details}</div>
               </section>
               <section className='rewards-bar'>
-                <h1>Support this project</h1>
+                <h2 className="move-left">Support this project</h2>
                 { project.rewards.map(reward => <RewardItem key={reward.id} reward={reward} />) }
               </section>
             </section>

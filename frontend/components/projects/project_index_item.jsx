@@ -29,6 +29,7 @@ class ProjectIndexItem extends React.Component {
     if (percentFunded > 100) {
       percentFunded = 100;
     }
+    debugger
     return (
       <li className="project-index-item">
         <Link className='preview-wrapper' to={`/projects/${project.id}`}>
@@ -40,7 +41,8 @@ class ProjectIndexItem extends React.Component {
               <text className='heavy'>
                 { project.title }:
               </text>
-              <text className='light'>
+            </br>
+              <text className='light wrap'>
                 { project.description }
               </text>
             </div>
