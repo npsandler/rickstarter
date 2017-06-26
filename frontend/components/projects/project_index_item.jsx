@@ -33,7 +33,7 @@ class ProjectIndexItem extends React.Component {
       <li className="project-index-item">
         <Link className='preview-wrapper' to={`/projects/${project.id}`}>
           <section className='text-wrapper'>
-          <div className='preview-image'>image</div>
+          <img className='preview-image' scr={project.image} />
             <div className='text-element'> { project.category } </div>
 
             <div className='text-element'>

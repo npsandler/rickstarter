@@ -16,6 +16,7 @@
 }
 
 .project-index-container:hover{
+  // width: 1250px;
   cursor: pointer;
 }
 
@@ -31,8 +32,8 @@
 }
 
 .project-index-item {
-  width: 400px;
-  height: 515px;
+  width: 390;
+  height: 535px;
   margin-top: 5%;
   border: 1px solid white;
   box-shadow: 2px 2px 2px #bbadad, -2px 2px 2px #bbadad;
