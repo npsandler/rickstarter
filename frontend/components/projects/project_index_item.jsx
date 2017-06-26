@@ -41,14 +41,14 @@ class ProjectIndexItem extends React.Component {
               <text className='heavy'>
                 { project.title }:
               </text>
-            </br>
+                <br/>
               <text className='light wrap'>
                 { project.description }
               </text>
             </div>
 
             <section className='creator'>
-              <div className='preview-pic text-element'> creatorpic </div>
+              <img className="preview-pic text-element" src={project.creator.image}/>
               <div> creatorname </div>
             </section>
             <div className='preview-funding-bar'>

@@ -10,10 +10,10 @@ User.destroy_all
 Project.destroy_all
 Reward.destroy_all
 
-users = User.create([{email: 'rick@aol.com', image: Project.open("app/assets/images/rick.png") name: 'Rick Sanchez', password: 'hunter12'},
+users = User.create([{email: 'rick@aol.com', image: File.open("app/assets/images/rick.png"), name: 'Rick Sanchez', password: 'hunter12'},
   {email: 'npsandler@gmail.com', name: 'Nathaniel Sandler', password: 'hunter12'},
-  {email: 'morty@aol.com', image: Project.open("app/assets/images/morty.png") name: 'Morty Smith', password: 'hunter12'},
-  {email: 'jerry@aol.com', image: Project.open("app/assets/images/jerry.png") name: 'Jerry Smith', password: 'hunter12'},
+  {email: 'morty@aol.com', image: File.open("app/assets/images/morty.png"), name: 'Morty Smith', password: 'hunter12'},
+  {email: 'jerry@aol.com', image: File.open("app/assets/images/jerry.png"), name: 'Jerry Smith', password: 'hunter12'},
   {email: 'demo', name: 'Demo', password: 'hunter12'}])
 
 Project.create!({title: 'Anatomy Park', image: File.open("app/assets/images/Anatomy_park.png"), description: 'Help us fund the worlds premier new theme park', details: "fill me in later",  end_date: DateTime.now(), funding_goal: 50000, creator_id: users[0].id, category: 'Theatre'})
@@ -28,4 +28,3 @@ Reward.create({project_id: Project.all.first.id, title: "Unlimited lifetime pass
 
 
 Reward.create({project_id: Project.all.second.id, title: "Thank you", pledge_amount: 5, description: "A thank you from Jerry for your help and support!"})
-ex
