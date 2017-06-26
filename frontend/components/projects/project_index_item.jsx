@@ -48,8 +48,8 @@ class ProjectIndexItem extends React.Component {
             </div>
 
             <section className='creator'>
-              <img className="preview-pic text-element" src={project.creator.image}/>
-              <div> creatorname </div>
+              <img className="thumb text-element" src={project.creator.image}/>
+              <text className='creator'>{project.creator.name}</text>
             </section>
             <div className='preview-funding-bar'>
               <Line percent={percentFunded} trailWidth="3" strokeColor="#25CB68" />

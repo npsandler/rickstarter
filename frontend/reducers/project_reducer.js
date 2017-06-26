@@ -19,23 +19,6 @@ const projectReducer = ( state = {}, action) => {
   }
 };
 
-// const selectAllProjects = (state) => {
-//   return(
-//     state.allIds.map( id => state.byId[id] );
-//   );
-// };
-//
-// const allProjects = (state = [], action) => {
-//   const allProjects = selectAllProjects(state);
-//   switch (action.type) {
-//     case RECEIVE_ALL_PROJECTS:
-//       return allProjects;
-//     default;
-//
-//   }
-// };
-
-
 
 
 

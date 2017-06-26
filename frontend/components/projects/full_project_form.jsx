@@ -158,9 +158,7 @@ class FullProjectForm extends React.Component {
                   </div>
                 </section>
                 <section className='bottom-bar'>
-                  <div>Discard changes</div>
-                  // TODO: get discard changes to work
-                  <button className='project-submit-button'>Save and continue</button>
+                  <button className='submit-button'>Save and continue</button>
                 </section>
             </form>
           </section>

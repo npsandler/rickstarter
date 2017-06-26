@@ -2,10 +2,6 @@
   overflow: auto;
 }
 
-.tester{
-  height: 575px;
-  background: lightgray;
-}
 
 
 
@@ -33,7 +29,7 @@
 
 .project-index-item {
   width: 390;
-  height: 535px;
+  height: 600px;
   margin-top: 5%;
   border: 1px solid white;
   box-shadow: 2px 2px 2px #bbadad, -2px 2px 2px #bbadad;
@@ -105,6 +101,15 @@
 .carousel-image {
   object-fit: fill;
 }
+
+.thumb {
+  border-radius: 50%;
+}
+
+.creator {
+  padding: 20px;
+}
+
 
 
 //
