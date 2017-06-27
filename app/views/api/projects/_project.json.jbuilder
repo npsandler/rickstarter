@@ -1,4 +1,4 @@
-json.extract! project, :id, :title, :end_date, :funding_goal, :details, :category, :description, :current_funding, :rewards
+json.extract! project, :id, :title, :end_date, :funding_goal, :details, :category, :description, :current_funding, :rewards, :backers
 json.image asset_path(project.image.url)
 
 json.set! :creator do

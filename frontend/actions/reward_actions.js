@@ -7,6 +7,8 @@ export const DELETE_REWARDS = 'DELETE_REWARDS';
 export const EDIT_REWARDS = 'EDIT_REWARDS';
 export const RECEIVE_REWARDS_ERRORS = 'RECEIVE_REWARDS_ERRORS';
 
+import { updateProject } from './project_actions';
+
 
 export const requestAllRewards = () => (dispatch) => {
   return APIUtil.fetchAllRewards()
@@ -25,10 +27,11 @@ export const createReward = (reward) => (dispatch) => {
   ), err => dispatch(receiveErrors(err.responseJSON));
 };
 
-export const createPledge = projectId => dispatch => {
-  return APIUtil.addPledge(projectId).then(project => {
-    dispatch(requestSingleProject(project));
-  });
+export const createPledge = (reward) => dispatch => {
+  return (
+    APIUtil.addPledge(reward)
+    .then( (project) =>  dispatch(updateProject(project)))
+  );
 };
 
 

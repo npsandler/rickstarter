@@ -13,7 +13,6 @@ export const requestAllProjects = () => (dispatch) => {
 };
 
 export const requestSingleProject = (projectId) => (dispatch) => {
-  debugger
   return APIUtil.fetchSingleProject(projectId)
     .then(project => dispatch(receiveSingleProject(project)));
 };

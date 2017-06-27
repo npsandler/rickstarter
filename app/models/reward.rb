@@ -19,4 +19,8 @@ class Reward < ActiveRecord::Base
 
   belongs_to :project,
   inverse_of: :rewards
+
+  has_many :pledgings,
+  class_name: :Pledge,
+  foreign_key: :reward_id
 end

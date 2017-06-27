@@ -36,6 +36,10 @@ class Project < ActiveRecord::Base
   has_many :rewards,
   inverse_of: :project
 
+  has_many :backers,
+  source: :pledgings,
+  through: :rewards
+
   accepts_nested_attributes_for :rewards
 
 

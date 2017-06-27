@@ -4,7 +4,6 @@ import { withRouter } from 'react-router-dom';
 class RewardItem extends React.Component {
   constructor(props) {
     super(props);
-    debugger
     this.processPledge = this.processPledge.bind(this)
   }
 
@@ -25,20 +24,19 @@ class RewardItem extends React.Component {
 
   processPledge(e) {
     e.preventDefault()
-    debugger
-    this.props.createPledge(this.props.match.params.projectId)
+    this.props.createPledge(this.props.reward)
   }
 
   render() {
     let { reward } = this.props;
-
+    debugger
     return (
       <section onClick={this.processPledge} className='reward'>
         <p className="reward-blue reward-header">Pledge ${reward.pledge_amount} or more</p>
         <label className='reward-header'>{reward.title}</label>
         <text className='gray desc'>{reward.description}</text>
         {this.numberRemaining()}
-        <p className='gray'>{reward.num_backers} backers</p>
+        <p className='gray'>{0} backers</p>
       </section>
     );
   }

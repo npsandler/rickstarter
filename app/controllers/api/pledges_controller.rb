@@ -3,11 +3,13 @@ class Api::PledgesController < ApplicationController
 
 
   def create
-    debugger
     @pledge = Pledge.new(pledge_params)
-    @pledge.backer_id = current_user.id
+    # @pledge.reward_id = pledge_params[id]
+    @pledge.user_id = current_user.id
     if @pledge.save
-      render :show
+      @pledge.project.current_funding += @pledge.reward.pledge_amount
+      debugger
+      render json: @pledge.project
     else
       render json: @pledge.errors.full_messages, status: 422
     end
@@ -24,6 +26,6 @@ class Api::PledgesController < ApplicationController
   end
 
   def pledge_params
-    params.require(:project)
+    params.permit(:reward_id)
   end
 end

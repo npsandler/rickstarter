@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import RewardItem from './reward_item';
-import { createPledge } from '../../actions/project_actions';
+import { createPledge } from '../../actions/reward_actions';
 
 const mapStateToProps = ({ project }) => {
   return {

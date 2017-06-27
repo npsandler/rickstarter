@@ -1,4 +1,4 @@
-@indexs.each do |index|
+@rewards.each do |index|
   json.set! index.id do
     json.partial! 'index', index: index
   end
