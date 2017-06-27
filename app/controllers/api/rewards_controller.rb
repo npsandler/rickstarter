@@ -11,9 +11,10 @@ class Api::RewardsController < ApplicationController
 
 
   def create
+    debugger
     @reward = Reward.new(reward_params)
-    # @reward.project =
-    # find current project from path
+
+    @reward.project_id = Project.all.last.id
     if @reward.save
       render :show
     else

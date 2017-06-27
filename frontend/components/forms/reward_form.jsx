@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import RewardFormItem from './reward_form_item';
 
 
 class RewardForm extends React.Component {
@@ -8,8 +9,8 @@ class RewardForm extends React.Component {
     this.state = {
       rewards: this.props.incompleteForm.rewards
     };
-    debugger
-    this.addReward = this.addReward.bind(this);
+
+    this.addRewardForm = this.addRewardForm.bind(this);
   }
 
 
@@ -29,60 +30,33 @@ class RewardForm extends React.Component {
     }
   }
 
-  addReward(e) {
+  addRewardForm(e) {
     e.preventDefault();
-    this.state.rewards.push({
-      title: '',
-      num_allowed: null,
-      description: "",
-      pledge_amount: 5
-    })
+    this.props.receiveBlankReward();
   }
 
   render() {
+    let rewardItems = [];
+    this.props.incompleteForm.rewards.forEach(
+      (reward, idx) => (
+        rewardItems.push(
+          <RewardFormItem
+            key={idx}
+            idx={idx}
+            receiveIncompleteReward={this.props.receiveIncompleteReward}
+            reward={reward} />)
+      )
+    )
     return (
       <section className="full-project-create">
 
         <h1 className='full-header'>Set your rewards.</h1>
         <h2 className='sub-header'>Invite backers to be a part of the creative experience by offering rewards like a copy of what you’re making, a special experience, or a behind-the-scenes look into your process.</h2>
-
-        <h4>Reward #{this.reward_num}</h4>
-        <section className="reward-inputs">
           <ul className="errors">{this.errors()}</ul>
-          <section className="reward-title-row">
-            <label>Title</label>
-            <input
-              className="reward-input"
-              type="text"
-              value={this.state.rewards[this.reward_num]}
-              onChange={this.update('title')}/>
-          </section>
-          <section className="reward-input-row">
-            <label>Pledge Amount</label>
-            <input
-              className="reward-input"
-              type="number"
-              value={this.state.rewards[this.reward_num]}
-              onChange={this.update('pledge_amount')}/>
-          </section>
-          <section className="reward-input-row box">
-            <label>Decription</label>
-            <input
-              className="reward-input"
-              type="textarea"
-              value={this.state.rewards[this.reward_num]}
-              onChange={this.update('description ')}/>
-          </section>
-          <section className="reward-input-row">
-            <label>Limit availability</label>
-            <input
-              className="reward-input"
-              type="number"
-              value={this.state.rewards[this.reward_num]}
-              onChange={this.update('num_allowed')}/>
-          </section>
 
-            <button className='reward-button' onClick={this.addReward}>Add reward</button>
+        <section className="reward-inputs">
+            {rewardItems}
+            <button className='reward-button' onClick={this.addRewardForm}>Add reward</button>
           </section>
         </section>
 

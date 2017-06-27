@@ -5,21 +5,33 @@ import ProjectForm from './project_form_container';
 import RewardForm from './reward_form_container';
 
 class FullForm extends React.Component {
+  constructor(props) {
+    super(props);
 
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.createProject = this.props.createProject.bind(this);
+    this.createReward = this.props.createReward.bind(this);
+  }
 
 
   handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData();
-    debugger
-    Object.keys(this.state).forEach( key => {
-      if (key === "imageUrl" || (key === "image" && !this.state.image)) {
+    const { project } = this.props.incompleteForm;
+    const { rewards } = this.props.incompleteForm;
+
+
+    Object.keys(project).forEach( key => {
+      if (key === "imageUrl" || (key === "image" && !project.image)) {
         return;
       }
-      formData.append(`project[${key}]`, this.state[key]);
+      formData.append(`project[${key}]`, project[key]);
     });
-    this.props.createProject(formData);
-    this.props.createReward();
+
+
+
+    this.createProject(formData);
+    rewards.forEach( (reward) => this.createReward({reward: reward}));
     // TODO: what goes in here
     // this.props.history.push('/');
   }

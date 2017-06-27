@@ -7,7 +7,7 @@ class ProjectForm extends React.Component {
     this.state = {
       project: this.props.incompleteForm.project
     };
-    debugger
+
 
 
 
@@ -17,8 +17,9 @@ class ProjectForm extends React.Component {
 
   update(property) {
     return e => {
-      this.setState( {project: { [property]: e.target.value }});
-      this.props.receiveIncompleteForm(this.state.project);
+      this.setState( {project: { [property]: e.target.value }}, () => (
+      this.props.receiveIncompleteForm(this.state.project)
+    ));
     };
   }
 

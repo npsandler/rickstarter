@@ -19,6 +19,7 @@ export const requestSingleReward = (rewardId) => (dispatch) => {
 };
 
 export const createReward = (reward) => (dispatch) => {
+    debugger
     return (
       APIUtil.createReward(reward)
     .then( (reward) => dispatch(receiveSingleReward(reward)))
