@@ -9,7 +9,7 @@ class ShowPage extends React.Component {
   constructor(props) {
     super(props);
 
-
+    debugger
 
     this.dateRemaining = this.dateRemaining.bind(this);
   }
@@ -42,14 +42,15 @@ class ShowPage extends React.Component {
     // TODO: renderuserimage properly
     // TODO: days to do, backers
     const { project } = this.props;
-    if (project) {``
+    debugger
+    if (project) {
       const percentFunded = Math.ceil((project.current_funding / project.funding_goal) * 100);
       return   (
         <article className='show-background'>
           <section className='content-box'>
             <section className='header content-subsection'>
               <section className='creator-area'>
-                <div className='creator-img'> prof-pic</div>
+                <img className="creator-img" src={project.creator.image}/>
                 <div className='creator-name'>{project.creator.name}</div>
               </section>
               <section className='headline'>

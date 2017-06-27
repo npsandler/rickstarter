@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import ToggleBar from '../rewards/toggle_bar';
 
 class FullProjectForm extends React.Component {
   constructor(props) {
@@ -90,8 +91,10 @@ class FullProjectForm extends React.Component {
   render() {
       return (
         <section className="full-project-create">
+          <ToggleBar />
+
           <section className='page-header'>
-            <h1 className='full-header'> Lets get started </h1>
+            <h1 className='full-header'> Lets get started. </h1>
             <h2 className='sub-header'>Make a great first impression with your project’s title and image, and set your funding goal, campaign duration, and project category.</h2>
             <ul>
               {this.errors()}

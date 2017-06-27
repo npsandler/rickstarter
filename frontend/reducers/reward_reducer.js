@@ -1,4 +1,4 @@
-import { RECEIVE_ALL_REWARDS, DELETE_REWARD, EDIT_REWARD} from '../actions/project_actions';
+import { RECEIVE_ALL_REWARDS, DELETE_REWARD, EDIT_REWARD} from '../actions/reward_actions';
 import { merge } from 'lodash';
 import { combineReducers } from "redux";
 

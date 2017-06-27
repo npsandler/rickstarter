@@ -1,8 +1,10 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
+
 class RewardForm extends React.Component {
   constructor(props) {
+    debugger
     super(props);
     this.state = {
       category: '',
@@ -13,7 +15,7 @@ class RewardForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.revieveRewards(this.state);
+    this.props.createReward(this.state);
     this.props.history.push('/fullform');
   }
 
@@ -34,16 +36,20 @@ class RewardForm extends React.Component {
 
   render() {
       return (
-        <section className="reward-form">
+        <section className="full-project-create">
+            <ToggleBar />
+
+          <h1 className='full-header'>Set your rewards.</h1>
+          <h2 className='sub-header'>Invite backers to be a part of the creative experience by offering rewards like a copy of what you’re making, a special experience, or a behind-the-scenes look into your process.</h2>
+
           <h4>reward</h4>
           <section className="reward-inputs">
-            <ul className="errors">{errors{}}</ul>
+            <ul className="errors">{this.errors()}</ul>
             <section className="reward-title-row">
               <label>Title</label>
               <input
                 className="reward-input"
                 type="text"
-                value="this.state.title"
                 onChange={this.update('title')}/>
             </section>
             <section className="reward-input-row">
@@ -51,23 +57,13 @@ class RewardForm extends React.Component {
               <input
                 className="reward-input"
                 type="number"
-                value="this.state.pledge_amount"
-                onChange={this.update('title')}/>
-            </section>
-            <section className="reward-input-row">
-              <label>Pledge Amount</label>
-              <input
-                className="reward-input"
-                type="number"
-                value="this.state.pledge_amount"
-                onChange={this.update('title')}/>
+                onChange={this.update('pledge_amount')}/>
             </section>
             <section className="reward-input-row box">
               <label>Decription</label>
               <input
                 className="reward-input"
                 type="textarea"
-                value="this.state.description"
                 onChange={this.update('description ')}/>
             </section>
             <section className="reward-input-row">
@@ -75,7 +71,6 @@ class RewardForm extends React.Component {
               <input
                 className="reward-input"
                 type="number"
-                value="this.state.num_allowed"
                 onChange={this.update('num_allowed')}/>
             </section>
 

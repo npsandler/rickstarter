@@ -15,6 +15,7 @@ class Api::RewardsController < ApplicationController
     # @reward.project =
     # find current project from path
     if @reward.save
+      Pledge.save({reward_id: @reward.id, user_id: current_user.id})
       render :show
     else
       render json: @reward.errors.full_messages, status: 422
