@@ -11,9 +11,9 @@ class Api::ProjectsController < ApplicationController
 
 
   def create
+    params[:project][:rewards_attributes] = JSON.parse(params[:project][:rewards_attributes])
     @project = Project.new(project_params)
     @project.creator = current_user
-
     if @project.save
       render :show
     else
@@ -39,7 +39,15 @@ class Api::ProjectsController < ApplicationController
     :details,
     :category,
     :description,
-    :image
+    :image,
+    rewards_attributes: [
+      :title,
+      :pledge_amount,
+      :description,
+      :project_id,
+      :num_allowed,
+      :num_backers
+    ]
     )
   end
 

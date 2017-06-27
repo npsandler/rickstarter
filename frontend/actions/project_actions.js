@@ -13,6 +13,7 @@ export const requestAllProjects = () => (dispatch) => {
 };
 
 export const requestSingleProject = (projectId) => (dispatch) => {
+  debugger
   return APIUtil.fetchSingleProject(projectId)
     .then(project => dispatch(receiveSingleProject(project)));
 };
@@ -31,11 +32,6 @@ export const updateProject = project => dispatch => {
     }));
   };
 
-export const createPledge = project => dispatch => {
-  return APIUtil.addPledge(project).then(project => {
-    dispatch(requestSingleProject(project));
-  });
-};
 
 
 export const editProject = project => {

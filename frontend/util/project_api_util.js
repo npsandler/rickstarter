@@ -29,11 +29,3 @@ export const editProject = (project) => {
     data: { project }
   });
 };
-
-  export const addPledge = (project) => {
-    return $.ajax({
-      method: 'POST',
-      url: '/api/pledges/',
-      data: { project }
-    });
-  };

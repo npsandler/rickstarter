@@ -21,3 +21,11 @@ export const editReward= (reward) => {
     data: { reward }
   });
 };
+
+export const addPledge = (reward) => {
+  return $.ajax({
+    method: 'POST',
+    url: '/api/pledges/',
+    data: { reward }
+  });
+};

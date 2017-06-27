@@ -74,9 +74,9 @@ class ShowPage extends React.Component {
                 <li>
                   <button className='backer-button shadowed-green'>Back this project</button>
                 </li>
-                <li>
+                <p>
                   <text className='footer'>All or nothing. This project will only be funded if it reaches its goal by {project.end_date}</text>
-                </li>
+                </p>
               </ul>
             </section>
 

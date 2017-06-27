@@ -24,13 +24,6 @@ class Api::PledgesController < ApplicationController
   end
 
   def pledge_params
-    params.require(:pledge).permit(
-    :title,
-    :pledge_amount,
-    :description,
-    :project_id,
-    :num_allowed,
-    :num_backers
-    )
+    params.require(:project)
   end
 end

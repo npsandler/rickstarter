@@ -24,6 +24,7 @@ class Project < ActiveRecord::Base
   validates :title, :end_date, :funding_goal, :description,
    :details, :creator_id, :category, presence: true
 
+
   has_attached_file :image, default_url: "prelim-backdrop.png"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
@@ -34,6 +35,12 @@ class Project < ActiveRecord::Base
 
   has_many :rewards,
   inverse_of: :project
+
+  accepts_nested_attributes_for :rewards
+
+
+
+
 
 
 end

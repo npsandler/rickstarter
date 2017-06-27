@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 class RewardItem extends React.Component {
   constructor(props) {
     super(props);
+    debugger
     this.processPledge = this.processPledge.bind(this)
   }
 
@@ -25,7 +26,7 @@ class RewardItem extends React.Component {
   processPledge(e) {
     e.preventDefault()
     debugger
-    this.props.createPledge(this)
+    this.props.createPledge(this.props.match.params.projectId)
   }
 
   render() {

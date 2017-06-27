@@ -19,12 +19,18 @@ export const requestSingleReward = (rewardId) => (dispatch) => {
 };
 
 export const createReward = (reward) => (dispatch) => {
-    debugger
     return (
       APIUtil.createReward(reward)
     .then( (reward) => dispatch(receiveSingleReward(reward)))
   ), err => dispatch(receiveErrors(err.responseJSON));
 };
+
+export const createPledge = projectId => dispatch => {
+  return APIUtil.addPledge(projectId).then(project => {
+    dispatch(requestSingleProject(project));
+  });
+};
+
 
 
 export const editReward = reward => {
