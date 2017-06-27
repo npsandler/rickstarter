@@ -22,10 +22,18 @@ export const createProject= (project) => {
   });
 };
 
-export const editProject= (project) => {
+export const editProject = (project) => {
   return $.ajax({
     method: 'PATCH',
     url: `api/projects/${project.projectId}`,
     data: { project }
   });
 };
+
+  export const addPledge = (project) => {
+    return $.ajax({
+      method: 'POST',
+      url: '/api/pledges/',
+      data: { project }
+    });
+  };

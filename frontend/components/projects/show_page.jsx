@@ -3,13 +3,12 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Line } from 'rc-progress';
 
-import RewardItem from '../rewards/reward_item';
+import RewardItem from '../rewards/reward_item_container';
 
 class ShowPage extends React.Component {
   constructor(props) {
     super(props);
 
-    debugger
 
     this.dateRemaining = this.dateRemaining.bind(this);
   }
@@ -42,7 +41,6 @@ class ShowPage extends React.Component {
     // TODO: renderuserimage properly
     // TODO: days to do, backers
     const { project } = this.props;
-    debugger
     if (project) {
       const percentFunded = Math.ceil((project.current_funding / project.funding_goal) * 100);
       return   (

@@ -1,6 +1,7 @@
+
 import { connect } from 'react-redux';
 import { receiveIncompleteForm } from '../../actions/incomplete_form_actions';
-import ProjectForm from './project_form';
+import ToggleBar from './toggle_bar';
 
 const mapStateToProps = ({errors, incompleteForm}) => ({
   errors,
@@ -8,10 +9,10 @@ const mapStateToProps = ({errors, incompleteForm}) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  receiveIncompleteForm:  (project, rewards) => dispatch(receiveIncompleteForm(project, rewards))
+  receiveIncompleteForm: (project, rewards) => dispatch(receiveIncompleteForm(project, rewards))
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(ProjectForm);
+)(ToggleBar);

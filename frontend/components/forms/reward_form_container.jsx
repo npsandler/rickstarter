@@ -12,7 +12,7 @@ const mapStateToProps = ({errors, incompleteForm}) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    
+    receiveIncompleteForm:  (project, rewards) => dispatch(receiveIncompleteForm(project, rewards))
     };
 };
 

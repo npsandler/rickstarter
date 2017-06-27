@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import RewardItem from './project_index_item';
-
+import RewardItem from './reward_item';
+import { createPledge } from '../../actions/project_actions';
 
 const mapStateToProps = ({ project }) => {
   return {
@@ -11,7 +11,7 @@ const mapStateToProps = ({ project }) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-
+    createPledge: (project) => dispatch(createPledge(project))
     };
 };
 

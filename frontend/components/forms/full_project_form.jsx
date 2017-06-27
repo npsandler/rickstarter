@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter, Route } from 'react-router-dom';
-import ToggleBar from './toggle_bar';
+import ToggleBar from './toggle_bar_container';
 import ProjectForm from './project_form_container';
 import RewardForm from './reward_form_container';
 
@@ -11,7 +11,7 @@ class FullForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData();
-
+    debugger
     Object.keys(this.state).forEach( key => {
       if (key === "imageUrl" || (key === "image" && !this.state.image)) {
         return;
@@ -19,21 +19,10 @@ class FullForm extends React.Component {
       formData.append(`project[${key}]`, this.state[key]);
     });
     this.props.createProject(formData);
+    this.props.createReward();
+    // TODO: what goes in here
     // this.props.history.push('/');
   }
-
-  // formRender() {
-  //   let pathType = location.pathname.slice(1);
-  //   if (pathType === (fullform/basics)) {
-  //     return (
-  //       <ProjectForm />
-  //     );
-  //   } else if (pathType === fullform/rewards) {
-  //     return (
-  //       <RewardForm />
-  //     );
-  //   }
-  // }
 
   render() {
     return (

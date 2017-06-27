@@ -5,5 +5,6 @@ Rails.application.routes.draw do
      resource :session, only: [:create, :destroy]
      resources :projects, except: [:edit, :new]
      resources :rewards, only: [:create, :edit]
+     resources :pledges, only: [:create, :edit]
   end
 end

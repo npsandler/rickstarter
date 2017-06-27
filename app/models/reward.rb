@@ -17,5 +17,6 @@
 class Reward < ActiveRecord::Base
   validates :project, :title, :pledge_amount, :description, presence: true
 
-  belongs_to :project
+  belongs_to :project,
+  inverse_of: :rewards
 end

@@ -10,6 +10,7 @@ class ProjectIndexItem extends React.Component {
   }
 
 
+
   numberWithCommas(x) {
     return(
      x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
@@ -29,7 +30,6 @@ class ProjectIndexItem extends React.Component {
     if (percentFunded > 100) {
       percentFunded = 100;
     }
-    debugger
     return (
       <li className="project-index-item">
         <Link className='preview-wrapper' to={`/projects/${project.id}`}>

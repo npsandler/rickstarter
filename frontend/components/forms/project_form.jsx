@@ -4,27 +4,22 @@ import { withRouter } from 'react-router-dom';
 class ProjectForm extends React.Component {
   constructor(props) {
     super(props);
-    const importedCategory = this.props.incompleteForm.category;
-    const importedTitle = this.props.incompleteForm.title;
-
     this.state = {
-      category: importedCategory,
-      title: importedTitle,
-      description: '',
-      end_date: null,
-      funding_goal: null,
-      details: 'The creator of this project has not added any details yet!',
-      image: null,
-      imageUrl: null
+      project: this.props.incompleteForm.project
     };
+    debugger
+
+
 
     this.updateFile = this.updateFile.bind(this);
   }
 
 
-
   update(property) {
-    return e => this.setState({ [property]: e.target.value });
+    return e => {
+      this.setState( {project: { [property]: e.target.value }});
+      this.props.receiveIncompleteForm(this.state.project);
+    };
   }
 
   updateFile(e) {
@@ -32,8 +27,9 @@ class ProjectForm extends React.Component {
     const fileReader = new FileReader();
     fileReader.onloadend = () => {
       this.setState({
-        image: file,
-        imageUrl: fileReader.result
+        project:
+        { image: file,
+        imageUrl: fileReader.result}
       });
     };
     if (file) {
@@ -58,13 +54,13 @@ class ProjectForm extends React.Component {
     'Film & Video', 'Food', 'Games', 'Journalism', 'Music', 'Photography', 'Publishing', 'Technology', 'Theatre']
 
     const selectorOptions = CATEGORIES.map( (cat) => {
-      if (cat === this.state.category) {
+      if (cat === this.state.project.category) {
         return (
-          <option name={this.state.category} selected='selected' value={cat}>{cat}</option>
+          <option name={this.state.project.category} selected='selected' value={cat}>{cat}</option>
           );
       } else {
         return (
-          <option name={this.state.category} value={cat}>{cat}</option>
+          <option name={this.state.project.category} value={cat}>{cat}</option>
           );
       }
     });
@@ -74,7 +70,6 @@ class ProjectForm extends React.Component {
   }
 
   render() {
-      debugger
       return (
         <section className="full-project-create">
 
@@ -91,18 +86,18 @@ class ProjectForm extends React.Component {
               <section className='form-sub-box'>
                 <h3>Project Image</h3>
                 <section className='right-box'>
-                  <img src={this.state.imageUrl}/>
+                  <img src={this.state.project.imageUrl}/>
                   <input type="file" onChange={this.updateFile}/>
                   <text>This is the first thing that people will see when they come across your project. Choose an image that’s crisp and text-free</text>
                 </section>
               </section>
-              
+
               <section className='form-sub-box'>
                 <h3>Project title</h3>
                 <div className='right-box'>
                   <input
                     type="text"
-                    value={this.state.title}
+                    value={this.state.project.title}
                     placeholder="title..."
                     onChange={this.update('title')}
                   />
@@ -118,7 +113,7 @@ class ProjectForm extends React.Component {
                 <div className='right-box'>
                   <input
                     type="textarea"
-                    value={this.state.description}
+                    value={this.state.project.description}
                     onChange={this.update('description')}
                   />
                 <text>Give people a sense of what you’re doing. Skip “Help me” and focus on what you’re making.</text>
@@ -128,7 +123,7 @@ class ProjectForm extends React.Component {
               <section className='form-sub-box'>
                 <h3>Category</h3>
                 <select className='right-box'>
-                    <option name={this.state.category} value=''>Select a category</option>
+                    <option name={this.state.project.category} value=''>Select a category</option>
                     {this.selectorRender()}
                 </select>
               </section>
@@ -136,7 +131,7 @@ class ProjectForm extends React.Component {
               <section className='form-sub-box'>
                 <h3>Project end date</h3>
                 <div className='right-box'>
-                  <input type="date" name="TEST" onChange={this.update('end_date')} value={this.state.end_date} />
+                  <input type="date" name="TEST" onChange={this.update('end_date')} value={this.state.project.end_date} />
                   <text>Projects with shorter durations have higher success rates. You won’t be able to adjust your duration after you launch.</text>
                 </div>
               </section>
@@ -144,7 +139,7 @@ class ProjectForm extends React.Component {
                 <section className='form-sub-box'>
                   <h3>Funding goal</h3>
                   <div className='right-box'>
-                    <input type="number" onChange={this.update('funding_goal')} value={this.state.funding_goal} />
+                    <input type="number" onChange={this.update('funding_goal')} value={this.state.project.funding_goal} />
                   <text>Funding on Rickstarter is all-or-nothing. It’s okay to raise more than your goal, but if your goal isn’t met, no money will be collected. Your goal should reflect the minimum amount of funds you need to complete your project and send out rewards, and include a buffer for payments processing fees.
                   </text>
                     <text>

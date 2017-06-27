@@ -32,7 +32,8 @@ class Project < ActiveRecord::Base
   class_name: :User,
   foreign_key: :creator_id
 
-  has_many :rewards
+  has_many :rewards,
+  inverse_of: :project
 
 
 end
