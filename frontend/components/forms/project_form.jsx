@@ -1,8 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import ToggleBar from '../rewards/toggle_bar';
 
-class FullProjectForm extends React.Component {
+class ProjectForm extends React.Component {
   constructor(props) {
     super(props);
     const importedCategory = this.props.incompleteForm.category;
@@ -19,24 +18,10 @@ class FullProjectForm extends React.Component {
       imageUrl: null
     };
 
-    this.handleSubmit = this.handleSubmit.bind(this);
     this.updateFile = this.updateFile.bind(this);
   }
 
 
-  handleSubmit(e) {
-    e.preventDefault();
-    const formData = new FormData();
-
-    Object.keys(this.state).forEach( key => {
-      if (key === "imageUrl" || (key === "image" && !this.state.image)) {
-        return;
-      }
-      formData.append(`project[${key}]`, this.state[key]);
-    });
-    this.props.createProject(formData);
-    // this.props.history.push('/');
-  }
 
   update(property) {
     return e => this.setState({ [property]: e.target.value });
@@ -89,9 +74,9 @@ class FullProjectForm extends React.Component {
   }
 
   render() {
+      debugger
       return (
         <section className="full-project-create">
-          <ToggleBar />
 
           <section className='page-header'>
             <h1 className='full-header'> Lets get started. </h1>
@@ -101,6 +86,7 @@ class FullProjectForm extends React.Component {
             </ul>
           </section>
           <section className='content-container'>
+
             <form className="full-project-form" onSubmit={this.handleSubmit}>
               <section className='form-sub-box'>
                 <h3>Project Image</h3>
@@ -110,6 +96,7 @@ class FullProjectForm extends React.Component {
                   <text>This is the first thing that people will see when they come across your project. Choose an image that’s crisp and text-free</text>
                 </section>
               </section>
+              
               <section className='form-sub-box'>
                 <h3>Project title</h3>
                 <div className='right-box'>
@@ -125,6 +112,7 @@ class FullProjectForm extends React.Component {
                     These words will help people find your project, so choose them wisely! Your name will be searchable too.</text>
                 </div>
               </section>
+
               <section className='form-sub-box'>
                 <h3>Short blurb</h3>
                 <div className='right-box'>
@@ -136,6 +124,7 @@ class FullProjectForm extends React.Component {
                 <text>Give people a sense of what you’re doing. Skip “Help me” and focus on what you’re making.</text>
                 </div>
               </section>
+
               <section className='form-sub-box'>
                 <h3>Category</h3>
                 <select className='right-box'>
@@ -143,6 +132,7 @@ class FullProjectForm extends React.Component {
                     {this.selectorRender()}
                 </select>
               </section>
+
               <section className='form-sub-box'>
                 <h3>Project end date</h3>
                 <div className='right-box'>
@@ -150,6 +140,7 @@ class FullProjectForm extends React.Component {
                   <text>Projects with shorter durations have higher success rates. You won’t be able to adjust your duration after you launch.</text>
                 </div>
               </section>
+
                 <section className='form-sub-box'>
                   <h3>Funding goal</h3>
                   <div className='right-box'>
@@ -160,9 +151,6 @@ class FullProjectForm extends React.Component {
                     If your project is successfully funded, the following fees will be collected from your funding total: Rickstarter’s 5% fee, and payment processing fees (between 3% and 5%). If funding isn’t successful, there are no fees.</text>
                   </div>
                 </section>
-                <section className='bottom-bar'>
-                  <button className='submit-button'>Save and continue</button>
-                </section>
             </form>
           </section>
         </section>
@@ -171,4 +159,4 @@ class FullProjectForm extends React.Component {
   }
 }
 
-export default withRouter(FullProjectForm);
+export default withRouter(ProjectForm);

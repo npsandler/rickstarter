@@ -4,20 +4,15 @@ import { withRouter } from 'react-router-dom';
 
 class RewardForm extends React.Component {
   constructor(props) {
-    debugger
     super(props);
     this.state = {
-      category: '',
-      title: ''
+      title: '',
+      description: '',
+      num_allowed: null,
+      pledge_amount: 0
     };
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleSubmit(e) {
-    e.preventDefault();
-    this.props.createReward(this.state);
-    this.props.history.push('/fullform');
-  }
 
   update(property) {
     return e => this.setState({ [property]: e.target.value });
@@ -37,7 +32,6 @@ class RewardForm extends React.Component {
   render() {
       return (
         <section className="full-project-create">
-            <ToggleBar />
 
           <h1 className='full-header'>Set your rewards.</h1>
           <h2 className='sub-header'>Invite backers to be a part of the creative experience by offering rewards like a copy of what you’re making, a special experience, or a behind-the-scenes look into your process.</h2>

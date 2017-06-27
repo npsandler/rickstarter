@@ -1,14 +1,13 @@
-
 import React from 'react';
 
 import SessionForm from './session_form/session_form_container';
 import LeftNav from './nav_bar/left_nav_container';
 import RightNav from './nav_bar/right_nav_container';
-import PrelimForm from './projects/prelim_container';
+import PrelimForm from './forms/prelim_container';
 import ProjectShow from './projects/show_page_container';
 import ProjectIndex from './projects/project_index_container';
-import FullForm from './projects/full_container';
-import RewardForm from './rewards/reward_form_container';
+import FullForm from './forms/full_form_container';
+import RewardForm from './forms/reward_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 import { Provider } from 'react-redux';

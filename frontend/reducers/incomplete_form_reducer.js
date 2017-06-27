@@ -6,7 +6,7 @@ import { combineReducers } from "redux";
 const incompleteFormReducer = ( state = {}, action) => {
   switch (action.type) {
     case RECEIVE_INCOMPLETE_FORM:
-      return merge({}, state, action.project);
+      return merge({}, state, {draft: action.project, rewards: action.rewards});
     default:
       return state;
   }

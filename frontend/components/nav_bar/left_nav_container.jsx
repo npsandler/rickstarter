@@ -2,7 +2,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import PreliminaryProjectForm from '../projects/prelim_container';
+import PreliminaryProjectForm from '../forms/prelim_container';
 
 
 import { logOut } from '../../actions/session_actions';

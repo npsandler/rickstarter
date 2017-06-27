@@ -7,7 +7,7 @@ const mapStateToProps = ({errors}) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  receiveIncompleteForm: (project) => dispatch(receiveIncompleteForm(project))
+  receiveIncompleteForm: (project, rewards) => dispatch(receiveIncompleteForm(project, rewards))
 });
 
 export default connect(

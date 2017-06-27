@@ -3,16 +3,16 @@ import { connect } from 'react-redux';
 import RewardForm from './reward_form';
 
 
-const mapStateToProps = ({errors, reward}) => {
+const mapStateToProps = ({errors, incompleteForm}) => {
   return {
     errors,
-    reward
+    incompleteForm
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-      createReward: (reward) => dispatch(createReward(reward))
+    
     };
 };
 
