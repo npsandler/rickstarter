@@ -1,1 +1,1 @@
-json.extract! :id, :project_id, :title, :pledge_amount, :description, :num_backers, :num_remaining, :num_allowed, :pledgings
+json.extract! reward, :id, :project_id, :title, :pledge_amount, :description, :num_backers, :num_allowed, :pledgings

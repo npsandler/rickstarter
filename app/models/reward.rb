@@ -23,4 +23,6 @@ class Reward < ActiveRecord::Base
   has_many :pledgings,
   class_name: :Pledge,
   foreign_key: :reward_id
+
+  
 end

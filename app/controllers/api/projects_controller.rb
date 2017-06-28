@@ -2,11 +2,17 @@ require 'active_support/core_ext/string'
 
 class Api::ProjectsController < ApplicationController
   def index
-    @projects = Project.includes(:creator)
+    @projects = Project.includes(:creator, :backers, :rewards)
+    @rewards = Reward.includes(:pledgings).find_by(project_id: @project.id)
+
+
   end
 
   def show
-    @project = Project.includes(:creator).find(params[:id])
+    @project = Project.includes(:creator, :backers).find(params[:id])
+    @rewards = Reward.includes(:pledgings).where(project_id: @project.id)
+    debugger
+    render :show
   end
 
 

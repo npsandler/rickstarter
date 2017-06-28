@@ -9,7 +9,7 @@ class Api::PledgesController < ApplicationController
     if @pledge.save
       @pledge.project.current_funding += @pledge.reward.pledge_amount
       debugger
-      render json: @pledge.project
+      render :show
     else
       render json: @pledge.errors.full_messages, status: 422
     end

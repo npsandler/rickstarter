@@ -1,5 +1,6 @@
 import React from 'react';
-import { NavLink, withRouter } from 'react-router-dom';
+import { Route, NavLink, withRouter } from 'react-router-dom';
+import CategoryIndex from './category_index';
 
 export default class Categories extends React.Component {
 
@@ -12,18 +13,18 @@ export default class Categories extends React.Component {
     let categoryRoutes = [];
 
     categories.forEach ( (category) => {
-      categoryToggles.push(<li><NavLink exact to="/explore/{category}" activeClassName='visiting' >{category} </NavLink></li>);
-      categoryRoutes.push(<li><Route path="/explore/{category}" category={category} component={ProjectForm} /></li>);
-    };
-
+      categoryRoutes.push(<li><Route path={`/explore/${category}`} category={category} component={CategoryIndex} /></li>);
+      categoryToggles.push(<NavLink exact to={`/explore/${category}`} activeClassName='visiting' >{category} </NavLink>);
+    });
+    debugger
     return(
         <section className='explore'>
-          <ul className='categoryToggles'>
+          <ul className='category-toggles'>
             {categoryToggles}
           </ul>
-          <ul className='categories-render'>
+          <section className='category-render'>
             {categoryRoutes}
-          </ul>
+          </section>
         </section>
     );
   }

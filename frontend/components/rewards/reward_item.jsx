@@ -36,7 +36,7 @@ class RewardItem extends React.Component {
         <label className='reward-header'>{reward.title}</label>
         <text className='gray desc'>{reward.description}</text>
         {this.numberRemaining()}
-        <p className='gray'>{0} backers</p>
+        <p className='gray'>{reward.pledgings.length} backers</p>
       </section>
     );
   }

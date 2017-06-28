@@ -7,7 +7,7 @@ export const DELETE_REWARDS = 'DELETE_REWARDS';
 export const EDIT_REWARDS = 'EDIT_REWARDS';
 export const RECEIVE_REWARDS_ERRORS = 'RECEIVE_REWARDS_ERRORS';
 
-import { updateProject } from './project_actions';
+import { updateProject, receiveSingleProject } from './project_actions';
 
 
 export const requestAllRewards = () => (dispatch) => {
@@ -30,7 +30,7 @@ export const createReward = (reward) => (dispatch) => {
 export const createPledge = (reward) => dispatch => {
   return (
     APIUtil.addPledge(reward)
-    .then( (project) =>  dispatch(updateProject(project)))
+    .then( (project) =>  dispatch(receiveSingleProject(project)))
   );
 };
 
