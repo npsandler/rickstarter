@@ -4,10 +4,11 @@ class Api::PledgesController < ApplicationController
 
   def create
     @pledge = Pledge.new(pledge_params)
-    # @pledge.reward_id = pledge_params[id]
     @pledge.user_id = current_user.id
     if @pledge.save
-      @pledge.project.current_funding += @pledge.reward.pledge_amount
+      @project = Project.includes(:creator, :backers).find(@pledge.project.id)
+      @rewards = Reward.includes(:pledgings).where(project_id: @project.id)
+      @project.current_funding += @pledge.reward.pledge_amount
       render :show
     else
       render json: @pledge.errors.full_messages, status: 422

@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 class ProjectForm extends React.Component {
   constructor(props) {
     super(props);
+    debugger
     this.state = {
       project: this.props.incompleteForm.project
     };
@@ -16,6 +17,7 @@ class ProjectForm extends React.Component {
 
 
   update(property) {
+    debugger
     return e => {
       this.setState( {project: { [property]: e.target.value }}, () => (
       this.props.receiveIncompleteForm(this.state.project)

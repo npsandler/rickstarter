@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 class RewardItem extends React.Component {
   constructor(props) {
     super(props);
-    this.processPledge = this.processPledge.bind(this)
+    this.processPledge = this.processPledge.bind(this);
   }
 
   numberRemaining() {

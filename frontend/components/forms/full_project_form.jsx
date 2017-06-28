@@ -7,7 +7,6 @@ import RewardForm from './reward_form_container';
 class FullForm extends React.Component {
   constructor(props) {
     super(props);
-
     this.handleSubmit = this.handleSubmit.bind(this);
     this.createProject = this.props.createProject.bind(this);
     this.createReward = this.props.createReward.bind(this);

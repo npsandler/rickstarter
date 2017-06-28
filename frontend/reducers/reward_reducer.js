@@ -1,4 +1,4 @@
-import { RECEIVE_ALL_REWARDS, DELETE_REWARD, EDIT_REWARD} from '../actions/reward_actions';
+import { RECEIVE_ALL_REWARDS, DELETE_REWARD, EDIT_REWARD, UPDATE_REWARD } from '../actions/reward_actions';
 import { merge } from 'lodash';
 import { combineReducers } from "redux";
 
@@ -10,7 +10,9 @@ const rewardReducer = ( state = {}, action) => {
       const newState = merge({}, state);
       delete newState[action.reward.id];
       return newState;
-      case EDIT_REWARD:
+    case EDIT_REWARD:
+      return merge({}, state, action.reward);
+    case UPDATE_REWARD:
       return merge({}, state, action.reward);
     default:
       return state;

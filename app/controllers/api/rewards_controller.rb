@@ -13,7 +13,6 @@ class Api::RewardsController < ApplicationController
   def create
     @reward = Reward.new(reward_params)
 
-    # @reward.project_id = Project.all.last.id
     if @reward.save
       render :show
     else

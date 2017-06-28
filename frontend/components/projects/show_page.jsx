@@ -19,12 +19,15 @@ class ShowPage extends React.Component {
     }
   }
 
+  componentWillReceiveProps(nextProps) {
+  }
+
 
 
 
   numberWithCommas(x) {
     return(
-     x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+      x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
      );
    }
 
@@ -41,6 +44,7 @@ class ShowPage extends React.Component {
     // TODO: renderuserimage properly
     // TODO: days to do, backers
     const { project } = this.props;
+    debugger
     if (project) {
       const percentFunded = Math.ceil((project.current_funding / project.funding_goal) * 100);
       return   (
