@@ -15,7 +15,6 @@ class CategoryIndex extends React.Component {
   }
 
   componentWillReceiveProps(nextProps){
-    debugger
     if(this.cat !== nextProps.match.url.slice(9)){
       this.projects = this.props.requestCategory(this.cat);
     }

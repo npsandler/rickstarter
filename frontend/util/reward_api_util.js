@@ -24,7 +24,6 @@ export const editReward= (reward) => {
 
 export const addPledge = (reward) => {
   let reward_id = reward.id;
-  debugger
   return $.ajax({
     method: 'POST',
     url: '/api/pledges',

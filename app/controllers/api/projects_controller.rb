@@ -3,7 +3,6 @@ require 'active_support/core_ext/string'
 class Api::ProjectsController < ApplicationController
   def index
     if params[:category]
-      # debugger
       @projects = Project.includes(:creator, :backers, :rewards).where(category: params[:category])
     else
       @projects = Project.includes(:creator, :backers, :rewards)
@@ -13,7 +12,6 @@ class Api::ProjectsController < ApplicationController
   def show
     @project = Project.includes(:creator, :backers).find(params[:id])
     @rewards = Reward.includes(:pledgings).where(project_id: @project.id)
-    debugger
     render :show
   end
 
@@ -30,7 +28,6 @@ class Api::ProjectsController < ApplicationController
   end
 
   def update
-    debugger
     @project = Project.find(params[:id])
 
     if @project.update(project_params)

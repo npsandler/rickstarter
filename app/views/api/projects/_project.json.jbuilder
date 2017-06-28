@@ -3,7 +3,6 @@ json.image asset_path(project.image.url)
 
 json.set! :rewards do
   json.array! rewards do |reward|
-    debugger
     json.partial! '/api/rewards/reward', reward: reward
   end
 end

@@ -29,7 +29,6 @@ class RewardItem extends React.Component {
 
   render() {
     let { reward } = this.props;
-    debugger
     return (
       <section onClick={this.processPledge} className='reward'>
         <p className="reward-blue reward-header">Pledge ${reward.pledge_amount} or more</p>

@@ -8,7 +8,6 @@ class Api::PledgesController < ApplicationController
     @pledge.user_id = current_user.id
     if @pledge.save
       @pledge.project.current_funding += @pledge.reward.pledge_amount
-      debugger
       render :show
     else
       render json: @pledge.errors.full_messages, status: 422
