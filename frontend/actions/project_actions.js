@@ -31,6 +31,13 @@ export const updateProject = project => dispatch => {
     }));
   };
 
+  export const requestCategory = category => dispatch => {
+    return (
+      APIUtil.fetchCategory(category).then(projects => {
+        dispatch(receiveAllProjects(projects));
+      }));
+  };
+
 
 
 export const editProject = project => {

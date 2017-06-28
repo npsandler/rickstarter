@@ -3,8 +3,9 @@ require 'active_support/core_ext/string'
 class Api::ProjectsController < ApplicationController
   def index
     @projects = Project.includes(:creator, :backers, :rewards)
-    @rewards = Reward.includes(:pledgings).find_by(project_id: @project.id)
-
+    # if @project.rewards.count > 0 
+    #   @rewards = Reward.includes(:pledgings).find_by(project_id: @project.id)
+    # end
 
   end
 

@@ -29,3 +29,10 @@ export const editProject = (project) => {
     data: { project }
   });
 };
+
+export const fetchCategory = (category) => {
+return $.ajax({
+  method: 'get',
+  url: `api/projects?category=${category}`
+  });
+};

@@ -1,6 +1,6 @@
 
 import { connect } from 'react-redux';
-import { selectCategory } from '../../reducers/selectors';
+import { requestCategory } from '../../actions/project_actions';
 import CategoryIndex from './category_index';
 
 const mapStateToProps = (state) => ({
@@ -8,7 +8,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  selectCategory: (category) => dispatch(selectCategory(category))
+  requestCategory: (category) => dispatch(requestCategory(category))
 });
 
 export default connect(
