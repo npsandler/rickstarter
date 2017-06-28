@@ -16,7 +16,7 @@ users = User.create([{email: 'rick@aol.com', image: File.open("app/assets/images
   {email: 'jerry@aol.com', image: File.open("app/assets/images/jerry.png"), name: 'Jerry Smith', password: 'hunter12'},
   {email: 'demo', name: 'Demo', password: 'hunter12'}])
 
-Project.create!({title: 'Anatomy Park', image: File.open("app/assets/images/Anatomy_park.png"), description: 'Help us fund the worlds premier new theme park', details: "fill me in later",  end_date: DateTime.now(), funding_goal: 50000, creator_id: users[0].id, category: 'Theatre'})
+Project.create!({title: 'Anatomy Park', image: File.open("app/assets/images/Anatomy_Park.png"), description: 'Help us fund the worlds premier new theme park', details: "fill me in later",  end_date: DateTime.now(), funding_goal: 50000, creator_id: users[0].id, category: 'Theatre'})
 Project.create!({title: 'Help me take 3 strokes off my short game', image: File.open("app/assets/images/golf.png"), description: 'how hard can it be?', details: "fill me in later",  end_date: DateTime.now(), funding_goal: 50000, creator_id: users[3].id, category: 'Games'})
 Project.create!({title: 'Fund a new laboratoy', image: File.open("app/assets/images/lab.png"), description: 'A new top of the line lab for inventions ', details: "fill me in later",  end_date: DateTime.now(), funding_goal: 50000, creator_id: users[0].id, category: 'Design'})
 Project.create!({title: 'Counsel of Ricks', image: File.open("app/assets/images/CofRs.png"), description: 'The Ricks need your Help', details: "fill me in later",  end_date: DateTime.now(), funding_goal: 50000, creator_id: users[0].id, category: 'Theatre'})
