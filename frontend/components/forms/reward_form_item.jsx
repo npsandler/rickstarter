@@ -21,41 +21,51 @@ class RewardFormItem extends React.Component {
 
   render() {
     return (
-    <section>
-        <h4>Reward</h4>
-      <section className="reward-title-row">
-        <label>Title</label>
-        <input
-          className="reward-input"
-          type="text"
-          value={this.state.title}
-          onChange={this.update('title')}/>
+    <form className='full-project-form reward-item-input'>
+      <h4>Reward</h4>
+      <section >
+        <section className="form-sub-box">
+          <label>Title</label>
+          <div className="right-box">
+            <input
+            className="reward-box"
+            type="text"
+            value={this.state.title}
+            onChange={this.update('title')}/>
+        </div>
+        </section>
+        <section className="form-sub-box">
+          <label>Pledge Amount</label>
+          <div className="right-box">
+            <input
+            className="reward-box"
+            type="number"
+            value={this.state.pledge_amount}
+            onChange={this.update('pledge_amount')}/>
+        </div>
+        </section>
+        <section className="form-sub-box box">
+          <label>Decription</label>
+          <div className="right-box">
+            <input
+            className="reward-box"
+            type="textarea"
+            value={this.state.description}
+            onChange={this.update('description')}/>
+        </div>
+        </section>
+        <section className="form-sub-box">
+          <label>Limit availability</label>
+          <div className="right-box">
+            <input
+            className="reward-box"
+            type="number"
+            value={this.state.num_allowed}
+            onChange={this.update('num_allowed')}/>
+        </div>
+        </section>
       </section>
-      <section className="reward-input-row">
-        <label>Pledge Amount</label>
-        <input
-          className="reward-input"
-          type="number"
-          value={this.state.pledge_amount}
-          onChange={this.update('pledge_amount')}/>
-      </section>
-      <section className="reward-input-row box">
-        <label>Decription</label>
-        <input
-          className="reward-input"
-          type="textarea"
-          value={this.state.description}
-          onChange={this.update('description')}/>
-      </section>
-      <section className="reward-input-row">
-        <label>Limit availability</label>
-        <input
-          className="reward-input"
-          type="number"
-          value={this.state.num_allowed}
-          onChange={this.update('num_allowed')}/>
-      </section>
-    </section>
+    </form>
   );
   }
 }

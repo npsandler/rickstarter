@@ -113,10 +113,17 @@ h2 {
   word-wrap: break-word;
 }
 .lower {
+  margin: 0 auto;
   margin-top: 140px;
   padding-top: 40px;
   border-top: 1px solid #f1eeea;
-  width: 1900px;
+  width: 1500px;
   justify-content: space-around !important;
   background: white;
 }
+
+.details {
+  width: 750px;
+}
+
+.rewards-bar{}

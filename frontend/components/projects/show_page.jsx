@@ -82,9 +82,9 @@ class ShowPage extends React.Component {
             </section>
 
             <section className='lower content-subsection'>
-              <section className='details-box'>
+              <section className='move-left details-box'>
                 <h2>About this project</h2>
-                <div className='details'>{project.details}</div>
+                <p className='details'>{project.details}</p>
               </section>
               <section className='rewards-bar'>
                 <h2 className="move-left">Support this project</h2>

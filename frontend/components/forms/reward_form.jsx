@@ -49,14 +49,15 @@ class RewardForm extends React.Component {
     )
     return (
       <section className="full-project-create">
-
+        <section className='page-header'>
         <h1 className='full-header'>Set your rewards.</h1>
         <h2 className='sub-header'>Invite backers to be a part of the creative experience by offering rewards like a copy of what you’re making, a special experience, or a behind-the-scenes look into your process.</h2>
           <ul className="errors">{this.errors()}</ul>
+        </section>
 
-        <section className="reward-inputs">
+        <section className="content-container">
             {rewardItems}
-            <button className='reward-button' onClick={this.addRewardForm}>Add reward</button>
+            <button className='submit-button reward-button' onClick={this.addRewardForm}>Add reward</button>
           </section>
         </section>
 

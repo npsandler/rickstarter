@@ -10,14 +10,11 @@ class CategoryIndex extends React.Component {
   }
 
   componentDidMount() {
-    debugger
     this.projects = this.props.requestCategory(this.props.match.url.slice(9));
   }
 
   componentWillReceiveProps(nextProps){
-    debugger
     if(this.props.location.pathname.slice(9) !== nextProps.match.url.slice(9)) {
-      debugger
       this.props.requestCategory(nextProps.match.url.slice(9));
     }
   }
@@ -28,7 +25,7 @@ class CategoryIndex extends React.Component {
 
       return (
         <ul className="category-list">
-          { projects.map(project => <ProjectIndexItem key={project.id} project={project} />)}
+          { projects.map(project => <li className="category-item"><ProjectIndexItem key={project.id} project={project} /></li>)}
         </ul>
       )
     } else {

@@ -27,14 +27,23 @@
 .category-render {
   margin-top: 100px;
   width: 1200px;
-  display: flex;
-  flex-wrap: wrap;
+
 }
 
 .category-list {
   list-style: none;
   width: 100%;
   height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category-list > * {
+  margin-left: 70px;
+}
+
+.category-list > *:first-of-type {
+  margin-left: 0;
 }
 
 .category-green {

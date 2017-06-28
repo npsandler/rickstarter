@@ -17,14 +17,14 @@
 }
 
 .nav-bar {
-  // position: fixed;
+  position: fixed;
   z-index: 5;
   background-color: white;
   display: flex;
   justify-content: space-between;
   padding: 15px;
   margin-top: -20px;
-  // width: 99%;
+  width: 99%;
   height: 50px;
   box-shadow: 2px 2px 5px #bbadad;
 }

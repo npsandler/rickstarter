@@ -38,7 +38,7 @@ class FullForm extends React.Component {
 
   render() {
     return (
-      <section>
+      <section className='fullform'>
         <ToggleBar />
 
         <section className='form-render'>
@@ -48,7 +48,7 @@ class FullForm extends React.Component {
 
 
         <section className='bottom-bar'>
-          <button className='submit-button' onClick={this.handleSubmit}>Save and continue</button>
+          <button className='submit-button button-align-right' onClick={this.handleSubmit}>Save and continue</button>
         </section>
 
       </section>

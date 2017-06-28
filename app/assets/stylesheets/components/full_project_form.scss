@@ -1,3 +1,9 @@
+.full-form {
+  width: 100%;
+  height: auto;
+  padding-bottom: 100px;
+}
+
 .full-project-create {
 
   background-color: #ece7e7;
@@ -36,7 +42,6 @@
 }
 
 .form-sub-box {
-  // height: 175px !important;
   background: #f8f9fd;
   margin: 20px 25px;
   display: flex;
@@ -72,13 +77,33 @@
   height: 43px;
   box-sizing: border-box;
   padding: 12px;
-  // width: 95%;
   line-height: 17px;
   background: white;
   border: 1px solid #dad7d4;
 }
 .toggle-bar {
+  position: relative;
   width: 65px;
   height: 230px;
-  margin: 100px auto 70px auto;
+  padding-top: 100px;
+  margin-left: 45%;
+}
+
+.reward-item-input {
+  display: flex;
+  justify-content: space-around;
+}
+
+.bottom-bar {
+  position: fixed;
+  width: 100%;
+  padding: 10px;
+  // background: tranpa;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+}
+
+.button-align-right {
+  margin-left: 500px
 }

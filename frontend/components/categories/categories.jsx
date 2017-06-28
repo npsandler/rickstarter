@@ -5,7 +5,7 @@ import CategoryIndex from './category_index_container';
 export default class Categories extends React.Component {
 
   render(){
-    const categories = ["Art", "Comments", "Crafts", "Dance", "Design",
+    const categories = ["Art", "Comics", "Crafts", "Dance", "Design",
     "Fashion", "Film & Video", "Food", "Games", "Journalism", "Music",
     "Photography", "Publishing", "Technology", "Theatre"];
 
