@@ -13,7 +13,7 @@ class LeftNav extends React.Component {
         <nav className='left-nav'>
           <ul>
             <li>
-              <Link to="/" className="explore-button nav-icon nav-item">
+              <Link to="/explore" className="explore-button nav-icon nav-item">
                 <i className="fa fa-compass"></i>
                 Explore
               </Link>

@@ -6,11 +6,38 @@
 
 .category-toggles{
   width: 200px;
+  padding: 0 150px;
   list-style: none;
   display: flex;
   flex-direction: column;
 }
 
+
+.category-toggles > a {
+  margin: 15px;
+  color: #353535;
+  font-size: 36px;
+}
+
+.category-toggles > a:hover {
+  color: #05af3c;
+}
+
+
 .category-render {
-  width: 400px;
+  margin-top: 100px;
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.category-list {
+  list-style: none;
+  width: 100%;
+  height: auto;
+}
+
+.category-green {
+  color: #05af3c;
+  margin: 50px 0;
 }

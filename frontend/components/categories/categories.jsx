@@ -17,6 +17,7 @@ export default class Categories extends React.Component {
     return(
         <section className='explore'>
           <ul className='category-toggles'>
+            <label className='category-green'>Categories</label>
             {categoryToggles}
           </ul>
           <section className='category-render'>

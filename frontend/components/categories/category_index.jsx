@@ -6,17 +6,19 @@ import { withRouter } from 'react-router-dom';
 class CategoryIndex extends React.Component {
   constructor(props) {
     super(props);
-    this.cat = this.props.match.url.slice(9);
     this.projects = null;
   }
 
   componentDidMount() {
-    this.projects = this.props.requestCategory(this.cat);
+    debugger
+    this.projects = this.props.requestCategory(this.props.match.url.slice(9));
   }
 
   componentWillReceiveProps(nextProps){
-    if(this.cat !== nextProps.match.url.slice(9)){
-      this.projects = this.props.requestCategory(this.cat);
+    debugger
+    if(this.props.location.pathname.slice(9) !== nextProps.match.url.slice(9)) {
+      debugger
+      this.props.requestCategory(nextProps.match.url.slice(9));
     }
   }
 
@@ -25,7 +27,7 @@ class CategoryIndex extends React.Component {
       const projects = Object.keys(this.props.projects).map( key => this.props.projects[key]);
 
       return (
-        <ul>
+        <ul className="category-list">
           { projects.map(project => <ProjectIndexItem key={project.id} project={project} />)}
         </ul>
       )

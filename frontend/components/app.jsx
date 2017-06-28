@@ -32,13 +32,13 @@ const App = () => (
 
     <Switch>
       <Route exact path='/' component={ProjectIndex} />
+      <Route path='/explore' component={Categories} />
       <Route path='/projects/:projectId' component={ProjectShow} />
       <Route path="/newproject" component={PrelimForm} />
       <ProtectedRoute path='/fullform' component={FullForm} />
       <AuthRoute path="/login" component={SessionForm} />
       <AuthRoute path="/signup" component={SessionForm} />
       <Route path='/rewardform' component={RewardForm} />
-      <Route path='/explore' component={Categories} />
     </Switch>
   </div>
 );
