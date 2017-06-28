@@ -10,20 +10,17 @@ export default class Categories extends React.Component {
     "Photography", "Publishing", "Technology", "Theatre"];
 
     let categoryToggles = [];
-    let categoryRoutes = [];
 
     categories.forEach ( (category) => {
-      categoryRoutes.push(<li><Route path={`/explore/${category}`} category={category} component={CategoryIndex} /></li>);
       categoryToggles.push(<NavLink exact to={`/explore/${category}`} activeClassName='visiting' >{category} </NavLink>);
     });
-    debugger
     return(
         <section className='explore'>
           <ul className='category-toggles'>
             {categoryToggles}
           </ul>
           <section className='category-render'>
-            {categoryRoutes}
+            <Route path={`/explore/:categoryName`} component={CategoryIndex} />
           </section>
         </section>
     );
