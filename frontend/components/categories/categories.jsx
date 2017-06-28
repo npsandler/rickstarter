@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, NavLink, withRouter } from 'react-router-dom';
-import CategoryIndex from './category_index';
+import CategoryIndex from './category_index_container';
 
 export default class Categories extends React.Component {
 

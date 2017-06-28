@@ -2,6 +2,7 @@ import * as APIUtil from '../util/project_api_util';
 
 export const RECEIVE_ALL_PROJECTS = 'RECEIVE_ALL_PROJECTS';
 export const RECEIVE_SINGLE_PROJECT = 'RECEIVE_SINGLE_PROJECT';
+export const RECEIVE_CATEGORY = 'RECEIVE_CATEGORY';
 export const CREATE_PROJECT = 'CREATE_PROJECT';
 export const DELETE_PROJECT = 'DELETE_PROJECT';
 export const EDIT_PROJECT = 'EDIT_PROJECT';
@@ -34,11 +35,16 @@ export const updateProject = project => dispatch => {
   export const requestCategory = category => dispatch => {
     return (
       APIUtil.fetchCategory(category).then(projects => {
-        dispatch(receiveAllProjects(projects));
+        dispatch(receiveCategory(projects));
       }));
   };
 
-
+export const receiveCategory = projects => {
+  return {
+    type: RECEIVE_CATEGORY,
+    projects
+  };
+};
 
 export const editProject = project => {
   return {

@@ -33,6 +33,7 @@ export const editProject = (project) => {
 export const fetchCategory = (category) => {
 return $.ajax({
   method: 'get',
-  url: `api/projects?category=${category}`
+  url: `api/projects`,
+  data: { category }
   });
 };
