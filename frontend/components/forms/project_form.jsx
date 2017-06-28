@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import { merge } from 'lodash';
 
 class ProjectForm extends React.Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class ProjectForm extends React.Component {
   update(property) {
     debugger
     return e => {
-      this.setState( {project: { [property]: e.target.value }}, () => (
+      this.setState( merge({}, this.state, {project: { [property]: e.target.value }}), () => (
       this.props.receiveIncompleteForm(this.state.project)
     ));
     };
@@ -56,6 +57,7 @@ class ProjectForm extends React.Component {
     const CATEGORIES = ['Art', 'Comic', 'Crafts', 'Dance', 'Design', 'Fashion',
     'Film & Video', 'Food', 'Games', 'Journalism', 'Music', 'Photography', 'Publishing', 'Technology', 'Theatre']
 
+    debugger
     const selectorOptions = CATEGORIES.map( (cat) => {
       if (cat === this.state.project.category) {
         return (

@@ -30,7 +30,8 @@ class FullForm extends React.Component {
     formData.append('project[rewards_attributes]', JSON.stringify(rewards));
 
     this.createProject(formData);
-
+    debugger
+    console.log("made project")
     // TODO: what goes in here
     // this.props.history.push('/');
   }
