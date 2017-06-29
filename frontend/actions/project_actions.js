@@ -21,8 +21,12 @@ export const requestSingleProject = (projectId) => (dispatch) => {
 export const createProject = (project) => (dispatch) => {
     return (
       APIUtil.createProject(project)
-    .then( (project) => dispatch(receiveSingleProject(project)))
-  ), err => dispatch(receiveErrors(err.responseJSON));
+    .then( (project) => {
+      dispatch(receiveSingleProject(project));
+      debugger
+      return project;
+    },
+     err => dispatch(receiveErrors(err.responseJSON))));
 };
 
 export const updateProject = project => dispatch => {
