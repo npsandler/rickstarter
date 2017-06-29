@@ -13,7 +13,7 @@ class Api::ProjectsController < ApplicationController
 
   def show
     @project = Project.includes(:creator, :backers).find(params[:id])
-    @rewards = Reward.includes(:pledgings).where(project_id: @project.id)
+    @rewards = Reward.includes(:pledgings).where(project_id: @project.id).order(:pledge_amount)
     render :show
   end
 
@@ -23,6 +23,7 @@ class Api::ProjectsController < ApplicationController
     @project = Project.new(project_params)
     @project.creator = current_user
     if @project.save
+      @rewards = Reward.includes(:pledgings).where(project_id: @project.id).order(:pledge_amount)
       render :show
     else
       render json: @project.errors.full_messages, status: 422

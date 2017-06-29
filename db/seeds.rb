@@ -26,12 +26,11 @@ Project.create!({title: 'Fund a new laboratory', image: File.open("app/assets/im
 Project.create!({title: 'Counsel of Ricks', image: File.open("app/assets/images/CofRs.png"), description: 'The Ricks need your Help', details: ipsum,  end_date: DateTime.now(), funding_goal: 50000, creator_id: users[0].id, category: 'Theatre'})
 Project.create!({title: 'Fund a new local saloon', image: File.open("app/assets/images/saloon.png"), description: 'A new saloon could be right in your backyard!', details: ipsum,  end_date: DateTime.now(), funding_goal: 50000, current_funding: 20000, creator_id: users[2].id, category: 'Food'})
 Project.create!({title: 'Meseeks Box', image: File.open("app/assets/images/meseeks.png"), description: 'A phenomenal new product to help you with everyday tasks', details: ipsum,  end_date: DateTime.now(), funding_goal: 50000, current_funding: 40000, creator_id: users[4].id, category: 'Technology'})
-Project.create!({title: 'New basketball hoop for the park', image: File.open("app/assets/images/basketball.png"), description: 'A newly renovated basketball hoop for the park', details: ipsum,  end_date: DateTime.now(), funding_goal: 50000, ccurrent_funding: 2345, reator_id: users[2].id, category: 'Games'})
+Project.create!({title: 'New basketball hoop for the park', image: File.open("app/assets/images/basketball.png"), description: 'A newly renovated basketball hoop for the park', details: ipsum,  end_date: DateTime.now(), funding_goal: 50000, current_funding: 2345, creator_id: users[2].id, category: 'Games'})
 Project.create!({title: 'Robot Dog Technology', image: File.open("app/assets/images/robodog.png"), description: 'The first of its kind in dog mech suits', details: ipsum,  end_date: DateTime.now(), funding_goal: 50000, current_funding: 6500, creator_id: users[0].id, category: 'Technology'})
 Project.create!({title: 'Block Party!', image: File.open("app/assets/images/party.png"), description: 'help us fund an annual block party at the park', details: ipsum,  end_date: DateTime.now(), funding_goal: 50000, current_funding: 45000, creator_id: users[0].id, category: 'Theatre'})
 Project.create!({title: 'Show me what you got', image: File.open("app/assets/images/moonguy.png"), description: 'Pease hire me', details: ipsum,  end_date: DateTime.now(), funding_goal: 50000, current_funding: 28000, creator_id: users[1].id, category: 'Technology'})
 
-current: ,
 
 Reward.create({project_id: Project.all.first.id, title: "One day pass to the park", pledge_amount: 20, description: "Enjoy a day in the works premier theme park"})
 Reward.create({project_id: Project.all.first.id, title: "Day pass to the park for two", pledge_amount: 35, description: "A day in the works premier theme park for you and a friend!"})

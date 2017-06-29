@@ -7,11 +7,12 @@ class Api::PledgesController < ApplicationController
     @pledge.user_id = current_user.id
     if @pledge.save
       @project = Project.includes(:creator, :backers).find(@pledge.project.id)
-      @rewards = Reward.includes(:pledgings).where(project_id: @project.id)
+      @rewards = Reward.includes(:pledgings).where(project_id: @project.id).order(:pledge_amount)
       @project.current_funding += @pledge.reward.pledge_amount
       @project.save
       @pledge.reward.num_backers += 1
       @pledge.reward.save
+
       render :show
     else
       render json: @pledge.errors.full_messages, status: 422
