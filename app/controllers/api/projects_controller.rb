@@ -4,6 +4,8 @@ class Api::ProjectsController < ApplicationController
   def index
     if params[:category]
       @projects = Project.includes(:creator, :backers, :rewards).where(category: params[:category])
+    elsif params[:query]
+      @projects = Project.includes(:creator, :backers, :rewards).where('title LIKE (?) OR description LIKE (?)', "%#{params[:query]}%", "%#{params[:query]}%")
     else
       @projects = Project.includes(:creator, :backers, :rewards)
     end

@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { logOut } from '../../actions/session_actions'
+import SearchBar from './search_bar';
 
 const loggedOutLinks = () => (
   <nav  className='right-nav'>
     <ul>
       <li>
-        <Link to='/' className='search-button'>
-          <i className="fa fa-search nav-icon"></i>
-        </Link>
+
+        <SearchBar />
+
       </li>
       <li>
         <Link to="/login" className="header-link nav-item login-link" >Log in</Link>
@@ -25,9 +26,7 @@ const loggedInLinks = (currentUser, logOut) => (
   <nav  className='right-nav'>
     <ul>
       <li>
-        <Link to='/' className='search-button'>
-          <i className="fa fa-search nav-icon"></i>
-          </Link>
+        <SearchBar />
       </li>
       <li>
         <div className="header-link" onClick={logOut}>

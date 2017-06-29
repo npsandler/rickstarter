@@ -8,6 +8,7 @@ import ProjectShow from './projects/show_page_container';
 import ProjectIndex from './projects/project_index_container';
 import FullForm from './forms/full_form_container';
 import RewardForm from './forms/reward_form_container';
+import SearchIndex from './projects/search_index_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Categories from './categories/categories';
 
@@ -39,6 +40,7 @@ const App = () => (
       <AuthRoute path="/login" component={SessionForm} />
       <AuthRoute path="/signup" component={SessionForm} />
       <Route path='/rewardform' component={RewardForm} />
+      <Route path='/search/:query' component={SearchIndex} />
     </Switch>
   </div>
 );

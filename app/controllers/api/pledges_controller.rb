@@ -9,6 +9,9 @@ class Api::PledgesController < ApplicationController
       @project = Project.includes(:creator, :backers).find(@pledge.project.id)
       @rewards = Reward.includes(:pledgings).where(project_id: @project.id)
       @project.current_funding += @pledge.reward.pledge_amount
+      if @project.num_allowed
+        @project.num_allowed -= 1
+      end
       @project.save
       render :show
     else

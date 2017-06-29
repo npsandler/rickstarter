@@ -43,7 +43,22 @@ export const updateProject = project => dispatch => {
       }));
   };
 
+  export const requestSearch = query => dispatch => {
+    debugger
+    return (
+      APIUtil.fetchSearch(query).then(projects => {
+        dispatch(receiveSearch(projects));
+      }));
+  };
+
 export const receiveCategory = projects => {
+  return {
+    type: RECEIVE_CATEGORY,
+    projects
+  };
+};
+
+export const receiveSearch = projects => {
   return {
     type: RECEIVE_CATEGORY,
     projects

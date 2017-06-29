@@ -37,3 +37,11 @@ return $.ajax({
   data: { category }
   });
 };
+
+export const fetchSearch = (query) => {
+return $.ajax({
+  method: 'get',
+  url: `api/projects`,
+  data: { query }
+  });
+};
