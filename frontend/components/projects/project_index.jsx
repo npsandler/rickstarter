@@ -11,8 +11,8 @@ componentDidMount() {
  }
 
  componentWillReceiveProps(nextProps) {
-   if (this.props.location.url !== nextProps.match.url) {
-    //  finsih this
+   debugger
+   if (this.props.match.url !== nextProps.match.url) {
       this.props.requestAllProjects();
    }
  }
@@ -31,8 +31,8 @@ componentDidMount() {
    };
 
    const projects = Object.keys(this.props.projects).map( key => this.props.projects[key]);
-   if (projects.length > 0) {
-     debugger
+   debugger
+   if (projects.length > 4) {
      return (
        <section className='home-page-background'>
          <section className='home-page'>

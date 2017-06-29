@@ -103,9 +103,11 @@
 
 .footer {
   font-size: 15px;
-  width: 350;
+  width: 349px;
+  display: block;
   height: auto;
-  word-wrap: break-word;
+  white-space: pre-wrap;
+  font-weight: 400;
 }
 .lower {
   margin: 0 auto;

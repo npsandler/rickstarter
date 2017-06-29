@@ -13,6 +13,7 @@ class CategoryIndex extends React.Component {
   }
 
   componentWillReceiveProps(nextProps){
+    debugger
     if(this.props.location.pathname.slice(9) !== nextProps.match.url.slice(9)) {
       this.props.requestCategory(nextProps.match.url.slice(9));
     }
