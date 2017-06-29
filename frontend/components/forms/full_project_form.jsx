@@ -31,7 +31,6 @@ class FullForm extends React.Component {
 
     this.props.createProject(formData)
     .then( (project) => {
-      debugger
       this.props.history.push(`/projects/${project.id}`);
     }
     );
@@ -40,9 +39,9 @@ class FullForm extends React.Component {
   render() {
     return (
       <section className='fullform'>
-        <ToggleBar />
 
         <section className='form-render'>
+          <ToggleBar />
             <Route path="/fullform/basics" component={ProjectForm} />
             <Route path="/fullform/rewards" component={RewardForm} />
         </section>

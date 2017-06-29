@@ -23,7 +23,6 @@ export const createProject = (project) => (dispatch) => {
       APIUtil.createProject(project)
     .then( (project) => {
       dispatch(receiveSingleProject(project));
-      debugger
       return project;
     },
      err => dispatch(receiveErrors(err.responseJSON))));
@@ -44,7 +43,6 @@ export const updateProject = project => dispatch => {
   };
 
   export const requestSearch = query => dispatch => {
-    debugger
     return (
       APIUtil.fetchSearch(query).then(projects => {
         dispatch(receiveSearch(projects));

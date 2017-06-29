@@ -6,17 +6,14 @@ import { withRouter } from 'react-router-dom';
 class SearchIndex extends React.Component {
   constructor(props) {
     super(props);
-    debugger
     this.projects = null;
   }
 
   componentDidMount() {
-    debugger
     this.projects = this.props.requestSearch(this.props.match.url.slice(8));
   }
 
   componentWillReceiveProps(nextProps){
-    debugger
     if(this.props.location.pathname.slice(8) !== nextProps.match.url.slice(8)) {
       this.props.requestSearch(nextProps.match.url.slice(8));
     }
