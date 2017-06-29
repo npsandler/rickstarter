@@ -60,16 +60,22 @@
 .text-wrapper {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
 .text-element {
+  width: 100%;
+  margin: 0 auto;
   padding: 10px;
-  padding-left: 5%;
   height: auto;
-  // word-wrap: bre ak-word;
+  white-space: pre-wrap;
 }
 
+
+.text-element > text {
+  width: 90%;
+}
 
 .heavy {
   font-weight: bold;

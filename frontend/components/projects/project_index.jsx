@@ -10,9 +10,11 @@ componentDidMount() {
    this.props.requestAllProjects();
  }
 
- componentWillReceiveProps() {
-   debugger
-   this.props.requestAllProjects()
+ componentWillReceiveProps(nextProps) {
+   if (this.props.location.url !== nextProps.match.url) {
+    //  finsih this
+      this.props.requestAllProjects();
+   }
  }
 
 
