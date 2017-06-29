@@ -157,9 +157,9 @@ body {
 
 .search-input {
   height: 60px;
-  font-size: 13px;
+  font-size: 15px;
   display: inline-block;
-  font-weight: 300;
+  font-weight: 400;
   border: none;
   outline: none;
   color: #555;
@@ -201,9 +201,9 @@ body {
   right: 0;
   z-index: 2;
   cursor: pointer;
-  opacity: 0.4;
+  opacity: 1;
   cursor: pointer;
-  transition: opacity .4s ease;
+  transition: opacity -.8s ease;
 }
 
 .search-submit:hover {

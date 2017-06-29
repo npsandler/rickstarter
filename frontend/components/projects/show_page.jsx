@@ -41,11 +41,8 @@ class ShowPage extends React.Component {
 
 
   render() {
-    // TODO: renderuserimage properly
-    // TODO: days to do, backers
     const { project } = this.props;
     if (project) {
-      debugger
       let percentFunded = Math.ceil((project.current_funding / project.funding_goal) * 100);
       if (percentFunded > 100 ) {
         percentFunded = 100;

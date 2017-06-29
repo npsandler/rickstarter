@@ -26,7 +26,11 @@ componentDidMount() {
      arrows: true,
      dots: true,
      buttons: true,
-     slidesToShow: 1
+     slidesToShow: 1,
+     autoplay: true,
+     draggable: false,
+     fade: true,
+     autoplaySpeed: 5000,
    };
 
    const projects = Object.keys(this.props.projects).map( key => this.props.projects[key]);
