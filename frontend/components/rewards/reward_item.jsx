@@ -11,6 +11,7 @@ class RewardItem extends React.Component {
     let numRemaining;
     let { reward } = this.props;
     if (reward.num_allowed) {
+      debugger
       let numRemaining = reward.num_allowed - reward.num_backers;
       return (
         <p className="orange">Limited ({numRemaining} of {reward.num_allowed} left)</p>

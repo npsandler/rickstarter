@@ -13,6 +13,7 @@ const rewardReducer = ( state = {}, action) => {
     case EDIT_REWARD:
       return merge({}, state, action.reward);
     case UPDATE_REWARD:
+    debugger
       return merge({}, state, action.reward);
     default:
       return state;

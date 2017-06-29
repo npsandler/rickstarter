@@ -77,16 +77,6 @@
 
 }
 
-.right-box input, select {
-  border-radius: 6px;
-  margin: 5px 5px 5px 0;
-  height: 43px;
-  box-sizing: border-box;
-  padding: 12px;
-  line-height: 17px;
-  background: white;
-  border: 1px solid #dad7d4;
-}
 .toggle-bar {
   position: absolute;
   width: 282px;
@@ -131,4 +121,16 @@
 
 .button-align-right {
   margin-left: 500px
+}
+
+
+.right-box input, select {
+  border-radius: 6px;
+  margin: 5px 5px 5px 0;
+  height: 43px;
+  box-sizing: border-box;
+  padding: 12px;
+  line-height: 17px;
+  background: white;
+  border: 1px solid #dad7d4;
 }

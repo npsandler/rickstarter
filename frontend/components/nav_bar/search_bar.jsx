@@ -34,7 +34,7 @@ class SearchBar extends React.Component {
       return (
         <div id="wrap">
           <form onSubmit={this.handleSubmit} autoComplete="on">
-            <input className="search-input" onChange={this.update('query')} id="search" name="searchx" type="text" placeholder="Search projects..."/>
+            <input className="search-input" onChange={this.update('query')} id="search" name="search" type="text" placeholder="Search projects..."/>
               <input className="search-submit" id="search_submit" value="Rechercher" type="submit"/>
           </form>
         </div>

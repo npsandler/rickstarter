@@ -10,6 +10,11 @@ componentDidMount() {
    this.props.requestAllProjects();
  }
 
+ componentWillReceiveProps() {
+   debugger
+   this.props.requestAllProjects()
+ }
+
 
 
  render() {
@@ -25,6 +30,7 @@ componentDidMount() {
 
    const projects = Object.keys(this.props.projects).map( key => this.props.projects[key]);
    if (projects.length > 0) {
+     debugger
      return (
        <section className='home-page-background'>
          <section className='home-page'>

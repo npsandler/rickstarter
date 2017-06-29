@@ -1,5 +1,6 @@
 .home-page {
   overflow: auto;
+  background: white;
 }
 
 
@@ -41,6 +42,7 @@
   height: 260px;
   margin-left: -11px;
   margin-top: -10px;
+  object-fit: cover;
 }
 
 .preview-wrapper {
@@ -65,7 +67,7 @@
   padding: 10px;
   padding-left: 5%;
   height: auto;
-  word-wrap: break-word;
+  // word-wrap: bre ak-word;
 }
 
 
@@ -113,6 +115,7 @@
 .creator {
   padding: 20px;
 }
+
 
 
 

@@ -27,9 +27,12 @@ class SearchIndex extends React.Component {
       const projects = Object.keys(this.props.projects).map( key => this.props.projects[key]);
 
       return (
-        <ul className="search-results">
-          { projects.map(project => <li className="category-item"><ProjectIndexItem key={project.id} project={project} /></li>)}
-        </ul>
+        <section className="search">
+          <label className='search-label'>Search results</label>
+          <ul className="search-results">
+            { projects.map(project => <li className="category-item"><ProjectIndexItem key={project.id} project={project} /></li>)}
+          </ul>
+        </section>
       )
     } else {
       return(

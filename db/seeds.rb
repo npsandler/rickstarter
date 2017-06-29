@@ -24,13 +24,14 @@ Project.create!({title: 'Anatomy Park', image: File.open("app/assets/images/Anat
 Project.create!({title: 'Help me take 3 strokes off my short game', image: File.open("app/assets/images/golf.png"), description: 'how hard can it be?', details: ipsum,  end_date: DateTime.now(), funding_goal: 50000, current_funding: 3000, creator_id: users[3].id, category: 'Games'})
 Project.create!({title: 'Fund a new laboratory', image: File.open("app/assets/images/lab.png"), description: 'A new top of the line lab for inventions ', details: ipsum,  end_date: DateTime.now(), funding_goal: 50000, current_funding: 4500, creator_id: users[0].id, category: 'Design'})
 Project.create!({title: 'Counsel of Ricks', image: File.open("app/assets/images/CofRs.png"), description: 'The Ricks need your Help', details: ipsum,  end_date: DateTime.now(), funding_goal: 50000, creator_id: users[0].id, category: 'Theatre'})
-Project.create!({title: 'Fund a new local saloon', image: File.open("app/assets/images/saloon.png"), description: 'A new saloon could be right in your backyard!', details: ipsum,  end_date: DateTime.now(), funding_goal: 50000, creator_id: users[2].id, category: 'Food'})
-Project.create!({title: 'Meseeks Box', image: File.open("app/assets/images/meseeks.png"), description: 'A phenomenal new product to help you with everyday tasks', details: ipsum,  end_date: DateTime.now(), funding_goal: 50000, creator_id: users[4].id, category: 'Technology'})
-Project.create!({title: '', image: File.open("app/assets/images."), description: '', details: ipsum,  end_date: DateTime.now(), funding_goal: 50000, creator_id: users[].id, category: ''})
-Project.create!({title: '', image: File.open("app/assets/images."), description: '', details: ipsum,  end_date: DateTime.now(), funding_goal: 50000, creator_id: users[].id, category: ''})
-Project.create!({title: 'Show me what you got', image: File.open("app/assets/images/moonguy.png"), description: '', details: ipsum,  end_date: DateTime.now(), funding_goal: 50000, creator_id: users[1].id, category: 'theatre'})
+Project.create!({title: 'Fund a new local saloon', image: File.open("app/assets/images/saloon.png"), description: 'A new saloon could be right in your backyard!', details: ipsum,  end_date: DateTime.now(), funding_goal: 50000, current_funding: 20000, creator_id: users[2].id, category: 'Food'})
+Project.create!({title: 'Meseeks Box', image: File.open("app/assets/images/meseeks.png"), description: 'A phenomenal new product to help you with everyday tasks', details: ipsum,  end_date: DateTime.now(), funding_goal: 50000, current_funding: 40000, creator_id: users[4].id, category: 'Technology'})
+Project.create!({title: 'New basketball hoop for the park', image: File.open("app/assets/images/basketball.png"), description: 'A newly renovated basketball hoop for the park', details: ipsum,  end_date: DateTime.now(), funding_goal: 50000, ccurrent_funding: 2345, reator_id: users[2].id, category: 'Games'})
+Project.create!({title: 'Robot Dog Technology', image: File.open("app/assets/images/robodog.png"), description: 'The first of its kind in dog mech suits', details: ipsum,  end_date: DateTime.now(), funding_goal: 50000, current_funding: 6500, creator_id: users[0].id, category: 'Technology'})
+Project.create!({title: 'Block Party!', image: File.open("app/assets/images/party.png"), description: 'help us fund an annual block party at the park', details: ipsum,  end_date: DateTime.now(), funding_goal: 50000, current_funding: 45000, creator_id: users[0].id, category: 'Theatre'})
+Project.create!({title: 'Show me what you got', image: File.open("app/assets/images/moonguy.png"), description: 'Pease hire me', details: ipsum,  end_date: DateTime.now(), funding_goal: 50000, current_funding: 28000, creator_id: users[1].id, category: 'Technology'})
 
-
+current: ,
 
 Reward.create({project_id: Project.all.first.id, title: "One day pass to the park", pledge_amount: 20, description: "Enjoy a day in the works premier theme park"})
 Reward.create({project_id: Project.all.first.id, title: "Day pass to the park for two", pledge_amount: 35, description: "A day in the works premier theme park for you and a friend!"})
@@ -53,11 +54,11 @@ Reward.create({project_id: Project.all.fourth.id, title: "Large Reward", pledge_
 Reward.create({project_id: Project.all.fifth.id, title: "Small Reward", pledge_amount: 100, description: "A small thank you to you, for supporting our dreams!"})
 Reward.create({project_id: Project.all.fifth.id, title: "Medium Reward", pledge_amount: 100, description: "A medium thank you to you, for supporting our dreams!"})
 Reward.create({project_id: Project.all.fifth.id, title: "Large Reward", pledge_amount: 100, num_allowed: 10, description: "A large thank you to you, for supporting our dreams!"})
-
-Reward.create({project_id: Project.all.sixth.id, title: "Small Reward", pledge_amount: 100, description: "A small thank you to you, for supporting our dreams!"})
-Reward.create({project_id: Project.all.sixth.id, title: "Medium Reward", pledge_amount: 100, description: "A medium thank you to you, for supporting our dreams!"})
-Reward.create({project_id: Project.all.sixth.id, title: "Large Reward", pledge_amount: 100, num_allowed: 10, description: "A large thank you to you, for supporting our dreams!"})
-
-Reward.create({project_id: Project.all.seventh.id, title: "Small Reward", pledge_amount: 100, description: "A small thank you to you, for supporting our dreams!"})
-Reward.create({project_id: Project.all.seventh.id, title: "Medium Reward", pledge_amount: 100, description: "A medium thank you to you, for supporting our dreams!"})
-Reward.create({project_id: Project.all.seventh.id, title: "Large Reward", pledge_amount: 100, num_allowed: 10, description: "A large thank you to you, for supporting our dreams!"})
+#
+# Reward.create({project_id: Project.all.sixth.id, title: "Small Reward", pledge_amount: 100, description: "A small thank you to you, for supporting our dreams!"})
+# Reward.create({project_id: Project.all.sixth.id, title: "Medium Reward", pledge_amount: 100, description: "A medium thank you to you, for supporting our dreams!"})
+# Reward.create({project_id: Project.all.sixth.id, title: "Large Reward", pledge_amount: 100, num_allowed: 10, description: "A large thank you to you, for supporting our dreams!"})
+#
+# Reward.create({project_id: Project.all.seventh.id, title: "Small Reward", pledge_amount: 100, description: "A small thank you to you, for supporting our dreams!"})
+# Reward.create({project_id: Project.all.seventh.id, title: "Medium Reward", pledge_amount: 100, description: "A medium thank you to you, for supporting our dreams!"})
+# Reward.create({project_id: Project.all.seventh.id, title: "Large Reward", pledge_amount: 100, num_allowed: 10, description: "A large thank you to you, for supporting our dreams!"})

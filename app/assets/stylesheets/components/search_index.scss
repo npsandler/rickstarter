@@ -1,0 +1,19 @@
+.search {
+  background: white;
+  height: 1000px;
+  padding-top: 120px;
+}
+
+.search-label {
+  font-size: 24px;
+  font-weight: bold;
+  padding: 110px;
+}
+
+.search-results {
+  margin-top: 50px;
+  list-style: none;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-around;
+}
