@@ -27,8 +27,10 @@ class ProjectIndexItem extends React.Component {
   render() {
     const { project } = this.props;
     let percentFunded = Math.ceil((project.current_funding / project.funding_goal) * 100);
-    if (percentFunded > 100) {
+    if (percentFunded > 100 ) {
       percentFunded = 100;
+    } else if (!percentFunded) {
+      percentFunded = 0
     }
     return (
       <li className="project-index-item">

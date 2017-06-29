@@ -17,15 +17,16 @@
   font-weight: 500;
   color: #353535;
   font-size: 30px;
-  line-height: 4.2rem;
 }
 
 .headline {
   width: 1000px;
 }
 
-.creator-area {
-// margin-top: 50px;
+.creator-img {
+  border-radius: 50%;
+  width: 35px;
+  height: auto;
 }
 
 .content-subsection {
@@ -34,18 +35,12 @@
   justify-content: center;
 }
 
-h2 {
-  font-weight: normal;
-}
 
-.move-left {
-  text-align: left;
-}
 
 .header {
-  height: 215px;
+  height: 150px;
   width: 1000px;
-  margin: 100px auto 0 170px;
+  margin: 150px auto 0 170px;
   display: flex;
   justify-content: space-between;
 }
@@ -126,4 +121,18 @@ h2 {
   width: 750px;
 }
 
-.rewards-bar{}
+.details-box {
+  margin-left: 85px;
+}
+
+
+h2 {
+  font-weight: normal;
+  text-align: left;
+}
+
+.funding-bar {
+  width: 350px;
+  height: auto;
+  padding-top: 0;
+}

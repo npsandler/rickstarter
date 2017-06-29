@@ -44,9 +44,13 @@ class ShowPage extends React.Component {
     // TODO: renderuserimage properly
     // TODO: days to do, backers
     const { project } = this.props;
-    debugger
     if (project) {
-      const percentFunded = Math.ceil((project.current_funding / project.funding_goal) * 100);
+      let percentFunded = Math.ceil((project.current_funding / project.funding_goal) * 100);
+      if (percentFunded > 100 ) {
+        percentFunded = 100;
+      } else if (!percentFunded) {
+        percentFunded = 0
+      }
       return   (
         <article className='show-background'>
           <section className='content-box'>
@@ -67,11 +71,11 @@ class ShowPage extends React.Component {
               </section>
               <ul className='project-stats'>
                 <li className='funding-bar'>
-                  <Line percent={percentFunded} trailWidth="3" strokeColor="#D3D3D3"
+                  <Line percent={percentFunded} trailWidth="3" strokeColor="#25CB68"
                      />
                 </li>
-                <li className='current-funding-text green'>${project.current_funding}</li>
-                <li className='funding-goal-text'>pledged of a ${project.funding_goal} goal</li>
+                <li className='current-funding-text green stat'>${project.current_funding}</li>
+                <li className='stat-line'>pledged of a ${project.funding_goal} goal</li>
                 <li className='stat'>{project.backers.length}</li>
                 <li className='stat-line'>backers</li>
                 <li className='stat'>{this.dateRemaining()}</li>

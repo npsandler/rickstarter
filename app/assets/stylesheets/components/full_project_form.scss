@@ -27,6 +27,10 @@
   border: 1px solid #dcdedd;
 }
 
+.full-header {
+  margin-top: 60px;
+}
+
 .page-header {
   padding: 70px 0;
   width: 930px;
@@ -84,11 +88,30 @@
   border: 1px solid #dad7d4;
 }
 .toggle-bar {
-  position: relative;
-  width: 65px;
-  height: 230px;
+  position: absolute;
+  width: 282px;
   padding-top: 100px;
-  margin-left: 45%;
+  margin-left: 42%;
+}
+
+.toggle-bar > * {
+  outline: 1px solid #dad7d4;
+  padding: 20px 30px;
+  font-weight: bold;
+  color: #3d3d66;
+  background: white;
+}
+
+.toggle-bar > *:hover {
+  cursor: pointer;
+  color: #2752ff;
+}
+.toggle-bar > *:before {
+  font-family: "FontAwesome";
+  content: "\f058";
+  font-size: 14px;
+  color: #cecbc7;
+  padding: 0 5px;
 }
 
 .reward-item-input {
