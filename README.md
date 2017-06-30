@@ -13,7 +13,6 @@ The largest component of the project was a series of pages where users are able 
 
 The biggest challenge in the implementation was to allow for users to change between Project and Reward forms as they saw fit without losing their partially completed forms. The solution was to implement a slice of state to track the incomplete forms, only to be sent to the backend upon the users submission.
 
----
 
 ```javascript
 
@@ -51,7 +50,6 @@ render() {
 
   ```
 
----
 
 
 Backing Projects
@@ -62,7 +60,7 @@ Upon creation, user are able to pledge towards the projects funding goal. Upon c
 
 ![pledge](https://github.com/npsandler/rickstarter/blob/master/app/assets/images/pledge.gif)
 
----
+
 
 Index, Search, and Categories View
 ----------------------------------
@@ -70,7 +68,7 @@ Index, Search, and Categories View
 
 Rickstarter offers multiple ways for users to search through existing projects. The home page provides a default view of all projects in the database, while search and category views allow them to filter results to their liking.
 
----
+
 
 ![categories](https://github.com/npsandler/rickstarter/blob/master/app/assets/images/categories-markdown.png)
 
@@ -82,7 +80,7 @@ Rickstarter offers multiple ways for users to search through existing projects. 
 
 In the projects controller, the different filters were handled with a simple if-else statement checking the params that were sen with the backend request.
 
----
+
 
 ```ruby
 
@@ -105,11 +103,11 @@ Future Plans for the Project
 
 I plan on continuing to improve upon the already implemented features and also adding the below features.
 
-###Robust reward backing###
+### Robust reward backing
 
 
 I plan on working to implement a more robust pledge feature, where users can track the pledges they have made and alter or remove them before projects end.
 
-###Project Profile###
+### Project Profile
 
 The project creator should be able to manage their project, editing information and updating as they see fit

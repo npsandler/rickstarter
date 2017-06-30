@@ -41,18 +41,20 @@ Reward.create({project_id: Project.all.first.id, title: "Unlimited lifetime pass
 Reward.create({project_id: Project.all.second.id, title: "Thank you", pledge_amount: 5, description: "A thank you from Jerry for your help and support!"})
 Reward.create({project_id: Project.all.second.id, title: "A golf outing together", pledge_amount: 50, description: "Lets celebrate on the links. This reward includes one game of 18 holes of golf with Jerry!"})
 
-Reward.create({project_id: Project.all.third.id, title: "A small invention", pledge_amount: 50, description: "Once the Laboratory is complete, we will send you a small invention!"})
-Reward.create({project_id: Project.all.third.id, title: "Medium invention", pledge_amount: 500, description: "Once the Laboratoy is complete, we will send you a medium invention"})
-Reward.create({project_id: Project.all.third.id, title: "Large invention", pledge_amount: 5000, description: "Once the Laboratoy is complete, we will send you a medium invention"})
+Reward.create({project_id: Project.all.third.id, title: "A Small Invention", pledge_amount: 50, description: "Once the Laboratory is complete, we will send you a small invention!"})
+Reward.create({project_id: Project.all.third.id, title: "Medium Invention", pledge_amount: 500, description: "Once the Laboratoy is complete, we will send you a medium invention"})
+Reward.create({project_id: Project.all.third.id, title: "Large Invention", pledge_amount: 5000, description: "Once the Laboratoy is complete, we will send you a medium invention"})
 
 
 Reward.create({project_id: Project.all.fourth.id, title: "Small Reward", pledge_amount: 100, description: "A small thank you to you, for supporting our dreams!"})
-Reward.create({project_id: Project.all.fourth.id, title: "Medium Reward", pledge_amount: 100, description: "A medium thank you to you, for supporting our dreams!"})
-Reward.create({project_id: Project.all.fourth.id, title: "Large Reward", pledge_amount: 100, num_allowed: 10, description: "A large thank you to you, for supporting our dreams!"})
+Reward.create({project_id: Project.all.fourth.id, title: "Medium Reward", pledge_amount: 1000, description: "A medium thank you to you, for supporting our dreams!"})
+Reward.create({project_id: Project.all.fourth.id, title: "Large Reward", pledge_amount: 1000, num_allowed: 10, description: "A large thank you to you, for supporting our dreams!"})
 
 Reward.create({project_id: Project.all.fifth.id, title: "Small Reward", pledge_amount: 100, description: "A small thank you to you, for supporting our dreams!"})
-Reward.create({project_id: Project.all.fifth.id, title: "Medium Reward", pledge_amount: 100, description: "A medium thank you to you, for supporting our dreams!"})
-Reward.create({project_id: Project.all.fifth.id, title: "Large Reward", pledge_amount: 100, num_allowed: 10, description: "A large thank you to you, for supporting our dreams!"})
+Reward.create({project_id: Project.all.fifth.id, title: "Medium Reward", pledge_amount: 1000, description: "A medium thank you to you, for supporting our dreams!"})
+Reward.create({project_id: Project.all.fifth.id, title: "Large Reward", pledge_amount: 1000, num_allowed: 10, description: "A large thank you to you, for supporting our dreams!"})
+
+Reward.create({project_id: Project.all.last, title: "One Junior Developer", pledge_amount: 90000, num_allowed: 1, description: "One junior full stack developer for your team"})
 #
 # Reward.create({project_id: Project.all.sixth.id, title: "Small Reward", pledge_amount: 100, description: "A small thank you to you, for supporting our dreams!"})
 # Reward.create({project_id: Project.all.sixth.id, title: "Medium Reward", pledge_amount: 100, description: "A medium thank you to you, for supporting our dreams!"})
