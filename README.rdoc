@@ -1,20 +1,21 @@
-[Rickstarter](rickstarter2017.herokuapp.com)
+rickstarter2017.herokuapp.com
 
 Rickstarter is full-stack web application clone of Kickstarter, created in 9 days using Ruby on Rails on the backend with a PostgreSQL database and React-Redux on the frontend.
 
-#Features and Implementation
-----------------------------
-##Project Creation
+Features and Implementation
+============================
+Project Creation
+---------------
 
 The largest component of the project was a series of pages where users are able to create a project and the associated rewards.
 
-![Project creation](https://github.com/npsandler/rickstarter/blob/master/app/assets/images/creation.gif)
+https://github.com/npsandler/rickstarter/blob/master/app/assets/images/creation.gif
 
 The biggest challenge in the implementation was to allow for users to change between Project and Reward forms as they saw fit without losing their partially completed forms. The solution was to implement a slice of state to track the incomplete forms, only to be sent to the backend upon the users submission.
 
 ---
 
-```js
+``
 
 update(property) {
   return e => this.setState({ [property]: e.target.value });
@@ -48,32 +49,33 @@ render() {
     );
   }
 
-  ```
 
 ---
 
 
-##Backing Projects
+Backing Projects
+---------------
 
 
 Upon creation, user are able to pledge towards the projects funding goal. Upon click, the reward item creates a Pledge, a relationship between the reward and the current user. The the app then does the necessary computations to account for the new total funding amount and supporters, then rerenders.
 
-![Pledging](https://github.com/npsandler/rickstarter/blob/master/app/assets/images/pledge.gif)
+https://github.com/npsandler/rickstarter/blob/master/app/assets/images/pledge.gif
 
 ---
 
-##Index, Search, and Categories View
+Index, Search, and Categories View
+----------------------------------
 
 
 Rickstarter offers multiple ways for users to search through existing projects. The home page provides a default view of all projects in the database, while search and category views allow them to filter results to their liking.
 
 ---
 
-![Categories view](https://github.com/npsandler/rickstarter/blob/master/app/assets/images/categories-markdown.png)
+https://github.com/npsandler/rickstarter/blob/master/app/assets/images/categories-markdown.png
 
 ---
 
-![search view](https://github.com/npsandler/rickstarter/blob/master/app/assets/images/search.gif)
+https://github.com/npsandler/rickstarter/blob/master/app/assets/images/search.gif
 
 ---
 
@@ -81,7 +83,7 @@ In the projects controller, the different filters were handled with a simple if-
 
 ---
 
-```ruby
+``
 
 def index
   if params[:category]
@@ -93,19 +95,21 @@ def index
   end
 end
 
-```
+``
 
 
 
-#Future Plans for the Project
----------------------------
+Future Plans for the Project
+============================
 
 I plan on continuing to improve upon the already implemented features and also adding the below features.
 
-##Robust reward backing.
+Robust reward backing.
+---------------------
 
 I plan on working to implement a more robust pledge feature, where users can track the pledges they have made and alter or remove them before projects end.
 
-##Project Profile
+Project Profile
+---------------
 
 The project creator should be able to manage their project, editing information and updating as they see fit
