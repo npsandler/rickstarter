@@ -63,6 +63,7 @@ componentDidMount() {
            </section>
            <section className="project-index-container">
              <h1 className='index-header'>Recent projects</h1>
+
              <ul className='project-index'>
                { projects.map(project => (
                  <div className='index-item-spacer'>
@@ -70,6 +71,7 @@ componentDidMount() {
                  </div>
                ))}
              </ul>
+             
            </section>
          </section>
         </section>
