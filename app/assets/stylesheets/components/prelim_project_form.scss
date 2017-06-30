@@ -1,9 +1,9 @@
 .project-create {
   display: flex;
   justify-content: center;
-  background-image: url('prelim-backdrop.png');
+  background: white;
   background-size: cover;
-  // background-color: red;
+  background: #f7f5f5;
   z-index: -1;
   position: fixed;
   top: 0;
@@ -11,15 +11,22 @@
   bottom: 150px;
   right: 0;
   overflow: auto;
+  height: 1000px;
 }
 
 .prelim-form-box {
+  align-self: center;
+  align-items: center;
+  padding: 50px;
+  height: 335px;
+  margin-bottom: 200px;
+  border: 1px solid #dcdedd;
+  width: 400px;
+  background: white;
+}
 
-    align-self: center;
-    align-items: center;
-    padding: 50px;
-    height: 345px;
-    background-color: gba(255,0,0,0.3)
+.prelim-project-form {
+  margin-right: 45px;
 }
 
 prelim-form-box > ul > li {
