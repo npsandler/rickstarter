@@ -1,6 +1,4 @@
-[Rickstarter][heroku]
-
-[heroku]:rickstarter2017.herokuapp.com
+[Rickstarter](rickstarter2017.herokuapp.com)
 
 Rickstarter is full-stack web application clone of Kickstarter, created in 9 days using Ruby on Rails on the backend with a PostgreSQL database and React-Redux on the frontend.
 
@@ -10,7 +8,7 @@ Rickstarter is full-stack web application clone of Kickstarter, created in 9 day
 
 The largest component of the project was a series of pages where users are able to create a project and the associated rewards.
 
-![Project creation](app/assets/images/creation.gif "Project creation")
+![Project creation](https://github.com/npsandler/rickstarter/blob/master/app/assets/images/creation.gif)
 
 The biggest challenge in the implementation was to allow for users to change between Project and Reward forms as they saw fit without losing their partially completed forms. The solution was to implement a slice of state to track the incomplete forms, only to be sent to the backend upon the users submission.
 
@@ -60,7 +58,7 @@ render() {
 
 Upon creation, user are able to pledge towards the projects funding goal. Upon click, the reward item creates a Pledge, a relationship between the reward and the current user. The the app then does the necessary computations to account for the new total funding amount and supporters, then rerenders.
 
-![Pledging](app/assets/images/pledge.gif "Pledging")
+![Pledging](https://github.com/npsandler/rickstarter/blob/master/app/assets/images/pledge.gif)
 
 ---
 
@@ -71,11 +69,11 @@ Rickstarter offers multiple ways for users to search through existing projects. 
 
 ---
 
-![Categories view](app/assets/images/categories-markdown.png "Categories view")
+![Categories view](https://github.com/npsandler/rickstarter/blob/master/app/assets/images/categories-markdown.png)
 
 ---
 
-![search view](app/assets/images/search.gif "search view")
+![search view](https://github.com/npsandler/rickstarter/blob/master/app/assets/images/search.gif)
 
 ---
 
