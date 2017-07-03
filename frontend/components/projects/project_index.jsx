@@ -66,12 +66,13 @@ componentDidMount() {
 
              <ul className='project-index'>
                { projects.map(project => (
-                 <div className='index-item-spacer'>
-                   <ProjectIndexItem key={project.id} project={project} />
+                 <div className='index-item-spacer' key={project.id} >
+                   debugger
+                   <ProjectIndexItem  project={project} key={project.id} />
                  </div>
                ))}
              </ul>
-             
+
            </section>
          </section>
         </section>

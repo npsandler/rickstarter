@@ -11,8 +11,8 @@ export default class Categories extends React.Component {
 
     let categoryToggles = [];
 
-    categories.forEach ( (category) => {
-      categoryToggles.push(<NavLink exact to={`/explore/${category}`} activeClassName='visiting' >{category} </NavLink>);
+    categories.forEach ( (category, i) => {
+      categoryToggles.push(<NavLink exact to={`/explore/${category}`} key={i} activeClassName='visiting' >{category} </NavLink>);
     });
     return(
         <section className='explore'>
