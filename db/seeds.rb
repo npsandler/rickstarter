@@ -54,4 +54,4 @@ Reward.create({project_id: Project.all.fifth.id, title: "Small Reward", pledge_a
 Reward.create({project_id: Project.all.fifth.id, title: "Medium Reward", pledge_amount: 1000, description: "A medium thank you to you, for supporting our dreams!"})
 Reward.create({project_id: Project.all.fifth.id, title: "Large Reward", pledge_amount: 1000, num_allowed: 10, description: "A large thank you to you, for supporting our dreams!"})
 
-Reward.create({project_id: Project.all.last, title: "One Junior Developer", pledge_amount: 90000, num_allowed: 1, description: "One junior full stack developer for your team"})
+Reward.create({project_id: Project.all.last.id, title: "One Junior Developer", pledge_amount: 90000, num_allowed: 1, description: "One junior full stack developer for your team"})

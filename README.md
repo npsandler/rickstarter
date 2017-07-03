@@ -1,4 +1,4 @@
-[Rickstarter](rickstarter2017.herokuapp.com)
+[Rickstarter]((https://rickstarter2017.herokuapp.com)
 
 Rickstarter is full-stack web application clone of Kickstarter, created in 9 days using Ruby on Rails on the backend with a PostgreSQL database and React-Redux on the frontend.
 
