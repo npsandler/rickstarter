@@ -21,7 +21,6 @@ class CategoryIndex extends React.Component {
   render() {
     if (this.props.projects) {
       const projects = Object.keys(this.props.projects).map( key => this.props.projects[key]);
-      debugger
       if (projects.length){
         const mappedProjects = projects.map((project) => {
           return (
@@ -30,14 +29,12 @@ class CategoryIndex extends React.Component {
             </li>
           );
         });
-        debugger
         return (
           <ul className="category-list">
             {mappedProjects}
           </ul>
         )
       } else {
-        debugger
         return (
           <section className="no-proj">
             <h2>There are currently no projects under this category</h2>
@@ -47,7 +44,6 @@ class CategoryIndex extends React.Component {
       }
     }
 
-    debugger
     return(
       null
     );
