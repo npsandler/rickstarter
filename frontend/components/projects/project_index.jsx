@@ -67,7 +67,6 @@ componentDidMount() {
              <ul className='project-index'>
                { projects.map(project => (
                  <div className='index-item-spacer' key={project.id} >
-                   debugger
                    <ProjectIndexItem  project={project} key={project.id} />
                  </div>
                ))}
