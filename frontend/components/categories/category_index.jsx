@@ -17,32 +17,27 @@ class CategoryIndex extends React.Component {
     }
   }
 
-  // <ProjectIndexItem key={project.id} project={project} />
+
   render() {
-    debugger
     if (this.props.projects) {
       const projects = Object.keys(this.props.projects).map( key => this.props.projects[key]);
       debugger
-      if (projects.length > 0){
-        console.log("debugger next");
-        debugger
+      if (projects.length){
         const mappedProjects = projects.map((project) => {
           return (
             <li className="category-item">
-              "random text"
+                <ProjectIndexItem key={project.id} project={project} />
             </li>
           );
         });
         debugger
         return (
           <ul className="category-list">
-            "TEST"
             {mappedProjects}
           </ul>
         )
       } else {
         debugger
-        console.log("debugger no projects");
         return (
           <section className="no-proj">
             <h2>There are currently no projects under this category</h2>
