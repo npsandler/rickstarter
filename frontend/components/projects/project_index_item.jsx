@@ -1,4 +1,4 @@
-import React from 'react';
+iimport React from 'react';
 import { Link } from 'react-router-dom';
 import { Line } from 'rc-progress';
 
