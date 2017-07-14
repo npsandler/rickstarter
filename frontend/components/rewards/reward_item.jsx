@@ -24,7 +24,11 @@ class RewardItem extends React.Component {
 
   processPledge(e) {
     e.preventDefault()
-    this.props.createPledge(this.props.reward)
+    if (this.props.session.currentUser) {
+      this.props.createPledge(this.props.reward)
+    } else {
+      this.props.history.push(`/login`)
+    }
   }
 
   render() {
