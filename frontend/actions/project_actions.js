@@ -25,7 +25,7 @@ export const createProject = (project) => (dispatch) => {
       dispatch(receiveSingleProject(project));
       return project;
     },
-     err => dispatch(receiveErrors(err.responseJSON))));
+     err => dispatch(receiveProjectErrors(err.responseJSON))));
 };
 
 export const updateProject = project => dispatch => {
