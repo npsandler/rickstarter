@@ -66,7 +66,9 @@ componentDidMount() {
 
              <ul className='project-index'>
                { projects.map(project => (
-                 <ProjectIndexItem  project={project} key={project.id} />
+                 <div className='index-item-spacer' key={project.id} >
+                   <ProjectIndexItem  project={project} key={project.id} />
+                 </div>
                ))}
              </ul>
 

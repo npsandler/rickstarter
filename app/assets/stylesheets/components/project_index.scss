@@ -9,7 +9,7 @@
 .project-index-container {
   width: 100%;
   margin: 0px;
-  // margin-left: -2%;
+  margin-left: -2%;
 }
 
 .project-index-container:hover{
@@ -20,18 +20,17 @@
 .project-index {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 10% 0;
+  justify-content: space-between;
+  margin: 10%;
   list-style-type: none;
 }
 
 .project-index-item {
-  width: 21%;
-  height: 50%;
-  margin: 5%;
+  width: 390px;
+  height: 565px;
+  margin: 5% auto 0 auto;
   border: 1px solid white;
   box-shadow: 2px 2px 2px #bbadad, -2px 2px 2px #bbadad;
-  white-space: pre-wrap;
 }
 
 .preview-image {
@@ -67,10 +66,6 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
-}
-
-.text-wrapper > div > text {
-  white-space: pre-wrap;
 }
 
 .text-element {
@@ -127,10 +122,10 @@
   height: 50px;
   object-fit: cover;
 }
-//
-// .index-item-spacer {
-//   padding:0 50px 5% 50px;
-// }
+
+.index-item-spacer {
+  padding:0 50px 5% 50px;
+}
 
 $slick-font-family:FontAwesome;
 $slick-prev-character: "\f053";
