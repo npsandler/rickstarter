@@ -88,7 +88,7 @@ class ProjectForm extends React.Component {
               <section className='form-sub-box'>
                 <h3>Project Image</h3>
                 <section className='right-box'>
-                  <img src={this.state.project.imageUrl}/>
+                  <img className='form-pic-prev' src={this.state.project.imageUrl}/>
                   <input type="file" onChange={this.updateFile}/>
                   <text>This is the first thing that people will see when they come across your project. Choose an image that’s crisp and text-free</text>
                 </section>
