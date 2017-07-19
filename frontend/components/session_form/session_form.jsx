@@ -29,15 +29,15 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = this.state;
     if (this.props.formType === 'login') {
-      this.props.processForm({email: user.email, password: user.password})
+      this.props.processForm({email: user.email, password: user.password});
     } else {
-      this.props.processForm(user)
-    };
+      this.props.processForm(user);
+    }
   }
   handleDemo(e) {
     e.preventDefault();
-      const user = {email: 'demo', password: 'hunter12'}
-      this.props.logIn(user)
+      const user = {email: 'demo', password: 'hunter12'};
+      this.props.logIn(user);
   }
 
   navLink() {
