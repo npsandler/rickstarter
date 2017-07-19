@@ -10,8 +10,8 @@ User.destroy_all
 Project.destroy_all
 Reward.destroy_all
 
-users = User.create([{email: 'rick@aol.com', image: File.open("app/assets/images/rick.jpg"), name: 'Rick Sanchez', password: 'hunter12'},
-  {email: 'npsandler@gmail.com', image: File.open("app/assets/images/nps.jpg"), name: 'Nathaniel Sandler', password: 'hunter12'},
+users = User.create([{email: 'rick@aol.com', image: File.open("app/assets/images/rick.png"), name: 'Rick Sanchez', password: 'hunter12'},
+  {email: 'npsandler@gmail.com', image: File.open("app/assets/images/nps.png"), name: 'Nathaniel Sandler', password: 'hunter12'},
   {email: 'morty@aol.com', image: File.open("app/assets/images/morty.png"), name: 'Morty Smith', password: 'hunter12'},
   {email: 'jerry@aol.com', image: File.open("app/assets/images/jerry.png"), name: 'Jerry Smith', password: 'hunter12'},
   {email: 'demo', name: 'Mr. Meseeks', password: 'hunter12'}])
