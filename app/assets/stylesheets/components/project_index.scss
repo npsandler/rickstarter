@@ -114,14 +114,14 @@
 .carousel-image {
   width: 100%;
   height: auto;
-  background-size: cover;
+  object-fit: scale-down;
 }
 
 .thumb {
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  object-fit: fill;
+  object-fit: cover;
 }
 
 .index-item-spacer {

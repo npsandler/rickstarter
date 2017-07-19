@@ -47,16 +47,16 @@ componentDidMount() {
                   <text className="carousel-overlay"> {projects[0].title}</text>
                 </section>
                 <section className='carousel-slide'>
-                  <img className="carousel-image" src={projects[2].image}/>
-                  <text className="carousel-overlay"> {projects[2].title}</text>
+                  <img className="carousel-image" src={projects[8].image}/>
+                  <text className="carousel-overlay"> {projects[8].title}</text>
                 </section>
                 <section className='carousel-slide'>
                   <img className="carousel-image" src={projects[5].image}/>
                   <text className="carousel-overlay"> {projects[5].title}</text>
                 </section>
                 <section className='carousel-slide'>
-                  <img className="carousel-image" src={projects[4].image}/>
-                  <text className="carousel-overlay"> {projects[4].title}</text>
+                  <img className="carousel-image" src={projects[3].image}/>
+                  <text className="carousel-overlay"> {projects[3].title}</text>
                 </section>
 
                </Slider>
