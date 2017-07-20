@@ -32,7 +32,7 @@ class FullForm extends React.Component {
     this.props.createProject(formData)
     .then( (project) => {
       this.props.history.push(`/projects/${project.id}`);
-    },  ((errors) => alert("Please complete missing fields"))
+    }
     );
   }
 
