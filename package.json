@@ -10,7 +10,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --watch",
     "webpack": "node_modules/.bin/webpack",
-    "heroku-postbuild": "npm run webpack"
   },
   "engines": {
     "node": "6.11.0",
@@ -36,7 +35,6 @@
     "react-slick": "^0.14.11",
     "redux": "^3.7.0",
     "redux-thunk": "^2.2.0",
-    "slick-carousel": "^1.6.0",
     "webpack": "2.6.1"
   }
 }
